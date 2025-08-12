@@ -10,37 +10,39 @@
   "options": [
     {
       "id": "A",
-      "text": "AI accuracy might not meet creative standards.",
-      "why": "Misaligned output could lead to rework, reducing efficiency.",
+      "text": "AI accuracy: Algorithm struggles with nuanced creative context.",
+      "why": "Misinterpretation could lead to incorrect task prioritization.",
       "assumptions": [
-        "AI model needs more training",
-        "creative tasks are nuanced"
+        "AI can't fully grasp creative subtleties",
+        "Limited training data"
       ],
-      "relevance": 0.5322575949013635,
+      "relevance": 0.5555137153003602,
       "specificity": true,
-      "compositeScore": 0.6322575949013635
+      "compositeScore": 0.6555137153003602
     },
     {
       "id": "B",
-      "text": "AI model bias could affect creative output quality.",
-      "why": "Ensuring unbiased AI is crucial for maintaining creative integrity and user trust.",
+      "text": "Market risk: Competitors rapidly improving similar AI solutions.",
+      "why": "Could reduce market share if competitors outperform.",
       "assumptions": [
-        "AI model training data is diverse",
-        "Users expect high-quality output"
-      ]
+        "Competitors' R&D outpaces ours",
+        "Users prefer competitor tools"
+      ],
+      "relevance": 0.517007060378347,
+      "specificity": true,
+      "compositeScore": 0.617007060378347
     },
     {
       "id": "C",
-      "text": "Integration with existing tools may face technical challenges.",
-      "why": "Seamless integration is crucial for user adoption and efficiency.",
+      "text": "Operational risk: Integration issues with Slack updates.",
+      "why": "Frequent Slack updates may break bot functionality.",
       "assumptions": [
-        "Teams use diverse tools",
-        "APIs may be limited"
+        "Slack's API changes unexpectedly",
+        "Limited dev resources for updates"
       ],
-      "tags": [
-        "integration",
-        "technical"
-      ]
+      "relevance": 0.45917844429514815,
+      "specificity": true,
+      "compositeScore": 0.5591784442951482
     }
   ]
 }

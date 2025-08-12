@@ -1,6 +1,6 @@
 {
   "candidatesGenerated": 5,
-  "candidatesPassingThresholds": 3,
+  "candidatesPassingThresholds": 5,
   "repairAttempts": 0,
   "finalSuccess": true
 }

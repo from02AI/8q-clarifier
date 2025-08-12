@@ -2,47 +2,46 @@
   "questionNumber": 4,
   "notes": {
     "distinctAxes": [
-      "delivery",
-      "named tool",
+      "mechanism",
+      "integration",
       "automation"
     ]
   },
   "options": [
     {
       "id": "A",
-      "text": "SaaS for automating repetitive creative tasks",
-      "why": "Automates low-value tasks, boosting efficiency by 30%",
+      "text": "Slack bot AI analyzes team messages, prioritizes tasks, and suggests responses.",
+      "why": "Reduces message overload by 30%, improving response time.",
       "assumptions": [
-        "Teams have repetitive tasks",
-        "Workflows are standard"
+        "Teams use Slack heavily",
+        "Task prioritization is valuable"
       ],
-      "relevance": 0.5985836539173385,
+      "relevance": 0.568495821355474,
       "specificity": true,
-      "compositeScore": 0.6985836539173385
+      "compositeScore": 0.668495821355474
     },
     {
       "id": "B",
-      "text": "Figma plugin for team design feedback",
-      "why": "Centralizes feedback, speeds up process by 25%",
+      "text": "Miro integration: AI organizes brainstorms, cuts meeting time by 25%",
+      "why": "Streamlines idea generation and decision-making processes.",
       "assumptions": [
-        "Teams use Figma",
-        "Feedback is decentralized"
+        "Teams use Miro",
+        "Brainstorming is frequent"
       ],
-      "relevance": 0.503080570813198,
-      "specificity": true,
-      "compositeScore": 0.603080570813198
+      "tags": [
+        "miro",
+        "brainstorming"
+      ],
+      "relevance": 0.5220239898039477,
+      "specificity": true
     },
     {
       "id": "C",
-      "text": "Slack bot for creative teams to auto-organize project files",
-      "why": "Streamlines file management, saving 20% of search time",
+      "text": "Google Workspace add-on: AI drafts creative briefs in 15 mins using past docs",
+      "why": "Speeds up briefing by 50%, ensuring consistency",
       "assumptions": [
-        "Slack in use",
-        "Teams use shared drives"
-      ],
-      "tags": [
-        "slack",
-        "file management"
+        "Google Workspace in use",
+        "Access to past documents"
       ]
     }
   ]

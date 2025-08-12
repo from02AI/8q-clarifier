@@ -10,44 +10,35 @@
   "options": [
     {
       "id": "A",
-      "text": "Increase team productivity by 15% in 6 months",
-      "why": "Measures task completion rate improvement through automation",
+      "text": "Increase Slack response rate by 20% in 3 months",
+      "why": "Improved response rates indicate better team collaboration",
       "assumptions": [
-        "Baseline productivity known",
-        "team adoption"
+        "Baseline data available",
+        "Clear Slack usage"
       ],
-      "tags": [
-        "productivity"
-      ],
-      "relevance": 0.5141371234388208,
+      "relevance": 0.5266349924733685,
       "specificity": true,
-      "compositeScore": 0.6141371234388208
+      "compositeScore": 0.6266349924733685
     },
     {
       "id": "B",
-      "text": "Boost collaboration efficiency score by 25% in 1 year",
-      "why": "Long-term measure of improved synergy and task synergy",
+      "text": "Improve creative output quality ratings by 10% in 5 months",
+      "why": "Quality ratings reflect better focus and creative flow",
       "assumptions": [
-        "Efficiency baseline exists",
-        "collaborative tasks measured"
+        "Rating system exists",
+        "Quality data tracked"
       ],
-      "tags": [
-        "collaboration"
-      ],
-      "relevance": 0.45117819494880085,
+      "relevance": 0.49027598605320943,
       "specificity": true,
-      "compositeScore": 0.5511781949488008
+      "compositeScore": 0.5902759860532094
     },
     {
       "id": "C",
-      "text": "Boost team satisfaction by 30% through AI-driven feedback loops",
-      "why": "Enhances engagement and morale, leading to better creative output",
+      "text": "Increase task completion rate by 15% in 3 months via AI prioritization",
+      "why": "Boosts productivity by focusing on high-impact tasks",
       "assumptions": [
-        "Feedback is actionable",
-        "Teams value morale"
-      ],
-      "tags": [
-        "team satisfaction"
+        "AI accurately prioritizes",
+        "Teams follow AI suggestions"
       ]
     }
   ]

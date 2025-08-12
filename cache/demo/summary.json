@@ -1,7 +1,7 @@
 {
   "questionsAttempted": 8,
-  "questionsSuccessful": 7,
+  "questionsSuccessful": 8,
   "totalCandidatesGenerated": 40,
   "totalRepairAttempts": 5,
-  "averageLatency": 18202.75
+  "averageLatency": 18050.25
 }

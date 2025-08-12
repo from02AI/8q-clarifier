@@ -10,45 +10,38 @@
   "options": [
     {
       "id": "A",
-      "text": "Teams spend 20% time on redundant tasks like updates.",
-      "why": "Drains creative energy and focus.",
+      "text": "Slack overwhelmed: 30% messages unanswered daily, slowing creative output",
+      "why": "Unanswered messages lead to missed deadlines and reduced productivity.",
       "assumptions": [
-        "Manual updates frequent",
-        "Tasks repetitive"
+        "High message volume",
+        "Limited response capacity"
       ],
-      "relevance": 0.4275185034775708,
+      "relevance": 0.4623559536875178,
       "specificity": true,
-      "failureReasons": [
-        "relevance: 0.428 < 0.45"
-      ],
-      "compositeScore": 0.3275185034775708
+      "compositeScore": 0.5623559536875178
     },
     {
       "id": "B",
-      "text": "Weekly 5-hour delays in design approvals slow projects.",
-      "why": "Causes bottlenecks and frustration.",
+      "text": "Idea bottleneck: 50% ideas lost monthly, stifling innovation",
+      "why": "Lost ideas prevent the team from developing innovative solutions.",
       "assumptions": [
-        "Designs need approval",
-        "Approvals delayed"
+        "Frequent brainstorming sessions",
+        "No idea tracking system"
       ],
-      "relevance": 0.3855947486378273,
+      "relevance": 0.44668610481409815,
       "specificity": true,
       "failureReasons": [
-        "relevance: 0.386 < 0.45"
+        "relevance: 0.447 < 0.45"
       ],
-      "compositeScore": 0.28559474863782724
+      "compositeScore": 0.3466861048140982
     },
     {
       "id": "C",
-      "text": "Weekly 15% delay due to misaligned creative briefs in remote teams.",
-      "why": "Misalignment causes rework and delays, impacting deadlines.",
+      "text": "Creative block: 30% of team reports weekly delays due to lack of inspiration",
+      "why": "AI copilot can suggest ideas, boosting creativity and reducing delays",
       "assumptions": [
-        "Remote communication challenges",
-        "Briefs are central to workflow"
-      ],
-      "tags": [
-        "remote",
-        "briefs"
+        "Teams face creative blocks",
+        "AI suggestions are useful"
       ]
     }
   ]

@@ -10,46 +10,39 @@
   "options": [
     {
       "id": "A",
-      "text": "Slack bot copilot for 10–50p remote creative teams",
-      "why": "Lives where teams work; cuts PM time by 20%",
+      "text": "AI bot for 10-50p remote creative teams on Slack",
+      "why": "Integrates into existing workflow, reducing project management time by 20%.",
       "assumptions": [
-        "Slack in use",
-        "basic API OK"
+        "Teams use Slack",
+        "Basic API integration is sufficient"
       ],
-      "tags": [
-        "slack"
-      ],
-      "relevance": 0.5981611247354449,
+      "relevance": 0.6985574122676357,
       "specificity": true,
-      "compositeScore": 0.6981611247354449
+      "compositeScore": 0.7985574122676357
     },
     {
       "id": "B",
-      "text": "AI assistant in Asana for 50+ person marketing teams",
-      "why": "Reduces task management time by 15%",
+      "text": "Standalone AI tool for 5-10p marketing startups with Adobe integration",
+      "why": "Enhances creative output, reducing project completion time by 10%.",
       "assumptions": [
-        "Asana in use"
+        "Startups use Adobe suite",
+        "Need for quicker project turnaround"
       ],
-      "tags": [
-        "asana"
-      ],
-      "relevance": 0.5116687607688184,
+      "relevance": 0.636009797937737,
       "specificity": true,
-      "compositeScore": 0.6116687607688184
+      "compositeScore": 0.736009797937737
     },
     {
       "id": "C",
-      "text": "Standalone SaaS for freelance designers with Figma automation",
-      "why": "Automates handoff; +25% throughput",
+      "text": "AI assistant for small video production teams using Asana",
+      "why": "Streamlines task allocation, boosting productivity by 15%.",
       "assumptions": [
-        "Figma in use"
+        "Teams use Asana",
+        "Need for improved task management"
       ],
-      "tags": [
-        "figma"
-      ],
-      "relevance": 0.4770208308494591,
+      "relevance": 0.559767451869823,
       "specificity": true,
-      "compositeScore": 0.5770208308494591
+      "compositeScore": 0.659767451869823
     }
   ]
 }

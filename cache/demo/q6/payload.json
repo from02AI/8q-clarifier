@@ -10,48 +10,36 @@
   "options": [
     {
       "id": "A",
-      "text": "They use Asana for project management tasks.",
-      "why": "Widely adopted for task tracking and collaboration among creative teams.",
+      "text": "Teams use Asana to organize tasks and reduce Slack load",
+      "why": "Asana shifts focus from conversation to task completion",
       "assumptions": [
-        "Asana is already integrated in workflows.",
-        "Teams need project management."
+        "Teams have Asana accounts",
+        "Task management is a priority"
       ],
-      "tags": [
-        "asana"
-      ],
-      "relevance": 0.5591458832159222,
+      "relevance": 0.4752229807735682,
       "specificity": true,
-      "compositeScore": 0.6591458832159222
+      "compositeScore": 0.5752229807735683
     },
     {
       "id": "B",
-      "text": "Use Trello to coordinate and track creative projects.",
-      "why": "Visual board system is popular for organizing tasks creatively.",
+      "text": "Some teams hire additional admin staff to manage Slack",
+      "why": "Admins ensure timely responses, albeit at higher cost",
       "assumptions": [
-        "Trello is familiar to team members.",
-        "Board-based planning suits team needs."
+        "Budget allows for extra hires",
+        "Admins are available"
       ],
-      "tags": [
-        "trello"
-      ],
-      "relevance": 0.5131298954686918,
+      "relevance": 0.46107438260963907,
       "specificity": true,
-      "compositeScore": 0.6131298954686918
+      "compositeScore": 0.561074382609639
     },
     {
       "id": "C",
-      "text": "Teams use Google Workspace for document collaboration.",
-      "why": "Google's suite is popular for its real-time collaboration features.",
+      "text": "Teams use Google Docs for collaborative brainstorming sessions",
+      "why": "Google Docs allows real-time collaboration and easy sharing",
       "assumptions": [
-        "Documents are central to projects.",
-        "Google tools are already in use."
-      ],
-      "tags": [
-        "google_workspace"
-      ],
-      "relevance": 0.5054811375458788,
-      "specificity": true,
-      "compositeScore": 0.6054811375458787
+        "Teams need collaborative tools",
+        "Google Workspace is in use"
+      ]
     }
   ]
 }

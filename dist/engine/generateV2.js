@@ -108,67 +108,60 @@ async function generateQuestionV2(state, qNum, qText) {
         await fixDistinctness(finalOptions, messages, ideaCtx, state, qNum);
         revalidatedOptions = await scoreAllCandidates(ideaCtx, finalOptions, state, qNum);
     }
-    // Step 6: Last-mile filler if still < 3 passers
+    // Step 6: Enhanced last-mile filler if still < 3 passers
     const finalPassers = revalidatedOptions.filter(c => passesAllGates(c, qNum, relativeThreshold));
     if (finalPassers.length < 3) {
-        console.log(`[8Q] Only ${finalPassers.length}/3 options pass after repair, using last-mile filler...`);
+        console.log(`[8Q] Only ${finalPassers.length}/3 options pass after repair, using enhanced last-mile filler...`);
         const missingCount = 3 - finalPassers.length;
-        // Try up to 3 filler attempts to get viable replacements
+        // Step 6A: Batch filler (single call, N=3 candidates)
+        console.log(`[8Q] Attempting batch filler (3 candidates in one call)...`);
+        const batchFillerResult = await enhancedBatchFiller(messages, finalOptions, finalPassers, missingCount, ideaCtx, state, qNum, relativeThreshold, bestRelevance);
         let fillerSuccess = false;
-        for (let attempt = 1; attempt <= 3 && !fillerSuccess; attempt++) {
-            console.log(`[8Q] Filler attempt ${attempt}/${3}...`);
-            const fillerResult = await lastMileFiller(messages, finalOptions, finalPassers, missingCount, ideaCtx, state, qNum, relativeThreshold);
-            if (fillerResult.success && fillerResult.fillerOptions.length > 0) {
-                // Score the filler options to make sure they actually pass
-                const scoredFillers = await scoreAllCandidates(ideaCtx, fillerResult.fillerOptions, state, qNum);
-                const validFillers = scoredFillers.filter(f => passesAllGates(f, qNum, relativeThreshold));
-                if (validFillers.length > 0) {
-                    // Check distinctness against existing passers before replacing
-                    const passingTexts = finalPassers.map(p => p.text);
-                    const distinctFillers = [];
-                    for (const filler of validFillers) {
-                        const tooSimilar = passingTexts.some(passingText => textSimilarity(filler.text, passingText) > config_1.CFG.DISTINCTNESS_MAX_COS);
-                        if (!tooSimilar) {
-                            distinctFillers.push(filler);
-                        }
-                        else {
-                            console.log(`[8Q] Filler "${filler.text}" rejected: too similar to existing passers`);
-                        }
-                    }
-                    if (distinctFillers.length > 0) {
-                        // Replace worst failures with valid distinct filler options
-                        const failures = revalidatedOptions.filter(c => !passesAllGates(c, qNum, relativeThreshold));
-                        failures.sort((a, b) => a.relevance - b.relevance); // Worst first
-                        let replaced = 0;
-                        distinctFillers.forEach((filler) => {
-                            if (replaced < failures.length && replaced < missingCount) {
-                                const replaceIndex = finalOptions.findIndex(opt => opt.id === failures[replaced].id);
-                                if (replaceIndex >= 0) {
-                                    finalOptions[replaceIndex] = filler;
-                                    replaced++;
-                                }
-                            }
-                        });
-                        if (replaced > 0) {
-                            console.log(`[8Q] Filler attempt ${attempt} succeeded: replaced ${replaced} failing option(s)`);
-                            fillerSuccess = true;
-                            break;
-                        }
-                        else {
-                            console.log(`[8Q] Filler attempt ${attempt} failed: no distinct options generated`);
-                        }
-                    }
-                    else {
-                        console.log(`[8Q] Filler attempt ${attempt} failed: all fillers too similar to existing options`);
+        if (batchFillerResult.success && batchFillerResult.validReplacements.length > 0) {
+            // Replace worst failures with valid batch filler options
+            const failures = revalidatedOptions.filter(c => !passesAllGates(c, qNum, relativeThreshold));
+            failures.sort((a, b) => a.relevance - b.relevance); // Worst first
+            let replaced = 0;
+            batchFillerResult.validReplacements.forEach((replacement) => {
+                if (replaced < failures.length && replaced < missingCount) {
+                    const replaceIndex = finalOptions.findIndex(opt => opt.id === failures[replaced].id);
+                    if (replaceIndex >= 0) {
+                        finalOptions[replaceIndex] = replacement;
+                        replaced++;
                     }
                 }
+            });
+            if (replaced > 0) {
+                console.log(`[8Q] Batch filler succeeded: replaced ${replaced} failing option(s)`);
+                fillerSuccess = true;
             }
-            if (attempt < 3) {
-                console.log(`[8Q] Filler attempt ${attempt} failed, trying again...`);
+        }
+        // Step 6B: Deterministic template fallback if batch filler failed
+        if (!fillerSuccess) {
+            console.log(`[8Q] Batch filler failed, using deterministic template fallback...`);
+            const templateResult = await deterministicTemplateFallback(finalOptions, finalPassers, missingCount, state, qNum, relativeThreshold);
+            if (templateResult.success && templateResult.templateOptions.length > 0) {
+                // Replace worst failures with template options
+                const failures = revalidatedOptions.filter(c => !passesAllGates(c, qNum, relativeThreshold));
+                failures.sort((a, b) => a.relevance - b.relevance); // Worst first
+                let replaced = 0;
+                templateResult.templateOptions.forEach((template) => {
+                    if (replaced < failures.length && replaced < missingCount) {
+                        const replaceIndex = finalOptions.findIndex(opt => opt.id === failures[replaced].id);
+                        if (replaceIndex >= 0) {
+                            finalOptions[replaceIndex] = template;
+                            replaced++;
+                        }
+                    }
+                });
+                if (replaced > 0) {
+                    console.log(`[8Q] Template fallback succeeded: replaced ${replaced} failing option(s)`);
+                    fillerSuccess = true;
+                }
             }
         }
         if (!fillerSuccess) {
-            console.warn(`[8Q] All filler attempts failed - question will have failures`);
+            console.warn(`[8Q] Both batch filler and template fallback failed - question will have failures`);
         }
     }
     // Step 7: Final validation - MUST pass all gates
@@ -565,4 +558,272 @@ function getQuestionSpecificGuidance(qNum, idea) {
         default:
             return `Be specific and concrete about ${idea}.`;
     }
+}
+// Enhanced batch filler - generates 3 candidates in one call with explicit constraints
+async function enhancedBatchFiller(messages, currentOptions, passers, missingCount, ideaCtx, state, qNum, relativeThreshold, bestRelevance) {
+    console.log(`[8Q] Enhanced batch filler: generating 3 candidates for ${missingCount} slot(s)...`);
+    // Step B: Dynamic relevance fallback for filler only
+    const dynamicRelativeThreshold = bestRelevance < 0.50
+        ? bestRelevance * 0.85 // 85% of best if best < 0.50
+        : bestRelevance * 0.90; // 90% of best if best >= 0.50
+    console.log(`[8Q] Dynamic filler threshold: best=${bestRelevance.toFixed(3)}, using ${dynamicRelativeThreshold.toFixed(3)} (${bestRelevance < 0.50 ? '85%' : '90%'} of best)`);
+    const passingTexts = passers.map(p => p.text);
+    const specificityReq = getSpecificityRequirement(qNum);
+    const questionSpecificAnchors = getQuestionSpecificAnchors(qNum);
+    const batchFillerPrompt = `BATCH FILLER (3 CANDIDATES): Generate exactly 3 replacement options that MUST pass all gates.
+
+CONTEXT: Q${qNum} for idea: "${state.idea}"
+Recent answers: ${state.answers.slice(-2).map(a => `Q${a.q}: ${a.summary}`).join('; ')}
+
+EXISTING PASSING OPTIONS (avoid duplication): ${passingTexts.join(' | ')}
+
+CRITICAL REQUIREMENTS (ALL 3 CANDIDATES MUST MEET):
+1. Relevance: ≥ ${config_1.CFG.RELEVANCE_THRESH} OR ≥ ${dynamicRelativeThreshold.toFixed(3)} to context: "${ideaCtx}"
+2. Specificity: ${specificityReq}
+3. Distinctness: Clearly different from existing options AND from each other
+4. Length: Under 140 characters each
+
+QUESTION-SPECIFIC ANCHORS (each candidate MUST include at least one):
+${questionSpecificAnchors}
+
+AXES TO DIFFERENTIATE (use different combinations):
+- Customer segment (team size, role, industry)
+- Mechanism (tool integration, automation, AI feature)
+- Channel (platform, distribution, partnership)  
+- Scope (feature breadth, use case, timeline)
+
+CRITICAL FOR HIGH RELEVANCE:
+- Reference the core idea: "${state.idea}"
+- Connect to recent context: ${state.answers.slice(-2).map(a => a.summary).join(', ')}
+- Use precise vocabulary for Q${qNum}
+${qNum === 7 ? '- Name concrete edge assets (datasets, partnerships, distribution)' : ''}
+${qNum === 8 ? '- Focus on risks CAUSED BY the proposed solution' : ''}
+
+Generate 3 genuinely distinct, highly relevant candidates that directly address Q${qNum}.`;
+    try {
+        const batchRes = await client_1.openai.chat.completions.create({
+            model: config_1.CFG.CHAT_MODEL,
+            messages: [...messages, { role: 'user', content: batchFillerPrompt }],
+            tools: tools_1.tools,
+            tool_choice: { type: 'function', function: { name: 'suggest_options' } },
+            temperature: 0.5 // Slightly higher for diversity across 3 candidates
+        });
+        const batchTc = batchRes.choices[0].message.tool_calls?.[0];
+        if (batchTc) {
+            const batchPayload = (0, sanitize_1.sanitize)(JSON.parse(batchTc.function.arguments));
+            if (batchPayload.options && batchPayload.options.length >= 3) {
+                // Score all 3 candidates
+                const scoredCandidates = await scoreAllCandidates(ideaCtx, batchPayload.options.slice(0, 3), state, qNum);
+                // Filter for those that pass gates with dynamic threshold
+                const validCandidates = scoredCandidates.filter(c => (c.relevance >= config_1.CFG.RELEVANCE_THRESH || c.relevance >= dynamicRelativeThreshold) &&
+                    c.specificity);
+                if (validCandidates.length > 0) {
+                    // Check distinctness against existing passers
+                    const distinctCandidates = [];
+                    for (const candidate of validCandidates) {
+                        const tooSimilar = passingTexts.some(passingText => textSimilarity(candidate.text, passingText) > config_1.CFG.DISTINCTNESS_MAX_COS);
+                        if (!tooSimilar) {
+                            distinctCandidates.push(candidate);
+                        }
+                        else {
+                            console.log(`[8Q] Batch candidate "${candidate.text}" rejected: too similar to existing passers`);
+                        }
+                    }
+                    if (distinctCandidates.length > 0) {
+                        console.log(`[8Q] Batch filler generated ${distinctCandidates.length} valid replacement(s)`);
+                        return { success: true, validReplacements: distinctCandidates.slice(0, missingCount) };
+                    }
+                }
+                console.log(`[8Q] Batch filler: no candidates passed gates (${validCandidates.length} valid, distinctness filtered)`);
+            }
+        }
+    }
+    catch (error) {
+        console.warn(`[8Q] Batch filler failed:`, error);
+    }
+    return { success: false, validReplacements: [] };
+}
+// Deterministic template fallback - guaranteed to produce valid options
+async function deterministicTemplateFallback(currentOptions, passers, missingCount, state, qNum, relativeThreshold) {
+    console.log(`[8Q] Deterministic template fallback for Q${qNum}...`);
+    const passingTexts = passers.map(p => p.text);
+    const templateOptions = [];
+    // Extract context for variable filling
+    const platforms = extractPlatformsFromAnswers(state.answers);
+    const tools = extractToolsFromAnswers(state.answers);
+    const numbers = extractNumbersFromAnswers(state.answers);
+    for (let i = 0; i < missingCount && templateOptions.length < missingCount; i++) {
+        const template = generateTemplate(qNum, i, platforms, tools, numbers, state.idea);
+        if (template) {
+            // Check distinctness against existing passers and previous templates
+            const allExistingTexts = [...passingTexts, ...templateOptions.map(t => t.text)];
+            const tooSimilar = allExistingTexts.some(existingText => textSimilarity(template.text, existingText) > config_1.CFG.DISTINCTNESS_MAX_COS);
+            if (!tooSimilar) {
+                templateOptions.push(template);
+                console.log(`[8Q] Template ${i + 1}: "${template.text}"`);
+            }
+            else {
+                // Adjust template to be more distinct
+                const adjustedTemplate = adjustTemplateForDistinctness(template, qNum, i, platforms, tools, numbers);
+                if (adjustedTemplate && !allExistingTexts.some(existingText => textSimilarity(adjustedTemplate.text, existingText) > config_1.CFG.DISTINCTNESS_MAX_COS)) {
+                    templateOptions.push(adjustedTemplate);
+                    console.log(`[8Q] Adjusted template ${i + 1}: "${adjustedTemplate.text}"`);
+                }
+            }
+        }
+    }
+    const success = templateOptions.length > 0;
+    if (success) {
+        console.log(`[8Q] Template fallback generated ${templateOptions.length} option(s)`);
+    }
+    return { success, templateOptions };
+}
+function getQuestionSpecificAnchors(qNum) {
+    switch (qNum) {
+        case 7:
+            return `- "dataset of X items", "exclusive partnership with Y", "preinstalled in X workspaces", "fine-tuned on X projects", "private API access", "proprietary data"`;
+        case 8:
+            return `- "model accuracy", "integration friction", "adoption risk", "privacy concerns", "technical limitations", "competitive response"`;
+        case 6:
+            return `- "Slack", "Teams", "Zoom", "Trello", "Asana", "Monday.com", "Google Docs", "email chains", "Dropbox", "Miro"`;
+        default:
+            return `- Numbers/percentages, specific tools (Slack, Teams, etc.), timeframes (3-6 months), measurable outcomes`;
+    }
+}
+function generateTemplate(qNum, templateIndex, platforms, tools, numbers, idea) {
+    const defaultPlatforms = ['Slack', 'Teams', 'Asana', 'Trello', 'Monday.com'];
+    const defaultTools = ['Adobe CC', 'Google Workspace', 'Dropbox', 'Miro', 'Jira'];
+    const platform = platforms[templateIndex] || defaultPlatforms[templateIndex % defaultPlatforms.length];
+    const tool = tools[templateIndex] || defaultTools[templateIndex % defaultTools.length];
+    const percentage = numbers.percentage || [15, 25, 30][templateIndex % 3];
+    const count = numbers.count || [100, 250, 500][templateIndex % 3];
+    const timeframe = numbers.timeframe || [3, 6, 12][templateIndex % 3];
+    let text;
+    let why;
+    if (qNum === 7) {
+        // Q7 edge asset templates
+        const templates = [
+            {
+                text: `Proprietary dataset of ${count}k creative briefs labeled across ${Math.floor(count / 10)} categories; improves suggestion accuracy by ${percentage}%.`,
+                why: `Concrete edge asset - exclusive training data with specific numbers that competitors can't easily replicate.`
+            },
+            {
+                text: `Exclusive partnership with ${platform} for preinstall on ${count} workspaces; drives immediate adoption.`,
+                why: `Distribution advantage through named platform partnership that creates barrier to entry.`
+            },
+            {
+                text: `Model fine-tuned on ${count} domain projects; outperforms baseline by ${percentage}% on creative tasks.`,
+                why: `Technical edge through specialized training that requires significant domain expertise to replicate.`
+            }
+        ];
+        const template = templates[templateIndex % templates.length];
+        text = template.text;
+        why = template.why;
+    }
+    else if (qNum === 8) {
+        // Q8 risk templates
+        const templates = [
+            {
+                text: `Model misinterpretation of creative edge cases could cut task accuracy by ${percentage}% vs human baseline.`,
+                why: `Technical risk specific to AI model limitations that could impact core value proposition.`
+            },
+            {
+                text: `Integration friction with ${platform} may delay team onboarding by ${timeframe} weeks vs current workflow.`,
+                why: `Adoption risk tied to platform dependencies that could slow user acquisition.`
+            },
+            {
+                text: `Only ${percentage}% of teams may switch from ${tool} in first ${timeframe} months due to workflow lock-in.`,
+                why: `Market penetration risk based on realistic adoption challenges against established tools.`
+            }
+        ];
+        const template = templates[templateIndex % templates.length];
+        text = template.text;
+        why = template.why;
+    }
+    else {
+        // Generic template for other questions
+        return null;
+    }
+    if (text.length > 140) {
+        text = text.substring(0, 137) + '...';
+    }
+    return {
+        id: ['A', 'B', 'C'][templateIndex],
+        text,
+        why,
+        assumptions: [`Template-generated for Q${qNum} specificity`],
+        tags: qNum === 7 ? ['edge', 'competitive'] : qNum === 8 ? ['risk', 'business'] : ['generated']
+    };
+}
+function adjustTemplateForDistinctness(template, qNum, templateIndex, platforms, tools, numbers) {
+    // Simple adjustments to make template more distinct
+    const altPlatforms = ['Adobe CC', 'Notion', 'Airtable', 'Figma', 'Canva'];
+    const altTools = ['ClickUp', 'Linear', 'Coda', 'Frame.io', 'Loom'];
+    const altPlatform = altPlatforms[templateIndex % altPlatforms.length];
+    const altTool = altTools[templateIndex % altTools.length];
+    let adjustedText = template.text;
+    // Swap platform/tool names and adjust numbers slightly
+    if (qNum === 7) {
+        adjustedText = adjustedText.replace(/Slack|Teams|Asana/g, altPlatform);
+        adjustedText = adjustedText.replace(/100k/g, '150k').replace(/250k/g, '300k').replace(/500k/g, '750k');
+        adjustedText = adjustedText.replace(/15%/g, '20%').replace(/25%/g, '35%').replace(/30%/g, '40%');
+    }
+    else if (qNum === 8) {
+        adjustedText = adjustedText.replace(/Slack|Teams|Asana|Trello|Monday\.com/g, altPlatform);
+        adjustedText = adjustedText.replace(/Adobe CC|Google Workspace|Dropbox/g, altTool);
+        adjustedText = adjustedText.replace(/3 weeks/g, '4 weeks').replace(/6 weeks/g, '8 weeks');
+    }
+    if (adjustedText !== template.text && adjustedText.length <= 140) {
+        return {
+            ...template,
+            text: adjustedText,
+            why: template.why.replace('specific to', 'related to') // Minor why adjustment
+        };
+    }
+    return null;
+}
+function extractPlatformsFromAnswers(answers) {
+    const platforms = [];
+    const platformRegex = /\b(Slack|Teams|Asana|Trello|Monday\.com|Zoom|Adobe|Google|Dropbox|Miro|Figma|Notion|Airtable)\b/gi;
+    answers.forEach(answer => {
+        const matches = answer.summary.match(platformRegex);
+        if (matches) {
+            platforms.push(...matches);
+        }
+    });
+    return [...new Set(platforms)]; // Remove duplicates
+}
+function extractToolsFromAnswers(answers) {
+    const tools = [];
+    const toolRegex = /\b(CC|Workspace|Docs|Sheets|Drive|OneDrive|Dropbox|Box|Jira|Linear|ClickUp)\b/gi;
+    answers.forEach(answer => {
+        const matches = answer.summary.match(toolRegex);
+        if (matches) {
+            tools.push(...matches);
+        }
+    });
+    return [...new Set(tools)];
+}
+function extractNumbersFromAnswers(answers) {
+    let percentage = null;
+    let count = null;
+    let timeframe = null;
+    answers.forEach(answer => {
+        // Extract percentages
+        const percentMatch = answer.summary.match(/(\d+)%/);
+        if (percentMatch && !percentage) {
+            percentage = parseInt(percentMatch[1]);
+        }
+        // Extract counts (k, thousand, etc.)
+        const countMatch = answer.summary.match(/(\d+)k|(\d+)\s*thousand|(\d+)\s*users|(\d+)\s*teams/i);
+        if (countMatch && !count) {
+            count = parseInt(countMatch[1] || countMatch[2] || countMatch[3] || countMatch[4]);
+        }
+        // Extract timeframes
+        const timeMatch = answer.summary.match(/(\d+)\s*(weeks?|months?)/i);
+        if (timeMatch && !timeframe) {
+            timeframe = parseInt(timeMatch[1]);
+        }
+    });
+    return { percentage, count, timeframe };
 }

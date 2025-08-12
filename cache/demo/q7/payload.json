@@ -10,42 +10,45 @@
   "options": [
     {
       "id": "A",
-      "text": "AI model fine-tuned on 100K creative projects",
-      "why": "Delivers optimized suggestions specific to creative workflows",
+      "text": "Proprietary dataset of 2M creative team interactions",
+      "why": "Improves AI's contextual understanding and suggestions",
       "assumptions": [
-        "Model training data is relevant",
-        "AI model is efficient"
-      ],
-      "tags": [
-        "model"
-      ],
-      "relevance": 0.5415066578781518,
-      "specificity": true,
-      "compositeScore": 0.6415066578781518
-    },
-    {
-      "id": "B",
-      "text": "Proprietary dataset of 2M labeled creative tasks",
-      "why": "Enables superior task prediction accuracy",
-      "assumptions": [
-        "Data quality high",
-        "dataset exclusive"
+        "Dataset quality high"
       ],
       "tags": [
         "dataset"
       ],
-      "relevance": 0.4547378203701099,
+      "relevance": 0.5624755485371853,
       "specificity": true,
-      "compositeScore": 0.5547378203701099
+      "compositeScore": 0.6624755485371853
+    },
+    {
+      "id": "B",
+      "text": "Model fine-tuned on 5k creative projects",
+      "why": "Delivers superior task prioritization for creative work",
+      "assumptions": [
+        "Projects are diverse"
+      ],
+      "tags": [
+        "model"
+      ],
+      "relevance": 0.5127986443747655,
+      "specificity": true,
+      "compositeScore": 0.6127986443747655
     },
     {
       "id": "C",
-      "text": "Exclusive dataset of 100k creative briefs with Adobe",
-      "why": "Provides unmatched insights for tailored AI solutions",
+      "text": "Exclusive partnership with Slack for API access to enhance AI copilot",
+      "why": "Allows unique integration, boosting response rate by 20%",
       "assumptions": [
-        "Adobe partnership",
-        "dataset access"
-      ]
+        "Slack willing to partner",
+        "API access enhances AI"
+      ],
+      "tags": [
+        "exclusive partnership"
+      ],
+      "relevance": 0.6580785291455966,
+      "specificity": true
     }
   ]
 }
