@@ -10,48 +10,46 @@
   "options": [
     {
       "id": "A",
-      "text": "Remote teams face 30% productivity loss due to tool overload",
-      "why": "Streamlines tool usage to improve focus",
+      "text": "Teams spend 20% time on redundant tasks like updates.",
+      "why": "Drains creative energy and focus.",
       "assumptions": [
-        "Multiple tools are used",
-        "Tool switching disrupts flow"
+        "Manual updates frequent",
+        "Tasks repetitive"
       ],
-      "relevance": 0.43667895455924916,
+      "relevance": 0.4275185034775708,
       "specificity": true,
       "failureReasons": [
-        "relevance: 0.437 < 0.45"
+        "relevance: 0.428 < 0.45"
       ],
-      "compositeScore": 0.3366789545592492
+      "compositeScore": 0.3275185034775708
     },
     {
       "id": "B",
-      "text": "Remote team miscommunications lead to 3+ project delays/month",
-      "why": "Improves delivery timelines by ensuring clarity",
+      "text": "Weekly 5-hour delays in design approvals slow projects.",
+      "why": "Causes bottlenecks and frustration.",
       "assumptions": [
-        "Teams use chat apps",
-        "Projects have defined timelines"
+        "Designs need approval",
+        "Approvals delayed"
       ],
-      "relevance": 0.4261937128157947,
+      "relevance": 0.3855947486378273,
       "specificity": true,
       "failureReasons": [
-        "relevance: 0.426 < 0.45"
+        "relevance: 0.386 < 0.45"
       ],
-      "compositeScore": 0.32619371281579473
+      "compositeScore": 0.28559474863782724
     },
     {
       "id": "C",
-      "text": "Creative teams spend 5+ hours weekly on status updates",
-      "why": "Frees up time for creative tasks",
+      "text": "Weekly 15% delay due to misaligned creative briefs in remote teams.",
+      "why": "Misalignment causes rework and delays, impacting deadlines.",
       "assumptions": [
-        "Regular status updates needed",
-        "Time-consuming manual process"
+        "Remote communication challenges",
+        "Briefs are central to workflow"
       ],
-      "relevance": 0.4155883865105028,
-      "specificity": true,
-      "failureReasons": [
-        "relevance: 0.416 < 0.45"
-      ],
-      "compositeScore": 0.31558838651050275
+      "tags": [
+        "remote",
+        "briefs"
+      ]
     }
   ]
 }

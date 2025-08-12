@@ -19,24 +19,23 @@
       "tags": [
         "slack"
       ],
-      "relevance": 0.5981470906081684,
+      "relevance": 0.5981611247354449,
       "specificity": true,
-      "compositeScore": 0.6981470906081684
+      "compositeScore": 0.6981611247354449
     },
     {
       "id": "B",
-      "text": "AI assistant for marketing teams using Asana to automate task tracking",
-      "why": "Improves task tracking accuracy by 25%",
+      "text": "AI assistant in Asana for 50+ person marketing teams",
+      "why": "Reduces task management time by 15%",
       "assumptions": [
-        "Asana in use",
-        "marketing teams"
+        "Asana in use"
       ],
       "tags": [
         "asana"
       ],
-      "relevance": 0.5033583215985021,
+      "relevance": 0.5116687607688184,
       "specificity": true,
-      "compositeScore": 0.6033583215985021
+      "compositeScore": 0.6116687607688184
     },
     {
       "id": "C",
@@ -48,9 +47,9 @@
       "tags": [
         "figma"
       ],
-      "relevance": 0.477030275634939,
+      "relevance": 0.4770208308494591,
       "specificity": true,
-      "compositeScore": 0.577030275634939
+      "compositeScore": 0.5770208308494591
     }
   ]
 }

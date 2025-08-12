@@ -10,39 +10,48 @@
   "options": [
     {
       "id": "A",
-      "text": "Teams use Trello for task management instead of Slack bot.",
-      "why": "Trello is a familiar tool for many creative teams.",
+      "text": "They use Asana for project management tasks.",
+      "why": "Widely adopted for task tracking and collaboration among creative teams.",
       "assumptions": [
-        "Trello is already in use",
-        "Teams prefer visual task boards"
+        "Asana is already integrated in workflows.",
+        "Teams need project management."
       ],
-      "relevance": 0.6265253967281954,
+      "tags": [
+        "asana"
+      ],
+      "relevance": 0.5591458832159222,
       "specificity": true,
-      "compositeScore": 0.7265253967281954
+      "compositeScore": 0.6591458832159222
     },
     {
       "id": "B",
-      "text": "Teams use Zoom for synchronous collaboration instead of Slack bot.",
-      "why": "Zoom offers real-time communication and screen sharing.",
+      "text": "Use Trello to coordinate and track creative projects.",
+      "why": "Visual board system is popular for organizing tasks creatively.",
       "assumptions": [
-        "Teams prioritize live meetings",
-        "Zoom is already adopted"
+        "Trello is familiar to team members.",
+        "Board-based planning suits team needs."
       ],
-      "relevance": 0.502139219447363,
+      "tags": [
+        "trello"
+      ],
+      "relevance": 0.5131298954686918,
       "specificity": true,
-      "compositeScore": 0.6021392194473629
+      "compositeScore": 0.6131298954686918
     },
     {
       "id": "C",
-      "text": "Monday.com is an alternative vendor for workflow automation.",
-      "why": "Offers integrated project management features.",
+      "text": "Teams use Google Workspace for document collaboration.",
+      "why": "Google's suite is popular for its real-time collaboration features.",
       "assumptions": [
-        "Teams need comprehensive project management",
-        "Monday.com fits budget"
+        "Documents are central to projects.",
+        "Google tools are already in use."
       ],
-      "relevance": 0.4720690969499845,
+      "tags": [
+        "google_workspace"
+      ],
+      "relevance": 0.5054811375458788,
       "specificity": true,
-      "compositeScore": 0.5720690969499845
+      "compositeScore": 0.6054811375458787
     }
   ]
 }

@@ -10,42 +10,45 @@
   "options": [
     {
       "id": "A",
-      "text": "Achieve 90% adoption rate among teams within 4 months",
-      "why": "High adoption ensures broad impact and validates product fit.",
+      "text": "Increase team productivity by 15% in 6 months",
+      "why": "Measures task completion rate improvement through automation",
       "assumptions": [
-        "Adoption metrics tracked",
-        "Teams incentivized"
+        "Baseline productivity known",
+        "team adoption"
       ],
-      "relevance": 0.47051601708211666,
+      "tags": [
+        "productivity"
+      ],
+      "relevance": 0.5141371234388208,
       "specificity": true,
-      "compositeScore": 0.5705160170821166
+      "compositeScore": 0.6141371234388208
     },
     {
       "id": "B",
-      "text": "Improve cross-team collaboration score by 40% in 9 months",
-      "why": "Better collaboration enhances innovation and cohesion.",
+      "text": "Boost collaboration efficiency score by 25% in 1 year",
+      "why": "Long-term measure of improved synergy and task synergy",
       "assumptions": [
-        "Collaboration scores available",
-        "Cross-team projects exist"
+        "Efficiency baseline exists",
+        "collaborative tasks measured"
       ],
-      "relevance": 0.45331342249838263,
+      "tags": [
+        "collaboration"
+      ],
+      "relevance": 0.45117819494880085,
       "specificity": true,
-      "compositeScore": 0.5533134224983827
+      "compositeScore": 0.5511781949488008
     },
     {
       "id": "C",
-      "text": "Boost user satisfaction score by 30% within 3 months",
-      "why": "High user satisfaction indicates better tool adoption and value perception.",
+      "text": "Boost team satisfaction by 30% through AI-driven feedback loops",
+      "why": "Enhances engagement and morale, leading to better creative output",
       "assumptions": [
-        "User surveys conducted",
-        "Feedback loop exists"
+        "Feedback is actionable",
+        "Teams value morale"
       ],
-      "relevance": 0.43610959592409526,
-      "specificity": true,
-      "failureReasons": [
-        "relevance: 0.436 < 0.45"
-      ],
-      "compositeScore": 0.33610959592409523
+      "tags": [
+        "team satisfaction"
+      ]
     }
   ]
 }

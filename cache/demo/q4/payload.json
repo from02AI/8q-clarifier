@@ -2,47 +2,47 @@
   "questionNumber": 4,
   "notes": {
     "distinctAxes": [
-      "mechanism",
-      "integration",
+      "delivery",
+      "named tool",
       "automation"
     ]
   },
   "options": [
     {
       "id": "A",
-      "text": "Slack bot for 10-50p teams, automating task updates and reminders",
-      "why": "Reduces manual updates by 30%, boosting focus",
+      "text": "SaaS for automating repetitive creative tasks",
+      "why": "Automates low-value tasks, boosting efficiency by 30%",
       "assumptions": [
-        "Slack usage",
-        "task updates needed"
+        "Teams have repetitive tasks",
+        "Workflows are standard"
       ],
-      "tags": [
-        "slack",
-        "automation"
-      ]
+      "relevance": 0.5985836539173385,
+      "specificity": true,
+      "compositeScore": 0.6985836539173385
     },
     {
       "id": "B",
-      "text": "Asana bot for remote creative teams to automate task prioritization",
-      "why": "Increases task efficiency by 25% within 2 months",
+      "text": "Figma plugin for team design feedback",
+      "why": "Centralizes feedback, speeds up process by 25%",
       "assumptions": [
-        "Asana in use",
-        "teams follow bot suggestions"
+        "Teams use Figma",
+        "Feedback is decentralized"
       ],
-      "tags": [
-        "asana"
-      ]
+      "relevance": 0.503080570813198,
+      "specificity": true,
+      "compositeScore": 0.603080570813198
     },
     {
       "id": "C",
-      "text": "Google Workspace add-on for 20-50p creative teams to automate file organization",
-      "why": "Reduces file search time by 40%",
+      "text": "Slack bot for creative teams to auto-organize project files",
+      "why": "Streamlines file management, saving 20% of search time",
       "assumptions": [
-        "Google Workspace in use",
-        "Teams rely on shared files"
+        "Slack in use",
+        "Teams use shared drives"
       ],
       "tags": [
-        "google workspace"
+        "slack",
+        "file management"
       ]
     }
   ]

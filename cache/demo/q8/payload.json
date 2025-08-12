@@ -10,41 +10,37 @@
   "options": [
     {
       "id": "A",
-      "text": "AI model accuracy may drop with unique team slang or jargon.",
-      "why": "Could reduce task update accuracy, impacting trust.",
+      "text": "AI accuracy might not meet creative standards.",
+      "why": "Misaligned output could lead to rework, reducing efficiency.",
       "assumptions": [
-        "AI can't pre-train on all slang"
+        "AI model needs more training",
+        "creative tasks are nuanced"
       ],
-      "relevance": 0.49637431988507946,
+      "relevance": 0.5322575949013635,
       "specificity": true,
-      "compositeScore": 0.5963743198850795
+      "compositeScore": 0.6322575949013635
     },
     {
       "id": "B",
-      "text": "AI misinterpretation of creative tasks could reduce efficiency by 15%",
-      "why": "Inaccurate task handling may lead to rework and frustration",
+      "text": "AI model bias could affect creative output quality.",
+      "why": "Ensuring unbiased AI is crucial for maintaining creative integrity and user trust.",
       "assumptions": [
-        "AI lacks context",
-        "creative tasks are nuanced"
-      ],
-      "tags": [
-        "AI accuracy"
+        "AI model training data is diverse",
+        "Users expect high-quality output"
       ]
     },
     {
       "id": "C",
-      "text": "User resistance to replacing Trello with Slack bot could limit adoption to 60%",
-      "why": "Teams may prefer familiar tools, slowing transition.",
+      "text": "Integration with existing tools may face technical challenges.",
+      "why": "Seamless integration is crucial for user adoption and efficiency.",
       "assumptions": [
-        "Teams are currently using Trello",
-        "Slack bot is perceived as less useful"
+        "Teams use diverse tools",
+        "APIs may be limited"
       ],
       "tags": [
-        "user adoption",
-        "competition"
-      ],
-      "relevance": 0.4852711532447815,
-      "specificity": true
+        "integration",
+        "technical"
+      ]
     }
   ]
 }

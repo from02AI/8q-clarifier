@@ -123,23 +123,43 @@ async function generateQuestionV2(state, qNum, qText) {
                 const scoredFillers = await scoreAllCandidates(ideaCtx, fillerResult.fillerOptions, state, qNum);
                 const validFillers = scoredFillers.filter(f => passesAllGates(f, qNum, relativeThreshold));
                 if (validFillers.length > 0) {
-                    // Replace worst failures with valid filler options
-                    const failures = revalidatedOptions.filter(c => !passesAllGates(c, qNum, relativeThreshold));
-                    failures.sort((a, b) => a.relevance - b.relevance); // Worst first
-                    let replaced = 0;
-                    validFillers.forEach((filler) => {
-                        if (replaced < failures.length && replaced < missingCount) {
-                            const replaceIndex = finalOptions.findIndex(opt => opt.id === failures[replaced].id);
-                            if (replaceIndex >= 0) {
-                                finalOptions[replaceIndex] = filler;
-                                replaced++;
-                            }
+                    // Check distinctness against existing passers before replacing
+                    const passingTexts = finalPassers.map(p => p.text);
+                    const distinctFillers = [];
+                    for (const filler of validFillers) {
+                        const tooSimilar = passingTexts.some(passingText => textSimilarity(filler.text, passingText) > config_1.CFG.DISTINCTNESS_MAX_COS);
+                        if (!tooSimilar) {
+                            distinctFillers.push(filler);
                         }
-                    });
-                    if (replaced > 0) {
-                        console.log(`[8Q] Filler attempt ${attempt} succeeded: replaced ${replaced} failing option(s)`);
-                        fillerSuccess = true;
-                        break;
+                        else {
+                            console.log(`[8Q] Filler "${filler.text}" rejected: too similar to existing passers`);
+                        }
+                    }
+                    if (distinctFillers.length > 0) {
+                        // Replace worst failures with valid distinct filler options
+                        const failures = revalidatedOptions.filter(c => !passesAllGates(c, qNum, relativeThreshold));
+                        failures.sort((a, b) => a.relevance - b.relevance); // Worst first
+                        let replaced = 0;
+                        distinctFillers.forEach((filler) => {
+                            if (replaced < failures.length && replaced < missingCount) {
+                                const replaceIndex = finalOptions.findIndex(opt => opt.id === failures[replaced].id);
+                                if (replaceIndex >= 0) {
+                                    finalOptions[replaceIndex] = filler;
+                                    replaced++;
+                                }
+                            }
+                        });
+                        if (replaced > 0) {
+                            console.log(`[8Q] Filler attempt ${attempt} succeeded: replaced ${replaced} failing option(s)`);
+                            fillerSuccess = true;
+                            break;
+                        }
+                        else {
+                            console.log(`[8Q] Filler attempt ${attempt} failed: no distinct options generated`);
+                        }
+                    }
+                    else {
+                        console.log(`[8Q] Filler attempt ${attempt} failed: all fillers too similar to existing options`);
                     }
                 }
             }
@@ -210,7 +230,7 @@ function buildQuestionContext(qNum, state) {
             anchor = `Common alternatives to ${baseIdea} are tool names and workflows (e.g., email chains, Zoom meetings, Trello/Asana boards, Google Docs/Sheets, Dropbox). Stay on 'what they use today.' Context: ${recentAnswers}`;
             break;
         case 7:
-            anchor = `Hard-to-copy edge for business idea: ${baseIdea}. Context: ${recentAnswers}. Focus on concrete edge assets like exclusive datasets (quantify size), named partnerships, distribution advantages, proprietary API access, or model fine-tuning.`;
+            anchor = `Hard-to-copy competitive edge for AI copilot: ${baseIdea}. Context: ${recentAnswers}. Focus on proprietary assets like exclusive training datasets (with size), model fine-tuning advantages, named partnerships that enhance the AI copilot, or distribution locks that make the AI solution hard to replicate.`;
             break;
         case 8:
             anchor = `Business risks for business idea: ${baseIdea}. Context: ${recentAnswers}`;
@@ -473,18 +493,25 @@ async function lastMileFiller(messages, currentOptions, passers, missingCount, i
 CONTEXT: You're answering Q${qNum} for this idea: ${state.idea}
 Recent answers context: ${state.answers.slice(-2).map(a => `Q${a.q}: ${a.summary}`).join('; ')}
 
-CURRENT OPTIONS (to differentiate from): ${currentTexts}
+CURRENT OPTIONS (DO NOT REPEAT THESE - be clearly different): ${currentTexts}
 
-REQUIREMENTS:
-1. Relevance: MUST achieve ≥ ${config_1.CFG.RELEVANCE_THRESH} relevance to the idea context "${ideaCtx}"
+CRITICAL REQUIREMENTS (ALL MUST BE MET):
+1. Relevance: MUST achieve ≥ ${config_1.CFG.RELEVANCE_THRESH} relevance OR ≥ ${relativeThreshold.toFixed(3)} to idea context: "${ideaCtx}"
 2. Specificity: ${specificityReq}  
-3. Distinctness: Clearly different from existing options
+3. Distinctness: MUST be clearly different from existing options - use different approach, customer segment, mechanism, or tool
 4. Length: Under 140 characters each
 
 FOR Q${qNum} SPECIFICALLY:
 ${getQuestionSpecificGuidance(qNum, state.idea)}
 
-Generate ${missingCount} option(s) that are highly relevant to the core idea AND include concrete specificity details. Focus on being very specific to this exact question and idea.`;
+KEY STRATEGY FOR HIGH RELEVANCE:
+- Stay extremely close to the core business idea: "${state.idea}"
+- Reference specific context from recent answers: ${state.answers.slice(-2).map(a => a.summary).join(', ')}
+- Use question-appropriate vocabulary and concepts
+- ${qNum === 6 ? 'Focus on real tools/workflows teams use TODAY as alternatives' : ''}
+- ${qNum === 7 ? 'Name concrete proprietary assets (datasets with numbers, exclusive partnerships, distribution locks)' : ''}
+
+CRITICAL: Do NOT generate anything similar to existing options. Generate ${missingCount} genuinely distinct, highly relevant option(s) that directly address Q${qNum} in the context of "${state.idea}".`;
     try {
         const fillerRes = await client_1.openai.chat.completions.create({
             model: config_1.CFG.CHAT_MODEL,

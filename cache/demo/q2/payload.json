@@ -10,48 +10,39 @@
   "options": [
     {
       "id": "A",
-      "text": "Remote marketing teams using Asana, 20-50 people",
-      "why": "Focuses on Asana's user base for optimized task management.",
+      "text": "Remote design teams of 10–20 using Figma and Slack",
+      "why": "Focused support for small teams using popular tools increases relevance.",
       "assumptions": [
-        "Asana is main tool",
-        "marketing teams"
+        "Teams use Slack and Figma",
+        "10-20 team size"
       ],
-      "tags": [
-        "asana"
-      ],
-      "relevance": 0.560806783465211,
+      "relevance": 0.573786597929782,
       "specificity": true,
-      "compositeScore": 0.6608067834652109
+      "compositeScore": 0.673786597929782
     },
     {
       "id": "B",
-      "text": "Design agencies with 50-100 employees using Adobe Suite",
-      "why": "Caters to large teams needing creative workflow efficiency.",
+      "text": "30–50p creative agencies handling video projects using Adobe Suite",
+      "why": "Medium-sized agencies benefit from AI in complex project workflows.",
       "assumptions": [
-        "Adobe Suite users",
-        "design focus"
+        "Use Adobe Suite",
+        "30-50 team size"
       ],
-      "tags": [
-        "adobe"
-      ],
-      "relevance": 0.4804674234482939,
+      "relevance": 0.5258131194328038,
       "specificity": true,
-      "compositeScore": 0.5804674234482939
+      "compositeScore": 0.6258131194328038
     },
     {
       "id": "C",
-      "text": "Small startups (5-20 people) using Trello for project tracking",
-      "why": "Addresses needs of growing teams for agile project management.",
+      "text": "Small animation studios of 5–10 using Microsoft Teams",
+      "why": "Small studios can enhance collaboration and streamline communication.",
       "assumptions": [
-        "Trello usage",
-        "startup environment"
+        "Use Microsoft Teams",
+        "5-10 team size"
       ],
-      "tags": [
-        "trello"
-      ],
-      "relevance": 0.47597464413788715,
+      "relevance": 0.46843624424246094,
       "specificity": true,
-      "compositeScore": 0.5759746441378871
+      "compositeScore": 0.568436244242461
     }
   ]
 }

@@ -10,39 +10,42 @@
   "options": [
     {
       "id": "A",
-      "text": "Proprietary dataset of 100k creative task templates",
-      "why": "Enables AI to suggest highly relevant task updates and automations",
+      "text": "AI model fine-tuned on 100K creative projects",
+      "why": "Delivers optimized suggestions specific to creative workflows",
       "assumptions": [
-        "Dataset accurately labeled",
-        "covers diverse use cases"
+        "Model training data is relevant",
+        "AI model is efficient"
       ],
-      "relevance": 0.5331399189081232,
+      "tags": [
+        "model"
+      ],
+      "relevance": 0.5415066578781518,
       "specificity": true,
-      "compositeScore": 0.6331399189081232
+      "compositeScore": 0.6415066578781518
     },
     {
       "id": "B",
-      "text": "Fine-tuned model on 200 creative projects for task efficiency",
-      "why": "Provides superior automation by understanding specific creative workflows",
+      "text": "Proprietary dataset of 2M labeled creative tasks",
+      "why": "Enables superior task prediction accuracy",
       "assumptions": [
-        "Projects accurately reflect target workflows",
-        "fine-tuning improves efficiency"
+        "Data quality high",
+        "dataset exclusive"
       ],
-      "relevance": 0.5031484215723678,
+      "tags": [
+        "dataset"
+      ],
+      "relevance": 0.4547378203701099,
       "specificity": true,
-      "compositeScore": 0.6031484215723678
+      "compositeScore": 0.5547378203701099
     },
     {
       "id": "C",
-      "text": "Exclusive Slack partnership for pre-installation in 500 client workspaces",
-      "why": "Ensures immediate access and adoption for target users",
+      "text": "Exclusive dataset of 100k creative briefs with Adobe",
+      "why": "Provides unmatched insights for tailored AI solutions",
       "assumptions": [
-        "Slack partnership secured",
-        "client interest"
-      ],
-      "relevance": 0.4519021525284287,
-      "specificity": true,
-      "compositeScore": 0.5519021525284287
+        "Adobe partnership",
+        "dataset access"
+      ]
     }
   ]
 }

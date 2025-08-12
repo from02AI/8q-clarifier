@@ -34,6 +34,10 @@ async function judgeSpecificity(suggestions, questionNumber) {
     if (questionNumber === 8) {
         return judgeRiskSpecificity(suggestions);
     }
+    // For Q6 (alternatives), be very lenient with tool names - almost everything should pass
+    if (questionNumber === 6) {
+        return judgeAlternativesSpecificity(suggestions);
+    }
     const input = suggestions.map((s, i) => `${i + 1}. "${s.text}" - ${s.why}`).join('\n');
     try {
         const response = await client_1.openai.chat.completions.create({
@@ -73,6 +77,15 @@ async function judgeSpecificity(suggestions, questionNumber) {
         return specificityFallback(suggestions, questionNumber);
     }
 }
+// Special handling for alternatives questions (Q6) - very lenient
+async function judgeAlternativesSpecificity(suggestions) {
+    // For Q6 (alternatives), any mention of a tool name should pass
+    const altPattern = /\b(slack|teams|figma|trello|asana|notion|jira|salesforce|shopify|google|monday|airtable|zoom|adobe|miro|loom|canva|clickup|basecamp|github|gitlab|bitbucket|dropbox|drive|onedrive|sharepoint|hubspot|mailchimp|stripe|quickbooks|tableau|excel|word|powerpoint|outlook|gmail|calendar|discord|skype|whatsapp|email|video|phone|conference|meetings?|calls?|chains?|threads?|docs?|sheets?|slides?|presentations?|manual|spreadsheet|whiteboard|chat)\b/i;
+    return suggestions.map(s => {
+        const text = `${s.text} ${s.why ?? ''}`.toLowerCase();
+        return altPattern.test(text);
+    });
+}
 // Special handling for edge questions (Q7) - look for proprietary assets
 async function judgeEdgeSpecificity(suggestions) {
     // For edges, require concrete edge assets 
@@ -106,7 +119,7 @@ function specificityFallback(suggestions, questionNumber) {
         });
     }
     const numberPattern = /\b\d+(\s?[-–]\s?\d+)?\s?(%|percent|p|people|persons|person|staff|employees|users?|teams?|companies|businesses|days?|weeks?|months?|years?|minutes?|mins?|hrs?|hours?|seconds?|\/week|\/month|\/day|weekly|monthly|daily)\b/i;
-    const toolPattern = /\b(slack|microsoft\s*teams?|ms\s*teams?|teams|figma|trello|asana|notion|jira|salesforce|shopify|google\s*workspace|google\s*sheets?|google\s*docs|monday\.com|airtable|zoom|adobe|adobe\s*creative\s*suite|adobe\s*creative\s*cloud|miro|loom|canva|clickup|basecamp|github|gitlab|bitbucket|dropbox|google\s*drive|onedrive|sharepoint|hubspot|mailchimp|stripe|quickbooks|tableau|power\s*bi|excel|word|powerpoint|outlook|gmail|calendar|drive|discord|skype|whatsapp|email\s*chains|email\s*threads|video\s*calls?|phone\s*calls?|conference\s*calls?|meetings?)\b/i;
+    const toolPattern = /\b(slack|microsoft\s*teams?|ms\s*teams?|teams|figma|trello|asana|notion|jira|salesforce|shopify|google\s*workspace|google\s*sheets?|google\s*docs|monday\.com|airtable|zoom|adobe|adobe\s*creative\s*suite|adobe\s*creative\s*cloud|miro|loom|canva|clickup|basecamp|github|gitlab|bitbucket|dropbox|google\s*drive|onedrive|sharepoint|hubspot|mailchimp|stripe|quickbooks|tableau|power\s*bi|excel|word|powerpoint|outlook|gmail|calendar|drive|discord|skype|whatsapp|email\s*chains|email\s*threads|video\s*calls?|phone\s*calls?|conference\s*calls?|meetings?|monday|miro|calendly|calendars?|docs?|sheets?|slides?|presentations?)\b/i;
     const metricPattern = /\b(reduce|increase|improve|boost|enhance|decrease|save|gain)\s+(by\s+)?\d+\s?%/i;
     const timePattern = /\b(within|in|over|after|before)\s+\d+\s+(days?|weeks?|months?|years?|hours?|minutes?)/i;
     const sizePattern = /\b(small|medium|large|enterprise|startup|freelance|solo|remote)\b.*?\b(teams?|companies|businesses|organizations)\b/i;
