@@ -1,0 +1,48 @@
+{
+  "questionNumber": 7,
+  "notes": {
+    "distinctAxes": [
+      "edge",
+      "data_adv",
+      "workflow_lock"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Proprietary dataset of 100k creative task templates",
+      "why": "Enables AI to suggest highly relevant task updates and automations",
+      "assumptions": [
+        "Dataset accurately labeled",
+        "covers diverse use cases"
+      ],
+      "relevance": 0.5331399189081232,
+      "specificity": true,
+      "compositeScore": 0.6331399189081232
+    },
+    {
+      "id": "B",
+      "text": "Fine-tuned model on 200 creative projects for task efficiency",
+      "why": "Provides superior automation by understanding specific creative workflows",
+      "assumptions": [
+        "Projects accurately reflect target workflows",
+        "fine-tuning improves efficiency"
+      ],
+      "relevance": 0.5031484215723678,
+      "specificity": true,
+      "compositeScore": 0.6031484215723678
+    },
+    {
+      "id": "C",
+      "text": "Exclusive Slack partnership for pre-installation in 500 client workspaces",
+      "why": "Ensures immediate access and adoption for target users",
+      "assumptions": [
+        "Slack partnership secured",
+        "client interest"
+      ],
+      "relevance": 0.4519021525284287,
+      "specificity": true,
+      "compositeScore": 0.5519021525284287
+    }
+  ]
+}

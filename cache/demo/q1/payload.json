@@ -1,0 +1,56 @@
+{
+  "questionNumber": 1,
+  "notes": {
+    "distinctAxes": [
+      "customer",
+      "mechanism",
+      "scope"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot copilot for 10–50p remote creative teams",
+      "why": "Lives where teams work; cuts PM time by 20%",
+      "assumptions": [
+        "Slack in use",
+        "basic API OK"
+      ],
+      "tags": [
+        "slack"
+      ],
+      "relevance": 0.5981470906081684,
+      "specificity": true,
+      "compositeScore": 0.6981470906081684
+    },
+    {
+      "id": "B",
+      "text": "AI assistant for marketing teams using Asana to automate task tracking",
+      "why": "Improves task tracking accuracy by 25%",
+      "assumptions": [
+        "Asana in use",
+        "marketing teams"
+      ],
+      "tags": [
+        "asana"
+      ],
+      "relevance": 0.5033583215985021,
+      "specificity": true,
+      "compositeScore": 0.6033583215985021
+    },
+    {
+      "id": "C",
+      "text": "Standalone SaaS for freelance designers with Figma automation",
+      "why": "Automates handoff; +25% throughput",
+      "assumptions": [
+        "Figma in use"
+      ],
+      "tags": [
+        "figma"
+      ],
+      "relevance": 0.477030275634939,
+      "specificity": true,
+      "compositeScore": 0.577030275634939
+    }
+  ]
+}

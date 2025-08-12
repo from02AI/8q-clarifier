@@ -1,0 +1,51 @@
+{
+  "questionNumber": 5,
+  "notes": {
+    "distinctAxes": [
+      "metric",
+      "coverage",
+      "confidence"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Achieve 90% adoption rate among teams within 4 months",
+      "why": "High adoption ensures broad impact and validates product fit.",
+      "assumptions": [
+        "Adoption metrics tracked",
+        "Teams incentivized"
+      ],
+      "relevance": 0.47051601708211666,
+      "specificity": true,
+      "compositeScore": 0.5705160170821166
+    },
+    {
+      "id": "B",
+      "text": "Improve cross-team collaboration score by 40% in 9 months",
+      "why": "Better collaboration enhances innovation and cohesion.",
+      "assumptions": [
+        "Collaboration scores available",
+        "Cross-team projects exist"
+      ],
+      "relevance": 0.45331342249838263,
+      "specificity": true,
+      "compositeScore": 0.5533134224983827
+    },
+    {
+      "id": "C",
+      "text": "Boost user satisfaction score by 30% within 3 months",
+      "why": "High user satisfaction indicates better tool adoption and value perception.",
+      "assumptions": [
+        "User surveys conducted",
+        "Feedback loop exists"
+      ],
+      "relevance": 0.43610959592409526,
+      "specificity": true,
+      "failureReasons": [
+        "relevance: 0.436 < 0.45"
+      ],
+      "compositeScore": 0.33610959592409523
+    }
+  ]
+}

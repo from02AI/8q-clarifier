@@ -1,0 +1,48 @@
+{
+  "questionNumber": 6,
+  "notes": {
+    "distinctAxes": [
+      "alt_tool",
+      "workaround",
+      "vendor"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Teams use Trello for task management instead of Slack bot.",
+      "why": "Trello is a familiar tool for many creative teams.",
+      "assumptions": [
+        "Trello is already in use",
+        "Teams prefer visual task boards"
+      ],
+      "relevance": 0.6265253967281954,
+      "specificity": true,
+      "compositeScore": 0.7265253967281954
+    },
+    {
+      "id": "B",
+      "text": "Teams use Zoom for synchronous collaboration instead of Slack bot.",
+      "why": "Zoom offers real-time communication and screen sharing.",
+      "assumptions": [
+        "Teams prioritize live meetings",
+        "Zoom is already adopted"
+      ],
+      "relevance": 0.502139219447363,
+      "specificity": true,
+      "compositeScore": 0.6021392194473629
+    },
+    {
+      "id": "C",
+      "text": "Monday.com is an alternative vendor for workflow automation.",
+      "why": "Offers integrated project management features.",
+      "assumptions": [
+        "Teams need comprehensive project management",
+        "Monday.com fits budget"
+      ],
+      "relevance": 0.4720690969499845,
+      "specificity": true,
+      "compositeScore": 0.5720690969499845
+    }
+  ]
+}

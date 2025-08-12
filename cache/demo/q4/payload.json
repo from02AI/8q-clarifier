@@ -1,0 +1,49 @@
+{
+  "questionNumber": 4,
+  "notes": {
+    "distinctAxes": [
+      "mechanism",
+      "integration",
+      "automation"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot for 10-50p teams, automating task updates and reminders",
+      "why": "Reduces manual updates by 30%, boosting focus",
+      "assumptions": [
+        "Slack usage",
+        "task updates needed"
+      ],
+      "tags": [
+        "slack",
+        "automation"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Asana bot for remote creative teams to automate task prioritization",
+      "why": "Increases task efficiency by 25% within 2 months",
+      "assumptions": [
+        "Asana in use",
+        "teams follow bot suggestions"
+      ],
+      "tags": [
+        "asana"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Google Workspace add-on for 20-50p creative teams to automate file organization",
+      "why": "Reduces file search time by 40%",
+      "assumptions": [
+        "Google Workspace in use",
+        "Teams rely on shared files"
+      ],
+      "tags": [
+        "google workspace"
+      ]
+    }
+  ]
+}

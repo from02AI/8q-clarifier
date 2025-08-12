@@ -1,0 +1,50 @@
+{
+  "questionNumber": 8,
+  "notes": {
+    "distinctAxes": [
+      "risk_type",
+      "timing",
+      "impact"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "AI model accuracy may drop with unique team slang or jargon.",
+      "why": "Could reduce task update accuracy, impacting trust.",
+      "assumptions": [
+        "AI can't pre-train on all slang"
+      ],
+      "relevance": 0.49637431988507946,
+      "specificity": true,
+      "compositeScore": 0.5963743198850795
+    },
+    {
+      "id": "B",
+      "text": "AI misinterpretation of creative tasks could reduce efficiency by 15%",
+      "why": "Inaccurate task handling may lead to rework and frustration",
+      "assumptions": [
+        "AI lacks context",
+        "creative tasks are nuanced"
+      ],
+      "tags": [
+        "AI accuracy"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "User resistance to replacing Trello with Slack bot could limit adoption to 60%",
+      "why": "Teams may prefer familiar tools, slowing transition.",
+      "assumptions": [
+        "Teams are currently using Trello",
+        "Slack bot is perceived as less useful"
+      ],
+      "tags": [
+        "user adoption",
+        "competition"
+      ],
+      "relevance": 0.4852711532447815,
+      "specificity": true
+    }
+  ]
+}

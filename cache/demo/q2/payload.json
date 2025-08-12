@@ -1,0 +1,57 @@
+{
+  "questionNumber": 2,
+  "notes": {
+    "distinctAxes": [
+      "segment",
+      "role",
+      "company_size"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Remote marketing teams using Asana, 20-50 people",
+      "why": "Focuses on Asana's user base for optimized task management.",
+      "assumptions": [
+        "Asana is main tool",
+        "marketing teams"
+      ],
+      "tags": [
+        "asana"
+      ],
+      "relevance": 0.560806783465211,
+      "specificity": true,
+      "compositeScore": 0.6608067834652109
+    },
+    {
+      "id": "B",
+      "text": "Design agencies with 50-100 employees using Adobe Suite",
+      "why": "Caters to large teams needing creative workflow efficiency.",
+      "assumptions": [
+        "Adobe Suite users",
+        "design focus"
+      ],
+      "tags": [
+        "adobe"
+      ],
+      "relevance": 0.4804674234482939,
+      "specificity": true,
+      "compositeScore": 0.5804674234482939
+    },
+    {
+      "id": "C",
+      "text": "Small startups (5-20 people) using Trello for project tracking",
+      "why": "Addresses needs of growing teams for agile project management.",
+      "assumptions": [
+        "Trello usage",
+        "startup environment"
+      ],
+      "tags": [
+        "trello"
+      ],
+      "relevance": 0.47597464413788715,
+      "specificity": true,
+      "compositeScore": 0.5759746441378871
+    }
+  ]
+}
