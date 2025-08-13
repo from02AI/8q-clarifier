@@ -10,7 +10,7 @@ const config_1 = require("../config");
 exports.openai = new openai_1.default({ apiKey: config_1.CFG.OPENAI_API_KEY });
 async function embed(texts) {
     const res = await exports.openai.embeddings.create({
-        model: config_1.CFG.EMBED_MODEL,
+        model: config_1.EFFECTIVE_EMBED_MODEL,
         input: texts
     });
     return res.data.map(d => d.embedding);

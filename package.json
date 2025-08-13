@@ -6,7 +6,9 @@
     "build": "tsc -p tsconfig.json",
     "demo": "npm run build && node dist/cli/runDemo.js",
     "smoke": "npm run build && node dist/cli/smokeTest.js",
-    "rescore": "npm run build && node dist/engine/evaluate.js --rescore"
+    "rescore": "npm run build && node dist/engine/evaluate.js --rescore",
+    "eval:final": "npm run build && node dist/cli/evalFinal.js",
+    "eval:drift": "npm run build && node dist/cli/evalDrift.js"
   },
   "dependencies": {
     "openai": "^4.55.0",

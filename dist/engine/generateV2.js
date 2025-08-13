@@ -11,11 +11,14 @@ const specificityJudge_1 = require("./specificityJudge");
 const client_2 = require("../openai/client");
 async function generateQuestionV2(state, qNum, qText) {
     const messages = (0, buildMessages_1.buildMessages)(state, qNum, qText);
+    // Initialize telemetry tracking
+    let batchFillerUsed = false;
+    let templateUsed = false;
     // Step 1: Generate 5 candidates
     console.log(`[8Q] Generating 5 candidates for Q${qNum}...`);
     const startTime = Date.now();
     const res = await client_1.openai.chat.completions.create({
-        model: config_1.CFG.CHAT_MODEL,
+        model: config_1.EFFECTIVE_CHAT_MODEL,
         messages,
         tools: tools_1.tools,
         tool_choice: { type: 'function', function: { name: 'suggest_options' } },
@@ -40,7 +43,7 @@ async function generateQuestionV2(state, qNum, qText) {
             }
         ];
         const retryRes = await client_1.openai.chat.completions.create({
-            model: config_1.CFG.CHAT_MODEL,
+            model: config_1.EFFECTIVE_CHAT_MODEL,
             messages: retryMessages,
             tools: tools_1.tools,
             tool_choice: { type: 'function', function: { name: 'suggest_options' } },
@@ -133,6 +136,7 @@ async function generateQuestionV2(state, qNum, qText) {
             });
             if (replaced > 0) {
                 console.log(`[8Q] Batch filler succeeded: replaced ${replaced} failing option(s)`);
+                batchFillerUsed = true;
                 fillerSuccess = true;
             }
         }
@@ -156,6 +160,7 @@ async function generateQuestionV2(state, qNum, qText) {
                 });
                 if (replaced > 0) {
                     console.log(`[8Q] Template fallback succeeded: replaced ${replaced} failing option(s)`);
+                    templateUsed = true;
                     fillerSuccess = true;
                 }
             }
@@ -170,6 +175,8 @@ async function generateQuestionV2(state, qNum, qText) {
         id: ['A', 'B', 'C'][i]
     }));
     const finalScore = await scoreFinalOptions(ideaCtx, finalOptions, qNum, relativeThreshold);
+    // CONTROLLER INVARIANTS: Assert final state is valid
+    assertControllerInvariants(finalOptions, finalScore, qNum, relativeThreshold);
     // CRITICAL: If we still have failures, we CANNOT finalize as "pass: true"
     // Force the final score to reflect reality
     if (!finalScore.pass) {
@@ -196,7 +203,21 @@ async function generateQuestionV2(state, qNum, qText) {
     };
     const duration = Date.now() - startTime;
     console.log(`[8Q] Q${qNum} completed in ${duration}ms. Success: ${metrics.finalSuccess}, Repaired: ${repaired}`);
-    return { payload, score: finalScore, repaired, metrics };
+    // Build telemetry object
+    const telemetry = {
+        bestRel: Math.max(...finalScore.rel),
+        relativeFloorUsed: Math.max(...finalScore.rel) * 0.9,
+        absFloorUsed: config_1.CFG.RELEVANCE_THRESH,
+        selectedRel: finalScore.rel,
+        spec: finalScore.spec,
+        maxPairCos: finalScore.maxPairCos,
+        repaired,
+        batchFillerUsed,
+        templateUsed,
+        finalPass: finalScore.pass,
+        qLatencyMs: duration
+    };
+    return { payload, score: finalScore, repaired, metrics, telemetry };
 }
 function buildQuestionContext(qNum, state) {
     const baseIdea = state.idea;
@@ -319,7 +340,7 @@ async function attemptTargetedRepair(originalMessages, failingOptions, ideaCtx, 
         ];
         try {
             const repairRes = await client_1.openai.chat.completions.create({
-                model: config_1.CFG.CHAT_MODEL,
+                model: config_1.EFFECTIVE_CHAT_MODEL,
                 messages: repairMessages,
                 tools: tools_1.repairTools,
                 tool_choice: { type: 'function', function: { name: 'replace_failing_option' } },
@@ -453,7 +474,7 @@ Current option to replace: "${currentOption.text}" - ${currentOption.why}
 Make the new option focus on a different axis (customer segment, mechanism, channel, or scope) while staying relevant to Q${qNum}. Keep under 140 characters.`;
         try {
             const repairRes = await client_1.openai.chat.completions.create({
-                model: config_1.CFG.CHAT_MODEL,
+                model: config_1.EFFECTIVE_CHAT_MODEL,
                 messages: [...messages, { role: 'user', content: distinctnessPrompt }],
                 tools: tools_1.repairTools,
                 tool_choice: { type: 'function', function: { name: 'replace_failing_option' } },
@@ -507,7 +528,7 @@ KEY STRATEGY FOR HIGH RELEVANCE:
 CRITICAL: Do NOT generate anything similar to existing options. Generate ${missingCount} genuinely distinct, highly relevant option(s) that directly address Q${qNum} in the context of "${state.idea}".`;
     try {
         const fillerRes = await client_1.openai.chat.completions.create({
-            model: config_1.CFG.CHAT_MODEL,
+            model: config_1.EFFECTIVE_CHAT_MODEL,
             messages: [...messages, { role: 'user', content: fillerPrompt }],
             tools: tools_1.tools,
             tool_choice: { type: 'function', function: { name: 'suggest_options' } },
@@ -602,7 +623,7 @@ ${qNum === 8 ? '- Focus on risks CAUSED BY the proposed solution' : ''}
 Generate 3 genuinely distinct, highly relevant candidates that directly address Q${qNum}.`;
     try {
         const batchRes = await client_1.openai.chat.completions.create({
-            model: config_1.CFG.CHAT_MODEL,
+            model: config_1.EFFECTIVE_CHAT_MODEL,
             messages: [...messages, { role: 'user', content: batchFillerPrompt }],
             tools: tools_1.tools,
             tool_choice: { type: 'function', function: { name: 'suggest_options' } },
@@ -826,4 +847,48 @@ function extractNumbersFromAnswers(answers) {
         }
     });
     return { percentage, count, timeframe };
+}
+// Controller invariant enforcement
+function assertControllerInvariants(options, score, qNum, relativeThreshold) {
+    // Invariant 1: Must have exactly 3 options
+    if (options.length !== 3) {
+        throw new Error(`CONTROLLER INVARIANT VIOLATION: Expected 3 options, got ${options.length}`);
+    }
+    // Invariant 2: All options must pass relevance (absolute OR relative threshold)
+    const primaryThreshold = config_1.CFG.RELEVANCE_THRESH;
+    const relevanceViolations = [];
+    score.rel.forEach((rel, i) => {
+        const passesAbsolute = rel >= primaryThreshold;
+        const passesRelative = relativeThreshold !== undefined && rel >= relativeThreshold;
+        if (!passesAbsolute && !passesRelative) {
+            relevanceViolations.push(`Option ${['A', 'B', 'C'][i]}: ${rel.toFixed(3)} < ${primaryThreshold} AND < ${relativeThreshold?.toFixed(3) || 'N/A'}`);
+        }
+    });
+    if (relevanceViolations.length > 0) {
+        throw new Error(`CONTROLLER INVARIANT VIOLATION: Relevance failures: ${relevanceViolations.join('; ')}`);
+    }
+    // Invariant 3: All options must pass specificity
+    const specificityViolations = [];
+    score.spec.forEach((spec, i) => {
+        if (!spec) {
+            if (qNum === 7) {
+                specificityViolations.push(`Option ${['A', 'B', 'C'][i]}: lacks edge asset specificity`);
+            }
+            else {
+                specificityViolations.push(`Option ${['A', 'B', 'C'][i]}: lacks specificity (no concrete numbers/tools)`);
+            }
+        }
+    });
+    if (specificityViolations.length > 0) {
+        throw new Error(`CONTROLLER INVARIANT VIOLATION: Specificity failures: ${specificityViolations.join('; ')}`);
+    }
+    // Invariant 4: Must pass distinctness
+    if (score.maxPairCos > config_1.CFG.DISTINCTNESS_MAX_COS) {
+        throw new Error(`CONTROLLER INVARIANT VIOLATION: Distinctness failure: ${score.maxPairCos.toFixed(3)} > ${config_1.CFG.DISTINCTNESS_MAX_COS}`);
+    }
+    // Invariant 5: Overall pass flag must be true if all gates pass
+    if (!score.pass) {
+        throw new Error(`CONTROLLER INVARIANT VIOLATION: Overall pass flag is false despite passing individual gates`);
+    }
+    console.log(`[8Q] Controller invariants verified for Q${qNum}: 3 options, all gates passed`);
 }
