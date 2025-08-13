@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.repair = repair;
+const config_1 = require("../config");
 const client_1 = require("../openai/client");
 const tools_1 = require("../openai/tools");
 async function repair(messages, failingIds, reasons) {
@@ -11,7 +12,7 @@ async function repair(messages, failingIds, reasons) {
             `and include either a number+unit OR a named integration. Keep schema and ids A,B,C.`
     };
     const res = await client_1.openai.chat.completions.create({
-        model: 'gpt-4o',
+        model: config_1.EFFECTIVE_CHAT_MODEL,
         messages: [...messages, user],
         tools: tools_1.tools,
         tool_choice: { type: 'function', function: { name: 'suggest_options' } }

@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run calibrate batch to test Q7 edge asset specificity fix",
+			"type": "shell",
+			"command": "npm run calibrate"
+		}
+	]
+}

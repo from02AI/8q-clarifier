@@ -23,7 +23,7 @@ Successfully implemented the "oversample + select + patch" strategy to dramatica
 ```typescript
 // Generate 5 candidates instead of 3
 const res = await openai.chat.completions.create({
-  model: 'gpt-4o',
+  model: 'gpt-4o-mini',
   messages,
   tools,
   tool_choice: { type: 'function', function: { name: 'suggest_options' } },

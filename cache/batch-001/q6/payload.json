@@ -1,0 +1,47 @@
+{
+  "questionNumber": 6,
+  "notes": {
+    "distinctAxes": [
+      "alt_tool",
+      "workaround",
+      "vendor"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Email chains for feedback loops and project updates",
+      "why": "Teams use email for asynchronous communication and tracking",
+      "assumptions": [
+        "Email is universally accessible",
+        "Teams need asynchronous options"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Zoom meetings for weekly design feedback sessions",
+      "why": "Provides real-time interaction for immediate feedback",
+      "assumptions": [
+        "Teams meet weekly",
+        "Zoom is accessible"
+      ],
+      "tags": [
+        "zoom"
+      ],
+      "relevance": 0.4509713493910103,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "Asana for task management and feedback tracking",
+      "why": "Centralizes tasks and feedback; reduces tool-switching",
+      "assumptions": [
+        "Teams use Asana",
+        "Feedback tracked in tasks"
+      ],
+      "tags": [
+        "asana"
+      ]
+    }
+  ]
+}

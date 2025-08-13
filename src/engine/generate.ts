@@ -1,3 +1,4 @@
+import { EFFECTIVE_CHAT_MODEL } from '../config';
 import { openai } from '../openai/client';
 import { tools } from '../openai/tools';
 import { buildMessages } from './buildMessages';
@@ -13,7 +14,7 @@ export async function generateQuestion(state: ConversationState, qNum: number, q
 
   // Primary call
   const res = await openai.chat.completions.create({
-    model: 'gpt-4o',
+  model: EFFECTIVE_CHAT_MODEL,
     messages,
     tools,
     tool_choice: { type: 'function', function: { name: 'suggest_options' } }

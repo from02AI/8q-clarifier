@@ -1,0 +1,49 @@
+{
+  "questionNumber": 7,
+  "notes": {
+    "distinctAxes": [
+      "edge",
+      "data_adv",
+      "workflow_lock"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Workflow/IP: fine-tuned on 10k cross-border design projects",
+      "why": "WHY: Enhances project-specific AI recommendations",
+      "assumptions": [
+        "Projects cover diverse use cases",
+        "AI model is adaptable"
+      ],
+      "tags": [
+        "workflow"
+      ],
+      "relevance": 0.5338689312278033,
+      "specificity": true
+    },
+    {
+      "id": "B",
+      "text": "Workflow/IP: proprietary API access to 50k creative briefs",
+      "why": "WHY: enhances AI's contextual understanding by 25%",
+      "assumptions": [
+        "API access is exclusive",
+        "data is regularly updated"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Data moat: dataset of 200k creative feedback loops from remote teams",
+      "why": "WHY: Improves AI feedback accuracy by 25%",
+      "assumptions": [
+        "Dataset is proprietary",
+        "Feedback loops are anonymized"
+      ],
+      "tags": [
+        "data moat"
+      ],
+      "relevance": 0.5391754602289888,
+      "specificity": true
+    }
+  ]
+}

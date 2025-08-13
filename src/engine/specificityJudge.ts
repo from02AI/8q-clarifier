@@ -1,3 +1,4 @@
+import { EFFECTIVE_CHAT_MODEL } from '../config';
 import { openai } from '../openai/client';
 import type { Suggestion } from '../types';
 
@@ -56,7 +57,7 @@ export async function judgeSpecificity(suggestions: Pick<Suggestion, 'text' | 'w
 
   try {
     const response = await openai.chat.completions.create({
-      model: 'gpt-4o-mini', // Cheaper model for this simple task
+  model: EFFECTIVE_CHAT_MODEL, // Use production-pinned model
       messages: [
         { role: 'system', content: SPECIFICITY_SYSTEM_PROMPT },
         { 

@@ -1,19 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateQuestion = generateQuestion;
+const config_1 = require("../config");
 const client_1 = require("../openai/client");
 const tools_1 = require("../openai/tools");
 const buildMessages_1 = require("./buildMessages");
 const sanitize_1 = require("./sanitize");
 const evaluate_1 = require("./evaluate");
 const repair_1 = require("./repair");
-const config_1 = require("../config");
+const config_2 = require("../config");
 const metrics_1 = require("./metrics");
 async function generateQuestion(state, qNum, qText) {
     const messages = (0, buildMessages_1.buildMessages)(state, qNum, qText);
     // Primary call
     const res = await client_1.openai.chat.completions.create({
-        model: 'gpt-4o',
+        model: config_1.EFFECTIVE_CHAT_MODEL,
         messages,
         tools: tools_1.tools,
         tool_choice: { type: 'function', function: { name: 'suggest_options' } }
@@ -28,13 +29,13 @@ async function generateQuestion(state, qNum, qText) {
     // Build failing set
     const failingIds = [];
     payload.options.forEach((o, i) => {
-        const relOk = s.rel[i] >= config_1.CFG.RELEVANCE_THRESH;
+        const relOk = s.rel[i] >= config_2.CFG.RELEVANCE_THRESH;
         const specOk = s.spec[i];
         if (!(relOk && specOk))
             failingIds.push(['A', 'B', 'C'][i]);
     });
     // If only distinctness failed, replace B and C
-    if (failingIds.length === 0 && s.maxPairCos > config_1.CFG.DISTINCTNESS_MAX_COS) {
+    if (failingIds.length === 0 && s.maxPairCos > config_2.CFG.DISTINCTNESS_MAX_COS) {
         failingIds.push('B', 'C');
     }
     // Targeted repair once

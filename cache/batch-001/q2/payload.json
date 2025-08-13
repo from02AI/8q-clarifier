@@ -1,0 +1,54 @@
+{
+  "questionNumber": 2,
+  "notes": {
+    "distinctAxes": [
+      "team size",
+      "platform",
+      "context"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "10–30p remote design teams using Microsoft Teams in cross-border projects.",
+      "why": "Targets teams with complex collaboration needs.",
+      "assumptions": [
+        "Microsoft Teams in use",
+        "international projects"
+      ],
+      "tags": [
+        "microsoft teams"
+      ],
+      "relevance": 0.5242628753389336,
+      "specificity": true,
+      "compositeScore": 0.6242628753389335
+    },
+    {
+      "id": "B",
+      "text": "30–50p marketing teams using Zoom for product launch weeks.",
+      "why": "Focuses on high-pressure periods needing clear communication.",
+      "assumptions": [
+        "Zoom meetings",
+        "launch-focused"
+      ],
+      "tags": [
+        "zoom"
+      ],
+      "relevance": 0.5178333468034213,
+      "specificity": true,
+      "compositeScore": 0.6178333468034213
+    },
+    {
+      "id": "C",
+      "text": "20–40p creative agencies using Monday.com in global time zones",
+      "why": "Facilitates cross-timezone collaboration for creative projects",
+      "assumptions": [
+        "Monday.com in use",
+        "global team setup"
+      ],
+      "tags": [
+        "monday.com"
+      ]
+    }
+  ]
+}

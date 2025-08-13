@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.judgeSpecificity = judgeSpecificity;
+const config_1 = require("../config");
 const client_1 = require("../openai/client");
 const SPECIFICITY_SYSTEM_PROMPT = `You are evaluating whether business suggestions contain specific, concrete details.
 
@@ -41,7 +42,7 @@ async function judgeSpecificity(suggestions, questionNumber) {
     const input = suggestions.map((s, i) => `${i + 1}. "${s.text}" - ${s.why}`).join('\n');
     try {
         const response = await client_1.openai.chat.completions.create({
-            model: 'gpt-4o-mini', // Cheaper model for this simple task
+            model: config_1.EFFECTIVE_CHAT_MODEL, // Use production-pinned model
             messages: [
                 { role: 'system', content: SPECIFICITY_SYSTEM_PROMPT },
                 {

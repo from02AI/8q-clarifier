@@ -24,7 +24,7 @@ All requested tasks have been implemented and are ready for production use.
 
 **Production Model Pinning**
 - Set `PRODUCTION_MODE=true` to enforce exact versions
-- Chat: `gpt-4o-2024-05-13` (pinned)
+- Chat: `gpt-4o-mini` (pinned)
 - Embeddings: `text-embedding-3-small` (stable)
 - All evaluations log model versions in summary
 

@@ -1,3 +1,4 @@
+import { EFFECTIVE_CHAT_MODEL } from '../config';
 
 import { openai } from '../openai/client';
 import { tools } from '../openai/tools';
@@ -12,7 +13,7 @@ export async function repair(messages: any[], failingIds: string[], reasons: str
   } as const;
 
   const res = await openai.chat.completions.create({
-    model: 'gpt-4o',
+  model: EFFECTIVE_CHAT_MODEL,
     messages: [...messages, user],
     tools,
     tool_choice: { type: 'function', function: { name: 'suggest_options' } }

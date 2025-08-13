@@ -1,0 +1,45 @@
+{
+  "questionNumber": 8,
+  "notes": {
+    "distinctAxes": [
+      "risk_type",
+      "platform",
+      "impact"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Figma auto-suggestions create 10% design revision rate.",
+      "why": "AI may provide inaccurate or unhelpful design inputs.",
+      "assumptions": [
+        "Figma used extensively",
+        "Design teams rely on AI suggestions"
+      ],
+      "relevance": 0.5004945771887179,
+      "specificity": true,
+      "compositeScore": 0.6004945771887179
+    },
+    {
+      "id": "B",
+      "text": "Model misreads Slack threads → 20% rework in creative briefs.",
+      "why": "Misinterpretations can lead to incorrect task execution.",
+      "assumptions": [
+        "Slack is primary communication tool",
+        "AI model is not perfectly tuned"
+      ],
+      "relevance": 0.47635297273347377,
+      "specificity": true,
+      "compositeScore": 0.5763529727334737
+    },
+    {
+      "id": "C",
+      "text": "AI misinterprets Figma comments → 18% rework on design iterations.",
+      "why": "Misinterpretations lead to incorrect design changes, increasing rework.",
+      "assumptions": [
+        "Figma is used",
+        "AI processes comments"
+      ]
+    }
+  ]
+}

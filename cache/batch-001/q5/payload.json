@@ -1,0 +1,49 @@
+{
+  "questionNumber": 5,
+  "notes": {
+    "distinctAxes": [
+      "metric",
+      "coverage",
+      "confidence"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Reach 80% user satisfaction among designers in 3 months",
+      "why": "High satisfaction indicates product-market fit",
+      "assumptions": [
+        "User feedback collected",
+        "3-month survey setup"
+      ],
+      "tags": [
+        "confidence"
+      ],
+      "relevance": 0.5230925273418872,
+      "specificity": true,
+      "compositeScore": 0.6230925273418871
+    },
+    {
+      "id": "B",
+      "text": "Increase design output by 20% for 10–30p remote teams using AI-driven feedback loops",
+      "why": "Enhances creative throughput with AI insights",
+      "assumptions": [
+        "Teams use design software",
+        "AI feedback is actionable"
+      ],
+      "tags": [
+        "design",
+        "AI"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Track 20% faster project completion for 10-50p creative teams using Slack in 6 months",
+      "why": "Faster completion demonstrates immediate efficiency gains",
+      "assumptions": [
+        "Slack integration",
+        "consistent team size"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "questionNumber": 4,
+  "notes": {
+    "distinctAxes": [
+      "mechanism",
+      "integration",
+      "automation"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "SaaS platform with AI-driven Figma feedback for designers",
+      "why": "Automates feedback process, accelerating design iterations",
+      "assumptions": [
+        "Figma in use",
+        "Remote design teams"
+      ],
+      "tags": [
+        "SaaS",
+        "automation"
+      ],
+      "relevance": 0.5709208565485593,
+      "specificity": true,
+      "compositeScore": 0.6709208565485593
+    },
+    {
+      "id": "B",
+      "text": "Microsoft Teams bot for 10–30p creative teams to auto-schedule feedback sessions",
+      "why": "Ensures timely feedback, reducing delays by 30%",
+      "assumptions": [
+        "Teams in use",
+        "feedback loops exist"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Slack integration for 10–30p creative teams to streamline cross-border feedback",
+      "why": "Cuts feedback loop delays by 40%",
+      "assumptions": [
+        "Slack in use",
+        "teams work across time zones"
+      ],
+      "relevance": 0.6031630101166496,
+      "specificity": true
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "questionNumber": 3,
+  "notes": {
+    "distinctAxes": [
+      "pain",
+      "frequency",
+      "severity"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Remote teams struggle with 40% delayed feedback loops",
+      "why": "Delays slow project completion, impacting deadlines",
+      "assumptions": [
+        "Teams rely on asynchronous communication",
+        "Feedback is critical to progress"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Cross-border teams lose 15h/month in timezone coordination",
+      "why": "AI scheduling can optimize meetings across timezones",
+      "assumptions": [
+        "Teams work in different timezones",
+        "Meetings are frequent"
+      ],
+      "relevance": 0.46209854258635624,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "Creative teams miss 25% deadlines due to poor task visibility",
+      "why": "AI-enhanced dashboards improve tracking and accountability",
+      "assumptions": [
+        "Tasks are managed digitally",
+        "Visibility tools are underutilized"
+      ],
+      "relevance": 0.4866741729866046,
+      "specificity": true
+    }
+  ]
+}

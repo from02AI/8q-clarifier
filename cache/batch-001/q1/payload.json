@@ -1,0 +1,59 @@
+{
+  "questionNumber": 1,
+  "notes": {
+    "distinctAxes": [
+      "customer segment",
+      "platform",
+      "mechanism",
+      "outcome metric"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot for 10–50p remote creative teams using Slack — WHY: Cuts PM time by 20%",
+      "why": "Reduces project management overhead, increasing efficiency and focus on creative tasks.",
+      "assumptions": [
+        "Teams use Slack",
+        "PM duties are significant"
+      ],
+      "tags": [
+        "remote",
+        "slack",
+        "efficiency"
+      ],
+      "relevance": 0.5509786567300525,
+      "specificity": true,
+      "compositeScore": 0.6509786567300525
+    },
+    {
+      "id": "B",
+      "text": "Figma automation for freelance designers using Figma — WHY: Boosts project throughput by 25%",
+      "why": "Automates repetitive design tasks, allowing more time for creative work.",
+      "assumptions": [
+        "Designers use Figma",
+        "Tasks are repetitive"
+      ],
+      "tags": [
+        "freelance",
+        "figma",
+        "throughput"
+      ],
+      "relevance": 0.4819721401238605,
+      "specificity": true,
+      "compositeScore": 0.5819721401238606
+    },
+    {
+      "id": "C",
+      "text": "Miro board assistant for 20–100p creative agencies",
+      "why": "Enhances brainstorming sessions by 40%",
+      "assumptions": [
+        "Miro in use",
+        "agencies need brainstorming"
+      ],
+      "tags": [
+        "miro"
+      ]
+    }
+  ]
+}

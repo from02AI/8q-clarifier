@@ -8,7 +8,13 @@
     "smoke": "npm run build && node dist/cli/smokeTest.js",
     "rescore": "npm run build && node dist/engine/evaluate.js --rescore",
     "eval:final": "npm run build && node dist/cli/evalFinal.js",
-    "eval:drift": "npm run build && node dist/cli/evalDrift.js"
+    "eval:drift": "npm run build && node dist/cli/evalDrift.js",
+    "batch": "npm run build && node dist/cli/runBatch.js",
+    "three-phase": "npm run build && node dist/cli/runThreePhase.js",
+    "calibrate": "npm run build && node dist/cli/runBatch.js 1",
+    "smoke10": "npm run build && node dist/cli/runBatch.js 10",
+    "sample25": "npm run build && node dist/cli/runBatch.js 25",
+    "full50": "npm run build && node dist/cli/runBatch.js 50"
   },
   "dependencies": {
     "openai": "^4.55.0",
