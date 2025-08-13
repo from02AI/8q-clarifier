@@ -1,0 +1,793 @@
+{
+  "sessionId": "batch-007",
+  "startTime": 1755054398686,
+  "lastSaveTime": 1755055207105,
+  "currentQuestion": 9,
+  "totalQuestions": 8,
+  "state": {
+    "idea": "AI copilot for remote creative teams",
+    "answers": [
+      {
+        "q": 1,
+        "chosen": "A",
+        "summary": "Figma tool for freelance creative teams using Figma. — WHY: Boosts design output by 25%"
+      },
+      {
+        "q": 2,
+        "chosen": "A",
+        "summary": "5-15p remote graphic design teams using Adobe Creative Cloud in global time zones"
+      },
+      {
+        "q": 4,
+        "chosen": "A",
+        "summary": "SaaS platform with Figma integration to enhance collaboration."
+      },
+      {
+        "q": 6,
+        "chosen": "A",
+        "summary": "Freelancers using Trello and Dropbox for design collaboration"
+      },
+      {
+        "q": 7,
+        "chosen": "A",
+        "summary": "Data moat: 500k annotated design files from global agencies"
+      },
+      {
+        "q": 8,
+        "chosen": "A",
+        "summary": "AI copilot misreads creative context in Figma, causing 25% rework in remote team projects."
+      }
+    ],
+    "features": {
+      "summary": "**Audience:** The primary audience comprises freelance creative teams and 5-15 person remote graphic design teams that rely on Adobe Creative Cloud and work across different global time zones.\n\n**Problem:** These teams face challenges in boosting their design productivity and effectively collaborating due to the limitations of their current tools.\n\n**Solution:** A SaaS platform that integrates with Figma to enhance collaboration and increase design output by 25%.\n\n**Edge:** The seamless integration with Figma offers a unique advantage in improving team collaboration for design teams.\n\n**Metric:** By utilizing this solution, teams can enhance their design output by 25%.\n\n**Risk:** There is inherent risk in adoption if teams are deeply embedded with other tools or face resistance to new technology integrations."
+    }
+  },
+  "completed": true,
+  "questionResults": [
+    {
+      "questionNumber": 1,
+      "questionText": "Write your one-sentence idea",
+      "payload": {
+        "questionNumber": 1,
+        "notes": {
+          "distinctAxes": [
+            "customer segment",
+            "mechanism",
+            "scope",
+            "platform"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Figma tool for freelance creative teams using Figma. — WHY: Boosts design output by 25%",
+            "why": "Enhances productivity by automating repetitive design tasks.",
+            "assumptions": [
+              "Figma is used",
+              "Freelancers work independently"
+            ],
+            "relevance": 0.5123187593484395,
+            "specificity": true,
+            "compositeScore": 0.6123187593484395
+          },
+          {
+            "id": "B",
+            "text": "Slack bot for 10–50p remote design teams using Slack. — WHY: Cuts PM time by 20%",
+            "why": "Reduces time spent on project management tasks.",
+            "assumptions": [
+              "Teams use Slack",
+              "Slack API is accessible"
+            ],
+            "relevance": 0.4767556766636671,
+            "specificity": true,
+            "compositeScore": 0.5767556766636671
+          },
+          {
+            "id": "C",
+            "text": "Google Workspace add-on for 50–200p creative teams to automate project updates",
+            "why": "Reduces update time by 40%",
+            "assumptions": [
+              "Google Workspace in use",
+              "teams need frequent updates"
+            ],
+            "tags": [
+              "google workspace"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5123187593484395,
+          0.4767556766636671,
+          0.45774528660555325
+        ],
+        "maxPairCos": 0.5988050521211121,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 2,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5123187593484395,
+        "relativeFloorUsed": 0.46108688341359555,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5123187593484395,
+          0.4767556766636671,
+          0.45774528660555325
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.5988050521211121,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 14280,
+        "tokensUsed": {
+          "input": 1806,
+          "output": 374,
+          "embedding": 187
+        },
+        "requestCounts": {
+          "chat": 2,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054412994,
+      "success": true
+    },
+    {
+      "questionNumber": 2,
+      "questionText": "Who exactly is this for?",
+      "payload": {
+        "questionNumber": 2,
+        "notes": {
+          "distinctAxes": [
+            "team size",
+            "platform",
+            "context"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "5-15p remote graphic design teams using Adobe Creative Cloud in global time zones",
+            "why": "Ensures 24/7 creative output",
+            "assumptions": [
+              "Adobe Creative Cloud usage",
+              "global collaboration"
+            ],
+            "relevance": 0.5111222263876832,
+            "specificity": true,
+            "compositeScore": 0.6111222263876832
+          },
+          {
+            "id": "B",
+            "text": "20-40p remote video production teams using Zoom in launch weeks",
+            "why": "Optimizes communication for tight deadlines",
+            "assumptions": [
+              "Zoom usage",
+              "launch-focused output"
+            ],
+            "relevance": 0.455706272722739,
+            "specificity": true,
+            "compositeScore": 0.555706272722739
+          },
+          {
+            "id": "C",
+            "text": "15-30p marketing teams using Asana during client review cycles",
+            "why": "Streamlines feedback loops",
+            "assumptions": [
+              "Asana boards in use",
+              "frequent client reviews"
+            ],
+            "relevance": 0.4531651798459412,
+            "specificity": true,
+            "compositeScore": 0.5531651798459412
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5111222263876832,
+          0.455706272722739,
+          0.4531651798459412
+        ],
+        "maxPairCos": 0.5595356299080717,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 3,
+        "repairAttempts": 0,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5111222263876832,
+        "relativeFloorUsed": 0.46001000374891493,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5111222263876832,
+          0.455706272722739,
+          0.4531651798459412
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.5595356299080717,
+        "repaired": false,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 6419,
+        "tokensUsed": {
+          "input": 873,
+          "output": 154,
+          "embedding": 143
+        },
+        "requestCounts": {
+          "chat": 1,
+          "embedding": 2
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 0
+        }
+      },
+      "timestamp": 1755054419427,
+      "success": true
+    },
+    {
+      "questionNumber": 3,
+      "questionText": "What problem are they facing?",
+      "payload": {
+        "questionNumber": 3,
+        "notes": {
+          "distinctAxes": []
+        },
+        "options": []
+      },
+      "score": {
+        "pass": false
+      },
+      "metrics": {
+        "finalSuccess": false
+      },
+      "telemetry": {
+        "qLatencyMs": 0,
+        "finalPass": false,
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 1,
+          "repaired": 0
+        }
+      },
+      "timestamp": 1755054440557,
+      "success": false
+    },
+    {
+      "questionNumber": 4,
+      "questionText": "How does your idea solve the problem?",
+      "payload": {
+        "questionNumber": 4,
+        "notes": {
+          "distinctAxes": [
+            "mechanism",
+            "integration",
+            "automation"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "SaaS platform with Figma integration to enhance collaboration.",
+            "why": "Centralizes feedback, cutting revision cycles by 30%.",
+            "assumptions": [
+              "Figma is primary tool"
+            ],
+            "tags": [
+              "saas",
+              "figma"
+            ],
+            "relevance": 0.571437949459245,
+            "specificity": true,
+            "compositeScore": 0.671437949459245
+          },
+          {
+            "id": "B",
+            "text": "Slack bot integrates with Adobe Creative Cloud to streamline task management.",
+            "why": "Automates project updates, saving 15% communication time.",
+            "assumptions": [
+              "Teams use Slack",
+              "Adobe Creative Cloud is core"
+            ],
+            "tags": [
+              "slack",
+              "adobe"
+            ],
+            "relevance": 0.4654964407453459,
+            "specificity": true,
+            "compositeScore": 0.5654964407453459
+          },
+          {
+            "id": "C",
+            "text": "Microsoft Teams plugin for creative file sharing automation.",
+            "why": "Speeds up file distribution, improving efficiency by 25%.",
+            "assumptions": [
+              "Microsoft Teams is used",
+              "File sharing is a bottleneck"
+            ],
+            "tags": [
+              "microsoft teams"
+            ],
+            "relevance": 0.4610341105099282,
+            "specificity": true,
+            "compositeScore": 0.5610341105099282
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.571437949459245,
+          0.4654964407453459,
+          0.4610341105099282
+        ],
+        "maxPairCos": 0.5265321725280119,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 3,
+        "repairAttempts": 0,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.571437949459245,
+        "relativeFloorUsed": 0.5142941545133205,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.571437949459245,
+          0.4654964407453459,
+          0.4610341105099282
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.5265321725280119,
+        "repaired": false,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 12589,
+        "tokensUsed": {
+          "input": 767,
+          "output": 293,
+          "embedding": 186
+        },
+        "requestCounts": {
+          "chat": 1,
+          "embedding": 2
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 0
+        }
+      },
+      "timestamp": 1755055013673,
+      "success": true
+    },
+    {
+      "questionNumber": 5,
+      "questionText": "How will you measure success?",
+      "payload": {
+        "questionNumber": 5,
+        "notes": {
+          "distinctAxes": []
+        },
+        "options": []
+      },
+      "score": {
+        "pass": false
+      },
+      "metrics": {
+        "finalSuccess": false
+      },
+      "telemetry": {
+        "qLatencyMs": 0,
+        "finalPass": false,
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 1,
+          "repaired": 0
+        }
+      },
+      "timestamp": 1755055033396,
+      "success": false
+    },
+    {
+      "questionNumber": 6,
+      "questionText": "Who / what do they use instead?",
+      "payload": {
+        "questionNumber": 6,
+        "notes": {
+          "distinctAxes": [
+            "alt_tool",
+            "workaround",
+            "vendor"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Freelancers using Trello and Dropbox for design collaboration",
+            "why": "Combines clear task management with file sharing",
+            "assumptions": [
+              "Trello and Dropbox are accessible",
+              "Teams need basic collaboration tools"
+            ],
+            "relevance": 0.5090327937463739,
+            "specificity": true,
+            "compositeScore": 0.6090327937463739
+          },
+          {
+            "id": "B",
+            "text": "Email chains and Google Docs for collaborative design feedback",
+            "why": "Common but inefficient; lacks real-time collaboration",
+            "assumptions": [
+              "Teams use email",
+              "Google Docs for feedback"
+            ],
+            "tags": [
+              "email",
+              "google docs"
+            ]
+          },
+          {
+            "id": "C",
+            "text": "Remote teams use Slack and Zoom for real-time design discussions",
+            "why": "Common tools for remote communication and collaboration",
+            "assumptions": [
+              "Teams use Slack",
+              "Video calls on Zoom"
+            ],
+            "tags": [
+              "slack",
+              "zoom"
+            ],
+            "relevance": 0.6212013650064161,
+            "specificity": true
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5090327937463739,
+          0.5339224104901598,
+          0.6212013650064161
+        ],
+        "maxPairCos": 0.5942464235867195,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 1,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.6212013650064161,
+        "relativeFloorUsed": 0.5590812285057745,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5090327937463739,
+          0.5339224104901598,
+          0.6212013650064161
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.5942464235867195,
+        "repaired": true,
+        "batchFillerUsed": true,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 22054,
+        "tokensUsed": {
+          "input": 4217,
+          "output": 517,
+          "embedding": 273
+        },
+        "requestCounts": {
+          "chat": 4,
+          "embedding": 5
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755055153945,
+      "success": true
+    },
+    {
+      "questionNumber": 7,
+      "questionText": "What's your hard-to-copy edge?",
+      "payload": {
+        "questionNumber": 7,
+        "notes": {
+          "distinctAxes": [
+            "edge",
+            "data_adv",
+            "workflow_lock"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Data moat: 500k annotated design files from global agencies",
+            "why": "WHY: Improves AI precision by learning diverse styles",
+            "assumptions": [
+              "Data access agreements",
+              "Files include design metadata"
+            ],
+            "tags": [
+              "data moat"
+            ],
+            "relevance": 0.5108737767479763,
+            "specificity": true,
+            "compositeScore": 0.6108737767479763
+          },
+          {
+            "id": "B",
+            "text": "Data moat: Curated dataset of 200k global design briefs",
+            "why": "WHY: Boosts relevance to remote teams' needs",
+            "assumptions": [
+              "Access to briefs",
+              "Quality annotation"
+            ],
+            "relevance": 0.46956696308963447,
+            "specificity": true,
+            "compositeScore": 0.5695669630896345
+          },
+          {
+            "id": "C",
+            "text": "Distribution advantage: Featured in Figma Community with 2k monthly views",
+            "why": "Targets active Figma users, boosting visibility and adoption",
+            "assumptions": [
+              "Figma users seek plugins",
+              "community engagement"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5108737767479763,
+          0.46956696308963447,
+          0.4586460294685339
+        ],
+        "maxPairCos": 0.7596158616272313,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 2,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5108737767479763,
+        "relativeFloorUsed": 0.4597863990731787,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5108737767479763,
+          0.46956696308963447,
+          0.4586460294685339
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.7596158616272313,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 19716,
+        "tokensUsed": {
+          "input": 3565,
+          "output": 474,
+          "embedding": 253
+        },
+        "requestCounts": {
+          "chat": 3,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755055176928,
+      "success": true
+    },
+    {
+      "questionNumber": 8,
+      "questionText": "Biggest unknown risk in one line",
+      "payload": {
+        "questionNumber": 8,
+        "notes": {
+          "distinctAxes": [
+            "risk_type",
+            "timing",
+            "impact"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "AI copilot misreads creative context in Figma, causing 25% rework in remote team projects.",
+            "why": "Technical risk specific to AI limitations in creative workflows.",
+            "assumptions": [
+              "Template-generated for Q8 guaranteed specificity"
+            ],
+            "tags": [
+              "risk",
+              "business"
+            ]
+          },
+          {
+            "id": "B",
+            "text": "Remote teams resist AI copilot adoption, limiting penetration to 25% in first 6 months.",
+            "why": "Adoption risk tied to creative team workflows and change resistance.",
+            "assumptions": [
+              "Template-generated for Q8 guaranteed specificity"
+            ],
+            "tags": [
+              "risk",
+              "business"
+            ]
+          },
+          {
+            "id": "C",
+            "text": "AI copilot fails creative nuance detection, reducing output quality by 25% vs manual work.",
+            "why": "Quality risk based on AI limitations in understanding creative requirements.",
+            "assumptions": [
+              "Template-generated for Q8 guaranteed specificity"
+            ],
+            "tags": [
+              "risk",
+              "business"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.6683381631132409,
+          0.6272483860031416,
+          0.5843221127363567
+        ],
+        "maxPairCos": 0.701256648975567,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 0,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.6683381631132409,
+        "relativeFloorUsed": 0.6015043468019168,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.6683381631132409,
+          0.6272483860031416,
+          0.5843221127363567
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.701256648975567,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": true,
+        "finalPass": true,
+        "qLatencyMs": 26521,
+        "tokensUsed": {
+          "input": 7523,
+          "output": 729,
+          "embedding": 483
+        },
+        "requestCounts": {
+          "chat": 6,
+          "embedding": 6
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755055207095,
+      "success": true
+    }
+  ],
+  "telemetry": {
+    "tokensUsed": {
+      "input": 18751,
+      "output": 2541,
+      "embedding": 1525
+    },
+    "requestCounts": {
+      "chat": 17,
+      "embedding": 21
+    },
+    "errorCounts": {
+      "rateLimited": 0,
+      "failed": 2,
+      "repaired": 4
+    },
+    "timing": {
+      "totalMs": 808419,
+      "averageQuestionMs": 101051.125
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "questionNumber": 4,
+  "notes": {
+    "distinctAxes": [
+      "mechanism",
+      "integration",
+      "automation"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack-based AI analyzes chat to suggest next steps in projects",
+      "why": "Transforms discussions into actionable plans, aiding clarity",
+      "assumptions": [
+        "Slack logs available",
+        "AI accuracy accepted"
+      ],
+      "tags": [
+        "slack"
+      ],
+      "relevance": 0.47784750064032006,
+      "specificity": true,
+      "compositeScore": 0.5778475006403201
+    },
+    {
+      "id": "B",
+      "text": "Asana plugin suggests task priorities for remote teams",
+      "why": "Improves focus by highlighting critical tasks",
+      "assumptions": [
+        "Asana in use",
+        "teams need prioritization"
+      ],
+      "tags": [
+        "asana"
+      ],
+      "relevance": 0.4608916287857444,
+      "specificity": true,
+      "compositeScore": 0.5608916287857444
+    },
+    {
+      "id": "C",
+      "text": "Slack bot for creative briefs auto-clarification, reducing miscommunication by 30%",
+      "why": "Ensures clear briefs, reducing rework and delays",
+      "assumptions": [
+        "Slack in use",
+        "Briefs often unclear"
+      ],
+      "tags": [
+        "slack",
+        "briefs"
+      ]
+    }
+  ]
+}

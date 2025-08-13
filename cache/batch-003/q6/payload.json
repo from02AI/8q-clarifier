@@ -1,0 +1,39 @@
+{
+  "questionNumber": 6,
+  "notes": {
+    "distinctAxes": [
+      "alt_tool",
+      "workaround",
+      "vendor"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Use email chains for feedback and approvals",
+      "why": "Email is ubiquitous but causes delays due to asynchronous communication",
+      "assumptions": [
+        "Teams rely on email",
+        "No real-time interaction needed"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Email chains for feedback loops",
+      "why": "Common but inefficient for tracking and delays feedback by 30%",
+      "assumptions": [
+        "Teams rely on email",
+        "No centralized platform"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Use Google Docs for collaborative feedback on creative projects",
+      "why": "Widely used for real-time collaboration but lacks structured task management",
+      "assumptions": [
+        "Teams use Google Workspace",
+        "Comfortable with Google Docs"
+      ]
+    }
+  ]
+}

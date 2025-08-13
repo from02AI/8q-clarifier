@@ -1,0 +1,48 @@
+{
+  "questionNumber": 8,
+  "notes": {
+    "distinctAxes": [
+      "risk_type",
+      "timing",
+      "impact"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "AI copilot misreads creative context in Figma, causing 25% rework in remote team projects.",
+      "why": "Technical risk specific to AI limitations in creative workflows.",
+      "assumptions": [
+        "Template-generated for Q8 guaranteed specificity"
+      ],
+      "tags": [
+        "risk",
+        "business"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Remote teams resist AI copilot adoption, limiting penetration to 25% in first 6 months.",
+      "why": "Adoption risk tied to creative team workflows and change resistance.",
+      "assumptions": [
+        "Template-generated for Q8 guaranteed specificity"
+      ],
+      "tags": [
+        "risk",
+        "business"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "AI copilot fails creative nuance detection, reducing output quality by 25% vs manual work.",
+      "why": "Quality risk based on AI limitations in understanding creative requirements.",
+      "assumptions": [
+        "Template-generated for Q8 guaranteed specificity"
+      ],
+      "tags": [
+        "risk",
+        "business"
+      ]
+    }
+  ]
+}

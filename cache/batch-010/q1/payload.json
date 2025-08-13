@@ -1,0 +1,57 @@
+{
+  "questionNumber": 1,
+  "notes": {
+    "distinctAxes": [
+      "customer segment",
+      "mechanism",
+      "outcome metric"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot for 10–50p remote creative teams using Slack. — WHY: Saves 20% on collaboration time",
+      "why": "Lives where teams work, reducing friction in communication",
+      "assumptions": [
+        "Team uses Slack",
+        "Time savings are quantifiable"
+      ],
+      "tags": [
+        "Slack"
+      ],
+      "relevance": 0.5633972835736769,
+      "specificity": true,
+      "compositeScore": 0.6633972835736769
+    },
+    {
+      "id": "B",
+      "text": "Figma integration for 20–100p creative agencies using Figma. — WHY: Increases design output by 25%",
+      "why": "Automates repetitive design tasks, enhancing productivity",
+      "assumptions": [
+        "Agencies use Figma",
+        "Output is measurable"
+      ],
+      "tags": [
+        "Figma"
+      ],
+      "relevance": 0.5037505052530553,
+      "specificity": true,
+      "compositeScore": 0.6037505052530553
+    },
+    {
+      "id": "C",
+      "text": "Asana tool for 5–20p freelance designers using Asana. — WHY: Boosts project delivery by 30%",
+      "why": "Streamlines task management specific to design projects",
+      "assumptions": [
+        "Design teams use Asana",
+        "Project timelines are trackable"
+      ],
+      "tags": [
+        "Asana"
+      ],
+      "relevance": 0.46443227879764937,
+      "specificity": true,
+      "compositeScore": 0.5644322787976493
+    }
+  ]
+}

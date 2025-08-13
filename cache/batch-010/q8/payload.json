@@ -1,0 +1,52 @@
+{
+  "questionNumber": 8,
+  "notes": {
+    "distinctAxes": [
+      "risk_type",
+      "timing",
+      "impact"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "AI model errors in Slack lead to 20% rework on creative briefs.",
+      "why": "Misinterpretations cause inefficiencies.",
+      "assumptions": [
+        "Slack threads are complex",
+        "Model lacks context"
+      ],
+      "tags": [
+        "slack",
+        "rework"
+      ],
+      "relevance": 0.5374791289262721,
+      "specificity": true,
+      "compositeScore": 0.6374791289262721
+    },
+    {
+      "id": "B",
+      "text": "Model accuracy drops in Trello → 30% increase in task misassignments.",
+      "why": "Inaccurate AI could lead to inefficient task distribution.",
+      "assumptions": [
+        "Trello used for task management",
+        "AI model not fully trained"
+      ],
+      "tags": [
+        "model accuracy",
+        "Trello"
+      ],
+      "relevance": 0.4752656232852067,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "AI misassigns tasks in Slack → 15% increase in project delays.",
+      "why": "Task misassignments can disrupt workflow and timelines.",
+      "assumptions": [
+        "AI model errors",
+        "Slack task management"
+      ]
+    }
+  ]
+}

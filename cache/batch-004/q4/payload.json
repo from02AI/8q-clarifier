@@ -1,0 +1,45 @@
+{
+  "questionNumber": 4,
+  "notes": {
+    "distinctAxes": [
+      "mechanism",
+      "integration",
+      "automation"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "AI Slack bot automates task assignments and reminders",
+      "why": "Reduces PM time by 20% with seamless Slack integration",
+      "assumptions": [
+        "Teams use Slack",
+        "Slack API access"
+      ],
+      "relevance": 0.4636977127513782,
+      "specificity": true,
+      "compositeScore": 0.5636977127513783
+    },
+    {
+      "id": "B",
+      "text": "AI-driven Miro plugin for brainstorming and idea clustering",
+      "why": "Enhances creativity by organizing ideas visually",
+      "assumptions": [
+        "Miro used for brainstorming",
+        "Teams need idea organization"
+      ],
+      "tags": [
+        "miro"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Asana integration for 20–100p creative teams to auto-schedule tasks",
+      "why": "Reduces scheduling time by 25%",
+      "assumptions": [
+        "Asana in use",
+        "task templates exist"
+      ]
+    }
+  ]
+}

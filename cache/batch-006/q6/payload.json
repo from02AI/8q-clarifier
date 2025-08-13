@@ -1,0 +1,56 @@
+{
+  "questionNumber": 6,
+  "notes": {
+    "distinctAxes": [
+      "alt_tool",
+      "workaround",
+      "vendor"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Creative teams rely on Basecamp for project management and updates.",
+      "why": "Basecamp is widely used but lacks automation for creative workflows.",
+      "assumptions": [
+        "Basecamp in use",
+        "Basic project management suffices"
+      ],
+      "tags": [
+        "basecamp"
+      ],
+      "relevance": 0.5986969037762839,
+      "specificity": true,
+      "compositeScore": 0.6986969037762839
+    },
+    {
+      "id": "B",
+      "text": "Teams use Google Docs to draft and iterate task briefs.",
+      "why": "Docs are common for collaborating but not optimized for quick alignment.",
+      "assumptions": [
+        "Teams prefer familiar tools",
+        "Docs are free"
+      ],
+      "tags": [
+        "google_docs"
+      ],
+      "relevance": 0.49765824440759004,
+      "specificity": true,
+      "compositeScore": 0.5976582444075901
+    },
+    {
+      "id": "C",
+      "text": "Remote teams rely on Zoom calls for project updates and coordination.",
+      "why": "Zoom is widely used for real-time communication and clarifying tasks.",
+      "assumptions": [
+        "Teams prefer live interaction",
+        "Zoom is accessible"
+      ],
+      "tags": [
+        "zoom"
+      ],
+      "relevance": 0.5422475094583022,
+      "specificity": true
+    }
+  ]
+}

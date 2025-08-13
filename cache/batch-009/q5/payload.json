@@ -1,0 +1,45 @@
+{
+  "questionNumber": 5,
+  "notes": {
+    "distinctAxes": [
+      "metric",
+      "coverage",
+      "confidence"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Success is a 20% PM time reduction within 6 months.",
+      "why": "Allows tracking of time savings in existing workflows.",
+      "assumptions": [
+        "Current PM time tracked",
+        "6-month period feasible"
+      ],
+      "relevance": 0.50890562375272,
+      "specificity": true,
+      "compositeScore": 0.60890562375272
+    },
+    {
+      "id": "B",
+      "text": "Aim for 25% increase in team throughput in 3 months.",
+      "why": "Boosts productivity, easy to measure via output volume.",
+      "assumptions": [
+        "Output metrics available",
+        "3-month projects common"
+      ],
+      "relevance": 0.473207382829144,
+      "specificity": true,
+      "compositeScore": 0.573207382829144
+    },
+    {
+      "id": "C",
+      "text": "Achieve 30% reduction in project delays within 6 months",
+      "why": "Directly impacts team efficiency and client satisfaction",
+      "assumptions": [
+        "Delays are measurable",
+        "Teams track project timelines"
+      ]
+    }
+  ]
+}

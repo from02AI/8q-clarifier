@@ -1,0 +1,45 @@
+{
+  "questionNumber": 7,
+  "notes": {
+    "distinctAxes": [
+      "edge",
+      "data_adv",
+      "workflow_lock"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Model fine-tuned on 10k creative projects for remote teams",
+      "why": "WHY: increases AI relevance and contextual accuracy by 25%.",
+      "assumptions": [
+        "Projects cover diverse needs",
+        "Model training sufficient"
+      ],
+      "relevance": 0.6101727705993717,
+      "specificity": true,
+      "compositeScore": 0.7101727705993717
+    },
+    {
+      "id": "B",
+      "text": "Data moat: 200k creative briefs from top agencies",
+      "why": "WHY: improves project suggestions by 30% due to large, high-quality dataset.",
+      "assumptions": [
+        "Access to briefs",
+        "Relevance to creative work"
+      ],
+      "relevance": 0.4948807361535047,
+      "specificity": true,
+      "compositeScore": 0.5948807361535047
+    },
+    {
+      "id": "C",
+      "text": "Workflow/IP: Model fine-tuned on 5k remote creative team projects",
+      "why": "WHY: boosts task suggestion accuracy by 25% using relevant project data",
+      "assumptions": [
+        "Model trained on similar team dynamics",
+        "Data reflects current workflows"
+      ]
+    }
+  ]
+}

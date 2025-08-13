@@ -1,0 +1,42 @@
+{
+  "questionNumber": 5,
+  "notes": {
+    "distinctAxes": [
+      "metric",
+      "coverage",
+      "confidence"
+    ],
+    "differentiationStrategy": "metrics and time horizons"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Increase team output by 15% in first 6 months",
+      "why": "Measures productivity boost from AI integration",
+      "assumptions": [
+        "AI effectively adopted",
+        "Teams use Slack"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Reduce Slack message volume by 25% within 3 months",
+      "why": "Less clutter improves focus and reduces churn",
+      "assumptions": [
+        "Teams use Slack heavily",
+        "Message overload is an issue"
+      ],
+      "relevance": 0.514782253316858,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "Achieve 15% reduction in project delays within 3 months",
+      "why": "Directly impacts team efficiency and client satisfaction",
+      "assumptions": [
+        "Delays are currently measurable",
+        "Teams track project timelines"
+      ]
+    }
+  ]
+}

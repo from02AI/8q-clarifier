@@ -1,0 +1,45 @@
+{
+  "questionNumber": 7,
+  "notes": {
+    "distinctAxes": [
+      "edge",
+      "data_adv",
+      "workflow_lock"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Data moat: Dataset of 500k creative briefs from top agencies",
+      "why": "WHY: Trains AI for nuanced creative suggestions, boosting relevance by 22%",
+      "assumptions": [
+        "Access to agency data",
+        "Quality briefs"
+      ],
+      "relevance": 0.5055555987918174,
+      "specificity": true
+    },
+    {
+      "id": "B",
+      "text": "Distribution advantage: Featured in Slack App Directory, 300+ creative teams",
+      "why": "WHY: Increases visibility, accelerates team adoption by 30%",
+      "assumptions": [
+        "Slack App Directory visibility",
+        "creative teams seeking tools"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Workflow/IP: Model fine-tuned on 50k Slack discussions",
+      "why": "WHY: Boosts AI's contextual understanding by 22%",
+      "assumptions": [
+        "Access to Slack data",
+        "Model training capability"
+      ],
+      "tags": [
+        "workflow",
+        "model"
+      ]
+    }
+  ]
+}

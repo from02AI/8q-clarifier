@@ -1,0 +1,51 @@
+{
+  "questionNumber": 6,
+  "notes": {
+    "distinctAxes": [
+      "alt_tool",
+      "workaround",
+      "vendor"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "They use Google Docs for collaborative brainstorming sessions",
+      "why": "Google Docs is widely used for real-time collaboration without additional cost",
+      "assumptions": [
+        "Teams prefer familiar tools",
+        "No budget for new tools"
+      ],
+      "tags": [
+        "google_docs"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Teams use Trello boards for task tracking and project management",
+      "why": "Trello is widely used for visual task management in creative teams.",
+      "assumptions": [
+        "Teams manage tasks visually",
+        "Trello is accessible"
+      ],
+      "tags": [
+        "Trello"
+      ],
+      "relevance": 0.5067397392368979,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "Teams use Zoom and email chains for coordination",
+      "why": "Widely used for remote communication, but lacks task integration",
+      "assumptions": [
+        "Zoom for meetings",
+        "email for follow-ups"
+      ],
+      "tags": [
+        "zoom",
+        "email"
+      ]
+    }
+  ]
+}

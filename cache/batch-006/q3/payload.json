@@ -1,0 +1,49 @@
+{
+  "questionNumber": 3,
+  "notes": {
+    "distinctAxes": [
+      "pain",
+      "frequency",
+      "severity"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Monthly creative blockages in Asana due to unclear briefs, delaying 30% of tasks.",
+      "why": "Leads to inefficiencies and missed deadlines.",
+      "assumptions": [
+        "Creative teams use Asana",
+        "Briefs are frequently unclear"
+      ],
+      "tags": [
+        "asana"
+      ],
+      "relevance": 0.5065148928201285,
+      "specificity": true
+    },
+    {
+      "id": "B",
+      "text": "Weekly miscommunications in Slack causing 25% project delays for 10-50p teams.",
+      "why": "Directly impacts project timelines and team efficiency.",
+      "assumptions": [
+        "Teams rely on Slack for communication",
+        "Miscommunications are frequent"
+      ],
+      "tags": [
+        "slack"
+      ],
+      "relevance": 0.5364513726197119,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "Bi-weekly delays in Asana tasks due to timezone gaps, affecting 40% of projects.",
+      "why": "Delays disrupt timelines, lowering client satisfaction.",
+      "assumptions": [
+        "Asana in use",
+        "global team"
+      ]
+    }
+  ]
+}

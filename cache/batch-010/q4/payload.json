@@ -1,0 +1,48 @@
+{
+  "questionNumber": 4,
+  "notes": {
+    "distinctAxes": [
+      "mechanism",
+      "integration",
+      "automation"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot automates task assignments using AI, reducing miscommunications",
+      "why": "Ensures clarity, reduces task overlap by 20%",
+      "assumptions": [
+        "Teams primarily use Slack",
+        "AI understands task language"
+      ],
+      "relevance": 0.47540241916761655,
+      "specificity": true,
+      "compositeScore": 0.5754024191676166
+    },
+    {
+      "id": "B",
+      "text": "Asana plugin for automating task dependencies and reminders",
+      "why": "Eliminates manual follow-ups, improving deadline adherence by 15%",
+      "assumptions": [
+        "Teams use Asana",
+        "Consistent task updates"
+      ],
+      "relevance": 0.46288613670440515,
+      "specificity": true,
+      "compositeScore": 0.5628861367044051
+    },
+    {
+      "id": "C",
+      "text": "Miro plugin for 20–50p design teams to auto-generate project timelines",
+      "why": "Reduces miscommunication delays by 25%",
+      "assumptions": [
+        "Miro in use",
+        "teams plan visually"
+      ],
+      "tags": [
+        "miro"
+      ]
+    }
+  ]
+}

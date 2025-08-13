@@ -1,0 +1,55 @@
+{
+  "questionNumber": 2,
+  "notes": {
+    "distinctAxes": [
+      "team size",
+      "platform",
+      "context"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "10–30p content creation teams using Asana in global time zones",
+      "why": "Targeting distributed teams helps address coordination challenges.",
+      "assumptions": [
+        "Asana is the primary task manager",
+        "Teams are spread across multiple countries"
+      ],
+      "tags": [
+        "content",
+        "Asana"
+      ],
+      "relevance": 0.5145141841052041,
+      "specificity": true,
+      "compositeScore": 0.6145141841052041
+    },
+    {
+      "id": "B",
+      "text": "30–50p UX teams using Miro in cross-functional workshops",
+      "why": "Enhances collaboration in design sprints",
+      "assumptions": [
+        "Miro in use",
+        "workshop format"
+      ],
+      "tags": [
+        "UX",
+        "Miro"
+      ],
+      "relevance": 0.4603961342244811,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "5–10p design teams using Monday.com in client review cycles",
+      "why": "Targets small teams needing streamlined feedback processes",
+      "assumptions": [
+        "Monday.com in use",
+        "client feedback required"
+      ],
+      "tags": [
+        "monday.com"
+      ]
+    }
+  ]
+}

@@ -10,37 +10,39 @@
   "options": [
     {
       "id": "A",
-      "text": "Email chains for feedback loops and project updates",
-      "why": "Teams use email for asynchronous communication and tracking",
+      "text": "Rely on Trello boards for project tracking and updates",
+      "why": "Simple and familiar; lacks AI insights",
       "assumptions": [
-        "Email is universally accessible",
-        "Teams need asynchronous options"
-      ]
+        "Trello in use",
+        "Teams prefer visual boards"
+      ],
+      "relevance": 0.5150119757448615,
+      "specificity": true,
+      "compositeScore": 0.6150119757448614
     },
     {
       "id": "B",
-      "text": "Zoom meetings for weekly design feedback sessions",
-      "why": "Provides real-time interaction for immediate feedback",
+      "text": "Use Google Workspace for document collaboration",
+      "why": "Widely used; lacks task automation",
       "assumptions": [
-        "Teams meet weekly",
-        "Zoom is accessible"
+        "Google Workspace in use",
+        "Teams collaborate on docs"
       ],
-      "tags": [
-        "zoom"
-      ],
-      "relevance": 0.4509713493910103,
-      "specificity": true
+      "relevance": 0.4500122554038847,
+      "specificity": true,
+      "compositeScore": 0.5500122554038847
     },
     {
       "id": "C",
-      "text": "Asana for task management and feedback tracking",
-      "why": "Centralizes tasks and feedback; reduces tool-switching",
+      "text": "Use Asana for task management, Google Docs for collaboration",
+      "why": "Common tools for project tracking and document sharing",
       "assumptions": [
         "Teams use Asana",
-        "Feedback tracked in tasks"
+        "Google Docs for collaboration"
       ],
       "tags": [
-        "asana"
+        "asana",
+        "google docs"
       ]
     }
   ]

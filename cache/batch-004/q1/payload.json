@@ -1,0 +1,46 @@
+{
+  "questionNumber": 1,
+  "notes": {
+    "distinctAxes": [
+      "customer",
+      "platform",
+      "outcome"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot for 10–50p creative teams using Slack. — WHY: Cuts PM time by 20%",
+      "why": "Lives within existing workflow for efficiency",
+      "assumptions": [
+        "Slack is primary communication tool"
+      ],
+      "relevance": 0.518019769356026,
+      "specificity": true,
+      "compositeScore": 0.618019769356026
+    },
+    {
+      "id": "B",
+      "text": "Figma plugin for 5–20p design teams using Figma. — WHY: Increases output by 30%",
+      "why": "Automates repetitive design tasks",
+      "assumptions": [
+        "Figma is primary design tool"
+      ],
+      "relevance": 0.45415009974639464,
+      "specificity": true,
+      "compositeScore": 0.5541500997463946
+    },
+    {
+      "id": "C",
+      "text": "Miro plugin for 20–100p agencies to brainstorm remotely",
+      "why": "Enhances collaboration, boosting idea generation by 30%",
+      "assumptions": [
+        "Miro in use",
+        "remote work setup"
+      ],
+      "tags": [
+        "miro"
+      ]
+    }
+  ]
+}

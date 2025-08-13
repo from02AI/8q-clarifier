@@ -1,0 +1,45 @@
+{
+  "questionNumber": 7,
+  "notes": {
+    "distinctAxes": [
+      "edge",
+      "data_adv",
+      "workflow_lock"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Pretrained AI model on 10k creative project outcomes",
+      "why": "WHY: Increases task assignment precision by 22%",
+      "assumptions": [
+        "Access to project outcome data",
+        "Model retraining possible"
+      ],
+      "relevance": 0.5579625107597327,
+      "specificity": true,
+      "compositeScore": 0.6579625107597327
+    },
+    {
+      "id": "B",
+      "text": "Data moat: 100k creative briefs from remote agencies — WHY: Trains AI copilot on creative workflows, boosting accuracy by 20%.",
+      "why": "Creative-specific dataset advantage that competitors can't easily replicate for remote teams.",
+      "assumptions": [
+        "Template-generated for Q7 guaranteed specificity"
+      ],
+      "tags": [
+        "edge",
+        "competitive"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "AI model trained on 50k remote team interactions",
+      "why": "WHY: Enhances task assignment accuracy by 30%",
+      "assumptions": [
+        "Data from remote teams",
+        "AI model applicable"
+      ]
+    }
+  ]
+}

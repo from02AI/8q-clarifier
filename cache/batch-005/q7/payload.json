@@ -1,0 +1,45 @@
+{
+  "questionNumber": 7,
+  "notes": {
+    "distinctAxes": [
+      "edge",
+      "data_adv",
+      "workflow_lock"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Data moat: 100k creative briefs dataset from top agencies",
+      "why": "Raises AI's suggestion precision by 15%",
+      "assumptions": [
+        "Dataset access",
+        "Relevant data"
+      ],
+      "relevance": 0.5324983276982996,
+      "specificity": true,
+      "compositeScore": 0.6324983276982996
+    },
+    {
+      "id": "B",
+      "text": "Exclusive partnership with Asana for insights from 50k projects",
+      "why": "Optimizes task management suggestions by 25%",
+      "assumptions": [
+        "Partnership validity",
+        "Data applicability"
+      ],
+      "relevance": 0.46004355725865603,
+      "specificity": true,
+      "compositeScore": 0.5600435572586561
+    },
+    {
+      "id": "C",
+      "text": "Workflow/IP: Model fine-tuned on 10k remote creative projects",
+      "why": "WHY: Boosts AI task suggestion accuracy by 25%",
+      "assumptions": [
+        "Model trained on relevant data",
+        "AI suggestions used"
+      ]
+    }
+  ]
+}

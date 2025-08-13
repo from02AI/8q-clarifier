@@ -1,0 +1,46 @@
+{
+  "questionNumber": 5,
+  "notes": {
+    "distinctAxes": [
+      "metric",
+      "coverage",
+      "confidence"
+    ],
+    "differentiationStrategy": "metric-based"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Success is 15% increase in task completion rate within 2 months.",
+      "why": "Higher completion rates show improved efficiency due to the tool.",
+      "assumptions": [
+        "Tasks are tracked",
+        "Data collection is consistent"
+      ],
+      "relevance": 0.481090261272207,
+      "specificity": true,
+      "compositeScore": 0.581090261272207
+    },
+    {
+      "id": "B",
+      "text": "Success is reducing collaboration time by 20% within 3 months.",
+      "why": "A measurable impact in the short term indicates effective intervention.",
+      "assumptions": [
+        "Current time tracking exists",
+        "Teams are motivated to change"
+      ],
+      "relevance": 0.47977817704282305,
+      "specificity": true,
+      "compositeScore": 0.5797781770428231
+    },
+    {
+      "id": "C",
+      "text": "Success if task completion time decreases by 25% within 3 months.",
+      "why": "Faster task completion indicates improved team efficiency and tool effectiveness.",
+      "assumptions": [
+        "Teams use the tool consistently",
+        "Baseline task times are known"
+      ]
+    }
+  ]
+}

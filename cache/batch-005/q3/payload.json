@@ -1,0 +1,43 @@
+{
+  "questionNumber": 3,
+  "notes": {
+    "distinctAxes": [
+      "pain",
+      "frequency",
+      "severity"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Creative teams lose 15% productivity on Asana due to task misalignment",
+      "why": "Misaligned tasks result in duplicated work, wasting time and resources.",
+      "assumptions": [
+        "Teams use Asana",
+        "Task alignment issues exist"
+      ],
+      "relevance": 0.4696365749627379,
+      "specificity": true
+    },
+    {
+      "id": "B",
+      "text": "Remote marketing teams experience 30% idea loss in Zoom meetings",
+      "why": "Ideas are not captured effectively, leading to missed opportunities.",
+      "assumptions": [
+        "Teams use Zoom",
+        "Meeting notes are not effectively captured"
+      ],
+      "relevance": 0.5322111039929549,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "Remote teams struggle with 20% miscommunication in Slack",
+      "why": "Miscommunication leads to rework and missed deadlines",
+      "assumptions": [
+        "Slack is primary communication tool",
+        "Teams are distributed"
+      ]
+    }
+  ]
+}

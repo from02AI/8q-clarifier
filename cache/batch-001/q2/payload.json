@@ -2,7 +2,8 @@
   "questionNumber": 2,
   "notes": {
     "distinctAxes": [
-      "team size",
+      "size",
+      "function",
       "platform",
       "context"
     ]
@@ -10,45 +11,38 @@
   "options": [
     {
       "id": "A",
-      "text": "10–30p remote design teams using Microsoft Teams in cross-border projects.",
-      "why": "Targets teams with complex collaboration needs.",
+      "text": "30–50p creative agencies using Microsoft Teams in global campaigns",
+      "why": "Targets larger agencies managing cross-border projects.",
       "assumptions": [
-        "Microsoft Teams in use",
-        "international projects"
+        "Microsoft Teams is the main platform",
+        "Global client base"
       ],
-      "tags": [
-        "microsoft teams"
-      ],
-      "relevance": 0.5242628753389336,
+      "relevance": 0.5759709318336561,
       "specificity": true,
-      "compositeScore": 0.6242628753389335
+      "compositeScore": 0.6759709318336561
     },
     {
       "id": "B",
-      "text": "30–50p marketing teams using Zoom for product launch weeks.",
-      "why": "Focuses on high-pressure periods needing clear communication.",
+      "text": "10–20p remote UX teams using Trello in sprint planning",
+      "why": "Focus on teams engaged in iterative design cycles.",
       "assumptions": [
-        "Zoom meetings",
-        "launch-focused"
+        "Teams use Trello",
+        "Agile methodologies in place"
       ],
-      "tags": [
-        "zoom"
-      ],
-      "relevance": 0.5178333468034213,
+      "relevance": 0.48308272341806363,
       "specificity": true,
-      "compositeScore": 0.6178333468034213
+      "compositeScore": 0.5830827234180637
     },
     {
       "id": "C",
-      "text": "20–40p creative agencies using Monday.com in global time zones",
-      "why": "Facilitates cross-timezone collaboration for creative projects",
+      "text": "5–15p remote content teams using Asana in project kickoffs",
+      "why": "Targets small teams for efficient project initiation",
       "assumptions": [
-        "Monday.com in use",
-        "global team setup"
+        "Asana in use",
+        "project-based workflow"
       ],
-      "tags": [
-        "monday.com"
-      ]
+      "relevance": 0.5152242155571248,
+      "specificity": true
     }
   ]
 }

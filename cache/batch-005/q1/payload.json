@@ -1,0 +1,51 @@
+{
+  "questionNumber": 1,
+  "notes": {
+    "distinctAxes": [
+      "platform",
+      "team type",
+      "metric"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot for 10–50p marketing teams using Slack. — WHY: Saves 20% of meeting time.",
+      "why": "Reduces meeting frequency, freeing up time for creative tasks.",
+      "assumptions": [
+        "Teams actively use Slack",
+        "Meetings are frequent"
+      ],
+      "tags": [
+        "marketing",
+        "slack"
+      ],
+      "relevance": 0.4962613847796934,
+      "specificity": true,
+      "compositeScore": 0.5962613847796934
+    },
+    {
+      "id": "B",
+      "text": "Google Workspace AI for 5–20p marketing teams automating content creation. — WHY: Cuts creation time by 20%",
+      "why": "Streamlines content processes, enhancing productivity",
+      "assumptions": [
+        "Google Workspace in use",
+        "content-heavy workflow"
+      ],
+      "tags": [
+        "google workspace"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Asana AI for 15–40p design teams optimizing project timelines. — WHY: Reduces delays by 25%",
+      "why": "Streamlines project management, enhancing team productivity and meeting deadlines.",
+      "assumptions": [
+        "Asana is used for project management",
+        "Teams face timeline challenges"
+      ],
+      "relevance": 0.4860581265238275,
+      "specificity": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "questionNumber": 5,
+  "notes": {
+    "distinctAxes": [
+      "metric",
+      "coverage",
+      "confidence"
+    ],
+    "differentiationStrategy": "Ensured metrics differ by focus, scope, and certainty"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Track 25% reduction in feedback cycle time over 3 months",
+      "why": "Demonstrates enhanced efficiency in processes.",
+      "assumptions": [
+        "Teams consistently use the bot",
+        "Baseline data available"
+      ],
+      "relevance": 0.4626344865572035,
+      "specificity": true,
+      "compositeScore": 0.5626344865572035
+    },
+    {
+      "id": "B",
+      "text": "Measure 30% increase in on-time project completions within 6 months",
+      "why": "Shows improved adherence to deadlines.",
+      "assumptions": [
+        "Project timelines tracked",
+        "Consistent bot usage"
+      ],
+      "relevance": 0.4586151370554057,
+      "specificity": true,
+      "compositeScore": 0.5586151370554057
+    },
+    {
+      "id": "C",
+      "text": "Assess 20% boost in client satisfaction via Slack within 4 months",
+      "why": "Higher satisfaction indicates smoother feedback processes.",
+      "assumptions": [
+        "Client feedback is measurable",
+        "Slack is primary tool"
+      ],
+      "relevance": 0.580648017836501,
+      "specificity": true
+    }
+  ]
+}

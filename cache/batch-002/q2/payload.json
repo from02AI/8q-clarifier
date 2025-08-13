@@ -1,0 +1,57 @@
+{
+  "questionNumber": 2,
+  "notes": {
+    "distinctAxes": [
+      "team size",
+      "platform",
+      "context"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "20–40p remote marketing teams using Slack in weekly campaign sprints",
+      "why": "Streamlines communication during intense periods",
+      "assumptions": [
+        "Slack in use",
+        "campaign-based work"
+      ],
+      "tags": [
+        "marketing"
+      ],
+      "relevance": 0.5895620908885882,
+      "specificity": true,
+      "compositeScore": 0.6895620908885882
+    },
+    {
+      "id": "B",
+      "text": "50–70p remote product design teams using Asana in client review cycles",
+      "why": "Facilitates feedback loops efficiently",
+      "assumptions": [
+        "Asana in use",
+        "regular client interactions"
+      ],
+      "tags": [
+        "product design"
+      ],
+      "relevance": 0.48514343330042026,
+      "specificity": true,
+      "compositeScore": 0.5851434333004203
+    },
+    {
+      "id": "C",
+      "text": "10–30p remote web development teams using GitHub in global time zones",
+      "why": "Addresses async collaboration challenges",
+      "assumptions": [
+        "GitHub in use",
+        "remote setup"
+      ],
+      "tags": [
+        "web development"
+      ],
+      "relevance": 0.45613148621597616,
+      "specificity": true,
+      "compositeScore": 0.5561314862159762
+    }
+  ]
+}

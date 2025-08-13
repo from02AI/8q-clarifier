@@ -1,0 +1,51 @@
+{
+  "questionNumber": 4,
+  "notes": {
+    "distinctAxes": [
+      "delivery mechanism",
+      "integration",
+      "automation"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot manages task assignments to keep 10–50p remote teams aligned.",
+      "why": "Automates task distribution, reducing project delays by 20%.",
+      "assumptions": [
+        "Slack is primary communication tool",
+        "Teams lack project alignment"
+      ],
+      "tags": [
+        "slack",
+        "task management"
+      ],
+      "relevance": 0.5139696238593685,
+      "specificity": true,
+      "compositeScore": 0.6139696238593685
+    },
+    {
+      "id": "B",
+      "text": "Slack plugin auto-summarizes weekly messages for 10-20p teams",
+      "why": "Reduces message overload, boosting creative output by 15%",
+      "assumptions": [
+        "Teams use Slack",
+        "Weekly summaries needed"
+      ],
+      "relevance": 0.549124704357554,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "Notion AI module for 10-50p remote teams to streamline creative workflows",
+      "why": "Integrates with Notion to centralize tasks, boosting efficiency by 20%",
+      "assumptions": [
+        "Notion in use",
+        "teams use Notion for task management"
+      ],
+      "tags": [
+        "notion"
+      ]
+    }
+  ]
+}

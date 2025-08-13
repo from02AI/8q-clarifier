@@ -1,0 +1,48 @@
+{
+  "questionNumber": 1,
+  "notes": {
+    "distinctAxes": [
+      "team size",
+      "platform",
+      "outcome"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot for 10–50p remote creative teams using Slack. — WHY: Cuts PM time by 20%",
+      "why": "Cuts PM time by 20%",
+      "assumptions": [
+        "Teams use Slack",
+        "Project management is time-intensive"
+      ],
+      "relevance": 0.5438558231463775,
+      "specificity": true,
+      "compositeScore": 0.6438558231463775
+    },
+    {
+      "id": "B",
+      "text": "Miro integration for 5-20p remote creative teams to streamline brainstorming",
+      "why": "Improves idea generation by 30%",
+      "assumptions": [
+        "Miro in use",
+        "teams are remote"
+      ],
+      "tags": [
+        "miro"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Miro integration for 50-200p marketing teams using Miro. — WHY: Boosts brainstorming speed by 40%",
+      "why": "Speeds up idea generation sessions",
+      "assumptions": [
+        "Miro in use",
+        "teams conduct brainstorming sessions"
+      ],
+      "tags": [
+        "miro"
+      ]
+    }
+  ]
+}

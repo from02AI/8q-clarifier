@@ -1,0 +1,45 @@
+{
+  "questionNumber": 6,
+  "notes": {
+    "distinctAxes": [
+      "alt_tool",
+      "workaround",
+      "vendor"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Google Workspace for task management and collaboration",
+      "why": "Many teams use its integrated tools for communication and organization.",
+      "assumptions": [
+        "Teams prefer integrated solutions",
+        "Familiarity with Google tools"
+      ],
+      "relevance": 0.5009296980558233,
+      "specificity": true,
+      "compositeScore": 0.6009296980558233
+    },
+    {
+      "id": "B",
+      "text": "Email chains for client feedback and task coordination",
+      "why": "Teams rely on email for asynchronous communication and feedback loops",
+      "assumptions": [
+        "Email is universally accessible",
+        "Teams need asynchronous communication"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Google Docs/Sheets for tracking client feedback and revisions",
+      "why": "Common toolset; no new learning curve",
+      "assumptions": [
+        "Teams use Google Workspace",
+        "Familiarity with Google tools"
+      ],
+      "tags": [
+        "google"
+      ]
+    }
+  ]
+}

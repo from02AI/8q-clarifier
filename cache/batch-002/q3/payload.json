@@ -1,0 +1,41 @@
+{
+  "questionNumber": 3,
+  "notes": {
+    "distinctAxes": [
+      "pain",
+      "frequency",
+      "severity"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Coordination delays in Slack discussions; 4-6 times/week",
+      "why": "Delays in Slack lead to project overruns and team frustration",
+      "assumptions": [
+        "Teams rely on Slack",
+        "High message volume"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Inconsistent creative feedback loops; 30% rework rate",
+      "why": "Streamlined feedback reduces rework, improving efficiency",
+      "assumptions": [
+        "Feedback tools are used",
+        "Teams value efficiency"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Creative block in brainstorming via Slack; 40% sessions stalled",
+      "why": "Slack lacks dynamic brainstorming tools, leading to stalled sessions.",
+      "assumptions": [
+        "Teams brainstorm in Slack",
+        "High dependence on text communication"
+      ],
+      "relevance": 0.5609103175907323,
+      "specificity": true
+    }
+  ]
+}

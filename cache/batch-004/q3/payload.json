@@ -1,0 +1,48 @@
+{
+  "questionNumber": 3,
+  "notes": {
+    "distinctAxes": [
+      "pain",
+      "frequency",
+      "severity"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "High churn in Slack client review cycles; 15% delay rate",
+      "why": "Slack integration can streamline feedback loops, reducing churn.",
+      "assumptions": [
+        "Teams use Slack",
+        "Feedback loops are manual"
+      ],
+      "relevance": 0.5133986820943996,
+      "specificity": true,
+      "compositeScore": 0.6133986820943996
+    },
+    {
+      "id": "B",
+      "text": "Missed deadlines due to 20% task misunderstanding rate",
+      "why": "AI can clarify tasks, cutting misunderstandings.",
+      "assumptions": [
+        "Teams lack consistent task clarity",
+        "Meetings aren't solving the issue"
+      ],
+      "relevance": 0.4915562701171626,
+      "specificity": true,
+      "compositeScore": 0.5915562701171626
+    },
+    {
+      "id": "C",
+      "text": "Feedback loops in Asana take 2-3 days; AI copilot reduces to 1 day",
+      "why": "Speeds up project cycles by 50%",
+      "assumptions": [
+        "Asana in use",
+        "feedback delays common"
+      ],
+      "tags": [
+        "asana"
+      ]
+    }
+  ]
+}

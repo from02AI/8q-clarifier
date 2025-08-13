@@ -1,0 +1,51 @@
+{
+  "questionNumber": 5,
+  "notes": {
+    "distinctAxes": [
+      "metric",
+      "coverage",
+      "confidence"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Measure task completion rate increase by 15% within 3 months",
+      "why": "Directly reflects efficiency improvements from AI use",
+      "assumptions": [
+        "Asana task tracking",
+        "Task volume stable"
+      ],
+      "tags": [
+        "task efficiency"
+      ],
+      "relevance": 0.49715716776324315,
+      "specificity": true,
+      "compositeScore": 0.5971571677632431
+    },
+    {
+      "id": "B",
+      "text": "Monitor 25% increase in task completion speed in Asana over 3 months",
+      "why": "Directly addresses productivity boost in core tool",
+      "assumptions": [
+        "Asana is primary tool",
+        "Teams track tasks"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Track 10% rise in brief approval speed using Google Docs AI in 6 months",
+      "why": "Faster approvals enhance project throughput and reduce bottlenecks.",
+      "assumptions": [
+        "Google Docs in use",
+        "AI integration accepted"
+      ],
+      "tags": [
+        "google docs",
+        "ai"
+      ],
+      "relevance": 0.5139125061366614,
+      "specificity": true
+    }
+  ]
+}

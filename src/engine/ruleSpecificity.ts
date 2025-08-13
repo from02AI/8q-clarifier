@@ -22,38 +22,55 @@ function checkSpecificity(text: string, questionNumber?: number): boolean {
 function checkEdgeAssetSpecificity(text: string): boolean {
   const lowerText = text.toLowerCase();
   
-  // Must have concrete edge asset indicators
-  const edgeAssetPatterns = [
-    // Dataset specificity
-    /\b(\d+k?|thousand|million)\s*(items?|briefs?|projects?|documents?|samples?|examples?)\b/i,
-    /\bdataset\s+of\s+\d+/i,
-    /\bfine-tuned\s+on\s+\d+/i,
-    /\btrained\s+on\s+\d+/i,
-    
-    // Partnership specificity
-    /\bpartnership\s+with\s+\w+/i,
-    /\bexclusive\s+.*\bwith\s+\w+/i,
-    /\bpreinstalled\s+(on|in)\s+\d+/i,
-    
-    // Technical advantage specificity
-    /\bproprietary\s+(api|data|model|algorithm)/i,
-    /\bprivate\s+api\s+access/i,
-    /\boutperforms?\s+.*by\s+\d+%/i,
-    /\bimproves?\s+.*by\s+\d+%/i,
-    
-    // Distribution advantage
-    /\bdistribution\s+.*\b(lock|advantage|channel)/i,
-    /\binstalled\s+in\s+\d+/i,
-    /\baccess\s+to\s+\d+/i
-  ];
+  // Check for the 3 required archetypes with concrete specifics
+  const hasDataMoat = checkDataMoat(text);
+  const hasDistribution = checkDistribution(text);
+  const hasWorkflowIP = checkWorkflowIP(text);
   
-  // Must match at least one edge asset pattern
-  const hasEdgeAsset = edgeAssetPatterns.some(pattern => pattern.test(text));
+  // Must match exactly one of the three archetypes
+  const archetypeCount = [hasDataMoat, hasDistribution, hasWorkflowIP].filter(Boolean).length;
   
   // Must also have a number for scale/specificity
   const hasNumber = /\b\d+[k%]?\b/.test(text);
   
-  return hasEdgeAsset && hasNumber;
+  return archetypeCount >= 1 && hasNumber;
+}
+
+function checkDataMoat(text: string): boolean {
+  // Data moat: dataset + size + provenance
+  const datasetPatterns = [
+    /\b(dataset|data)\s+.*\b\d+[k]?/i,
+    /\b\d+[k]?\s*(briefs?|projects?|samples?|examples?|documents?|records?)/i,
+    /\bfine-tuned\s+on\s+\d+/i,
+    /\btrained\s+on\s+\d+/i,
+    /\b(proprietary|exclusive)\s+(dataset|data)/i
+  ];
+  
+  return datasetPatterns.some(pattern => pattern.test(text));
+}
+
+function checkDistribution(text: string): boolean {
+  // Distribution: channel + count
+  const distributionPatterns = [
+    /\b(featured|preinstalled|installed)\s+(in|on)\s+.*\d+/i,
+    /\b(app\s+directory|marketplace|store)/i,
+    /\b\d+[k]?\s+(workspaces?|installations?|users?|customers?)/i,
+    /\b(slack\s+app\s+directory|teams\s+store|chrome\s+store)/i
+  ];
+  
+  return distributionPatterns.some(pattern => pattern.test(text));
+}
+
+function checkWorkflowIP(text: string): boolean {
+  // Workflow/IP: taxonomy/model/training with counts
+  const workflowPatterns = [
+    /\b(taxonomy|model|algorithm)\s+.*\b\d+/i,
+    /\b\d+[k]?\s+(patterns?|categories?|classifications?)/i,
+    /\b(proprietary|custom)\s+(model|algorithm|taxonomy)/i,
+    /\b(workflow|process)\s+(optimization|intelligence)/i
+  ];
+  
+  return workflowPatterns.some(pattern => pattern.test(text));
 }
 
 function checkGeneralSpecificity(text: string): boolean {
@@ -131,7 +148,7 @@ export function validateQuestionSpecificity(option: Pick<Suggestion, 'text' | 'w
   if (questionNumber === 7) {
     return {
       passes: false,
-      reason: 'Needs concrete edge asset: exclusive dataset with size, named partnership, distribution advantage, or proprietary technical details'
+      reason: 'lacks edge specificity (no concrete edge asset: dataset size, exclusive partner, distribution advantage)'
     };
   } else {
     const hasNumbers = checkForNumbers(option.text);

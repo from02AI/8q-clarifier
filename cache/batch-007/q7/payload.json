@@ -1,0 +1,48 @@
+{
+  "questionNumber": 7,
+  "notes": {
+    "distinctAxes": [
+      "edge",
+      "data_adv",
+      "workflow_lock"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Data moat: 500k annotated design files from global agencies",
+      "why": "WHY: Improves AI precision by learning diverse styles",
+      "assumptions": [
+        "Data access agreements",
+        "Files include design metadata"
+      ],
+      "tags": [
+        "data moat"
+      ],
+      "relevance": 0.5108737767479763,
+      "specificity": true,
+      "compositeScore": 0.6108737767479763
+    },
+    {
+      "id": "B",
+      "text": "Data moat: Curated dataset of 200k global design briefs",
+      "why": "WHY: Boosts relevance to remote teams' needs",
+      "assumptions": [
+        "Access to briefs",
+        "Quality annotation"
+      ],
+      "relevance": 0.46956696308963447,
+      "specificity": true,
+      "compositeScore": 0.5695669630896345
+    },
+    {
+      "id": "C",
+      "text": "Distribution advantage: Featured in Figma Community with 2k monthly views",
+      "why": "Targets active Figma users, boosting visibility and adoption",
+      "assumptions": [
+        "Figma users seek plugins",
+        "community engagement"
+      ]
+    }
+  ]
+}

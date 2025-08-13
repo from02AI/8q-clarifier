@@ -1,0 +1,58 @@
+{
+  "questionNumber": 4,
+  "notes": {
+    "distinctAxes": [
+      "mechanism",
+      "integration",
+      "automation"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "SaaS platform with Figma integration to enhance collaboration.",
+      "why": "Centralizes feedback, cutting revision cycles by 30%.",
+      "assumptions": [
+        "Figma is primary tool"
+      ],
+      "tags": [
+        "saas",
+        "figma"
+      ],
+      "relevance": 0.571437949459245,
+      "specificity": true,
+      "compositeScore": 0.671437949459245
+    },
+    {
+      "id": "B",
+      "text": "Slack bot integrates with Adobe Creative Cloud to streamline task management.",
+      "why": "Automates project updates, saving 15% communication time.",
+      "assumptions": [
+        "Teams use Slack",
+        "Adobe Creative Cloud is core"
+      ],
+      "tags": [
+        "slack",
+        "adobe"
+      ],
+      "relevance": 0.4654964407453459,
+      "specificity": true,
+      "compositeScore": 0.5654964407453459
+    },
+    {
+      "id": "C",
+      "text": "Microsoft Teams plugin for creative file sharing automation.",
+      "why": "Speeds up file distribution, improving efficiency by 25%.",
+      "assumptions": [
+        "Microsoft Teams is used",
+        "File sharing is a bottleneck"
+      ],
+      "tags": [
+        "microsoft teams"
+      ],
+      "relevance": 0.4610341105099282,
+      "specificity": true,
+      "compositeScore": 0.5610341105099282
+    }
+  ]
+}

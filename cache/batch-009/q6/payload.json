@@ -1,0 +1,52 @@
+{
+  "questionNumber": 6,
+  "notes": {
+    "distinctAxes": [
+      "alt_tool",
+      "workaround",
+      "vendor"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Adobe XD teams use Google Docs for feedback and revisions",
+      "why": "Accessible but lacks direct design integration",
+      "assumptions": [
+        "Google Suite available"
+      ],
+      "tags": [
+        "adobe"
+      ],
+      "relevance": 0.6137679589283893,
+      "specificity": true,
+      "compositeScore": 0.7137679589283893
+    },
+    {
+      "id": "B",
+      "text": "Trello users rely on manual task tracking and email updates",
+      "why": "Common for agencies; lacks real-time sync",
+      "assumptions": [
+        "Email is standard"
+      ],
+      "tags": [
+        "trello"
+      ],
+      "relevance": 0.452320995488361,
+      "specificity": true,
+      "compositeScore": 0.552320995488361
+    },
+    {
+      "id": "C",
+      "text": "Remote teams use Asana for task tracking, but lack AI insights",
+      "why": "Asana is structured, but lacks AI-driven efficiency improvements",
+      "assumptions": [
+        "Asana is widely used",
+        "Teams seek AI insights"
+      ],
+      "tags": [
+        "asana"
+      ]
+    }
+  ]
+}

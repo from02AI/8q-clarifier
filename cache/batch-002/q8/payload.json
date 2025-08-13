@@ -1,0 +1,45 @@
+{
+  "questionNumber": 8,
+  "notes": {
+    "distinctAxes": [
+      "risk_type",
+      "timing",
+      "impact"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Model misreads Slack threads, causing 20% rework in creative briefs.",
+      "why": "Inaccurate interpretations can lead to inefficient workflows.",
+      "assumptions": [
+        "AI model accuracy",
+        "complexity of language"
+      ],
+      "tags": [
+        "slack"
+      ],
+      "relevance": 0.4644457664794164,
+      "specificity": true,
+      "compositeScore": 0.5644457664794164
+    },
+    {
+      "id": "B",
+      "text": "AI misinterprets creative briefs in Slack, causing 25% rework rate.",
+      "why": "Misinterpretation leads to inefficiencies and increased workload.",
+      "assumptions": [
+        "AI accuracy issues",
+        "complex brief inputs"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "AI misinterprets Slack context, causing 15% drop in brief accuracy.",
+      "why": "Accuracy is crucial for maintaining team trust and efficiency.",
+      "assumptions": [
+        "AI context understanding",
+        "Slack message clarity"
+      ]
+    }
+  ]
+}

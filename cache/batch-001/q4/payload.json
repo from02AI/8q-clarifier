@@ -10,39 +10,39 @@
   "options": [
     {
       "id": "A",
-      "text": "SaaS platform with AI-driven Figma feedback for designers",
-      "why": "Automates feedback process, accelerating design iterations",
+      "text": "Asana plugin for 50–100p teams to auto-generate briefs with AI insights",
+      "why": "Reduces rework by 20% with clear, aligned briefs",
       "assumptions": [
-        "Figma in use",
-        "Remote design teams"
+        "Asana in use",
+        "teams need brief clarity"
       ],
       "tags": [
-        "SaaS",
-        "automation"
-      ],
-      "relevance": 0.5709208565485593,
-      "specificity": true,
-      "compositeScore": 0.6709208565485593
+        "asana"
+      ]
     },
     {
       "id": "B",
-      "text": "Microsoft Teams bot for 10–30p creative teams to auto-schedule feedback sessions",
-      "why": "Ensures timely feedback, reducing delays by 30%",
+      "text": "AI-driven SaaS for creative teams, integrates with Asana to streamline task management",
+      "why": "Reduces task coordination time by 30%",
       "assumptions": [
-        "Teams in use",
-        "feedback loops exist"
+        "Asana in use",
+        "teams need task management"
+      ],
+      "tags": [
+        "asana"
       ]
     },
     {
       "id": "C",
-      "text": "Slack integration for 10–30p creative teams to streamline cross-border feedback",
-      "why": "Cuts feedback loop delays by 40%",
+      "text": "Slack bot for creative agencies to auto-summarize briefs",
+      "why": "Ensures clarity; reduces rework by 20%",
       "assumptions": [
         "Slack in use",
-        "teams work across time zones"
+        "briefs often unclear"
       ],
-      "relevance": 0.6031630101166496,
-      "specificity": true
+      "tags": [
+        "slack"
+      ]
     }
   ]
 }

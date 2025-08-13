@@ -1,0 +1,52 @@
+{
+  "questionNumber": 6,
+  "notes": {
+    "distinctAxes": [
+      "alt_tool",
+      "workaround",
+      "vendor"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Freelancers using Trello and Dropbox for design collaboration",
+      "why": "Combines clear task management with file sharing",
+      "assumptions": [
+        "Trello and Dropbox are accessible",
+        "Teams need basic collaboration tools"
+      ],
+      "relevance": 0.5090327937463739,
+      "specificity": true,
+      "compositeScore": 0.6090327937463739
+    },
+    {
+      "id": "B",
+      "text": "Email chains and Google Docs for collaborative design feedback",
+      "why": "Common but inefficient; lacks real-time collaboration",
+      "assumptions": [
+        "Teams use email",
+        "Google Docs for feedback"
+      ],
+      "tags": [
+        "email",
+        "google docs"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Remote teams use Slack and Zoom for real-time design discussions",
+      "why": "Common tools for remote communication and collaboration",
+      "assumptions": [
+        "Teams use Slack",
+        "Video calls on Zoom"
+      ],
+      "tags": [
+        "slack",
+        "zoom"
+      ],
+      "relevance": 0.6212013650064161,
+      "specificity": true
+    }
+  ]
+}

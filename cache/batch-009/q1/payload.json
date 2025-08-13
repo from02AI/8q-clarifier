@@ -1,0 +1,47 @@
+{
+  "questionNumber": 1,
+  "notes": {
+    "distinctAxes": [
+      "customer segment",
+      "platform",
+      "impact metric"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot for 10–50p remote creative teams using Slack. — WHY: Cuts PM time by 20%",
+      "why": "Streamlines project management tasks, reducing time spent.",
+      "assumptions": [
+        "Teams use Slack",
+        "Basic API access available"
+      ],
+      "relevance": 0.5278543476218778,
+      "specificity": true,
+      "compositeScore": 0.6278543476218778
+    },
+    {
+      "id": "B",
+      "text": "Standalone SaaS for freelance designers using Figma. — WHY: Increases throughput by 25%",
+      "why": "Automates design handoff to increase efficiency.",
+      "assumptions": [
+        "Designers use Figma",
+        "Integration with Figma possible"
+      ],
+      "relevance": 0.4798923543689075,
+      "specificity": true,
+      "compositeScore": 0.5798923543689075
+    },
+    {
+      "id": "C",
+      "text": "Google Workspace AI copilot for 50-200p marketing teams. — WHY: Boosts collaboration efficiency by 30%",
+      "why": "Enhances existing workflows with AI, improving team output.",
+      "assumptions": [
+        "Teams use Google Workspace",
+        "Marketing teams have complex workflows"
+      ],
+      "relevance": 0.6868122368155107,
+      "specificity": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "questionNumber": 4,
+  "notes": {
+    "distinctAxes": [
+      "mechanism",
+      "integration",
+      "automation"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Adobe XD plugin auto-syncs design updates, boosting team sync by 25%",
+      "why": "Enhances real-time collaboration without extra apps",
+      "assumptions": [
+        "Teams use Adobe XD",
+        "Frequent design updates"
+      ],
+      "relevance": 0.5197811720118022,
+      "specificity": true,
+      "compositeScore": 0.6197811720118022
+    },
+    {
+      "id": "B",
+      "text": "Asana plugin for 50–100p creative teams to auto-sync project updates",
+      "why": "Ensures real-time visibility; boosts team alignment by 25%",
+      "assumptions": [
+        "Asana in use",
+        "teams need real-time updates"
+      ],
+      "tags": [
+        "asana"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Slack bot for remote creative teams to auto-generate briefs",
+      "why": "Streamlines briefing process, saving 20% time",
+      "assumptions": [
+        "Teams use Slack",
+        "Briefs are repetitive"
+      ],
+      "tags": [
+        "slack"
+      ]
+    }
+  ]
+}

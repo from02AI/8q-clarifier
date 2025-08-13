@@ -1,0 +1,940 @@
+{
+  "sessionId": "batch-009",
+  "startTime": 1755055374398,
+  "lastSaveTime": 1755055526987,
+  "currentQuestion": 9,
+  "totalQuestions": 8,
+  "state": {
+    "idea": "AI copilot for remote creative teams",
+    "answers": [
+      {
+        "q": 1,
+        "chosen": "A",
+        "summary": "Slack bot for 10–50p remote creative teams using Slack. — WHY: Cuts PM time by 20%"
+      },
+      {
+        "q": 2,
+        "chosen": "A",
+        "summary": "10–30p remote design teams using Adobe XD in launch weeks"
+      },
+      {
+        "q": 3,
+        "chosen": "A",
+        "summary": "30–60p agencies lose 10% productivity due to manual task tracking in Trello"
+      },
+      {
+        "q": 4,
+        "chosen": "A",
+        "summary": "Adobe XD plugin auto-syncs design updates, boosting team sync by 25%"
+      },
+      {
+        "q": 5,
+        "chosen": "A",
+        "summary": "Success is a 20% PM time reduction within 6 months."
+      },
+      {
+        "q": 6,
+        "chosen": "A",
+        "summary": "Adobe XD teams use Google Docs for feedback and revisions"
+      },
+      {
+        "q": 7,
+        "chosen": "A",
+        "summary": "Data moat: 300k annotated creative briefs from top design agencies"
+      },
+      {
+        "q": 8,
+        "chosen": "A",
+        "summary": "Model misreads Slack threads → 20% rework in creative briefs."
+      }
+    ],
+    "features": {
+      "summary": "**Audience:** Remote creative and design teams, particularly those with 10–50 members using Slack and 10–30 members using Adobe XD during launch weeks.  \n**Problem:** These teams experience up to a 10% productivity loss due to the time-consuming nature of project management and manual task tracking.  \n**Solution:** A Slack bot and an Adobe XD plugin automate and streamline updates, potentially improving team synchronization by 25%.  \n**Edge:** The integration with popular tools like Slack and Adobe XD for seamless operations.  \n**Metric:** Achieving a 20% reduction in project management time within six months is a key success indicator.  \n**Risk:** Potential risks include inadequate user adoption or failure to integrate smoothly with existing team workflows, potentially affecting the expected productivity gains.  "
+    }
+  },
+  "completed": true,
+  "questionResults": [
+    {
+      "questionNumber": 1,
+      "questionText": "Write your one-sentence idea",
+      "payload": {
+        "questionNumber": 1,
+        "notes": {
+          "distinctAxes": [
+            "customer segment",
+            "platform",
+            "impact metric"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Slack bot for 10–50p remote creative teams using Slack. — WHY: Cuts PM time by 20%",
+            "why": "Streamlines project management tasks, reducing time spent.",
+            "assumptions": [
+              "Teams use Slack",
+              "Basic API access available"
+            ],
+            "relevance": 0.5278543476218778,
+            "specificity": true,
+            "compositeScore": 0.6278543476218778
+          },
+          {
+            "id": "B",
+            "text": "Standalone SaaS for freelance designers using Figma. — WHY: Increases throughput by 25%",
+            "why": "Automates design handoff to increase efficiency.",
+            "assumptions": [
+              "Designers use Figma",
+              "Integration with Figma possible"
+            ],
+            "relevance": 0.4798923543689075,
+            "specificity": true,
+            "compositeScore": 0.5798923543689075
+          },
+          {
+            "id": "C",
+            "text": "Google Workspace AI copilot for 50-200p marketing teams. — WHY: Boosts collaboration efficiency by 30%",
+            "why": "Enhances existing workflows with AI, improving team output.",
+            "assumptions": [
+              "Teams use Google Workspace",
+              "Marketing teams have complex workflows"
+            ],
+            "relevance": 0.6868122368155107,
+            "specificity": true
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5278543476218778,
+          0.4798923543689075,
+          0.6868122368155107
+        ],
+        "maxPairCos": 0.5879040048062321,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 2,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.6868122368155107,
+        "relativeFloorUsed": 0.6181310131339597,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5278543476218778,
+          0.4798923543689075,
+          0.6868122368155107
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.5879040048062321,
+        "repaired": true,
+        "batchFillerUsed": true,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 24810,
+        "tokensUsed": {
+          "input": 3052,
+          "output": 591,
+          "embedding": 324
+        },
+        "requestCounts": {
+          "chat": 3,
+          "embedding": 5
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755055399230,
+      "success": true
+    },
+    {
+      "questionNumber": 2,
+      "questionText": "Who exactly is this for?",
+      "payload": {
+        "questionNumber": 2,
+        "notes": {
+          "distinctAxes": [
+            "size",
+            "platform",
+            "context"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "10–30p remote design teams using Adobe XD in launch weeks",
+            "why": "Targets teams needing coordination during intense periods",
+            "assumptions": [
+              "Adobe XD is utilized",
+              "teams experience rushes"
+            ],
+            "relevance": 0.5419914786653832,
+            "specificity": true,
+            "compositeScore": 0.6419914786653832
+          },
+          {
+            "id": "B",
+            "text": "15–25p remote marketing teams using Trello in client review cycles",
+            "why": "Streamlines processes during crucial feedback periods",
+            "assumptions": [
+              "Trello is in use",
+              "client feedback is frequent"
+            ],
+            "relevance": 0.5133742980466203,
+            "specificity": true,
+            "compositeScore": 0.6133742980466202
+          },
+          {
+            "id": "C",
+            "text": "40–60p remote content teams using Asana in global time zones",
+            "why": "Facilitates coordination across diverse time zones",
+            "assumptions": [
+              "Asana is primary tool",
+              "teams are globally distributed"
+            ],
+            "relevance": 0.4843626865580241,
+            "specificity": true,
+            "compositeScore": 0.5843626865580241
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5419914786653832,
+          0.5133742980466203,
+          0.4843626865580241
+        ],
+        "maxPairCos": 0.6436890954906022,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 3,
+        "repairAttempts": 0,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5419914786653832,
+        "relativeFloorUsed": 0.48779233079884493,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5419914786653832,
+          0.5133742980466203,
+          0.4843626865580241
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.6436890954906022,
+        "repaired": false,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 7381,
+        "tokensUsed": {
+          "input": 875,
+          "output": 162,
+          "embedding": 148
+        },
+        "requestCounts": {
+          "chat": 1,
+          "embedding": 2
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 0
+        }
+      },
+      "timestamp": 1755055406632,
+      "success": true
+    },
+    {
+      "questionNumber": 3,
+      "questionText": "What problem are they facing?",
+      "payload": {
+        "questionNumber": 3,
+        "notes": {
+          "distinctAxes": [
+            "pain",
+            "frequency",
+            "severity"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "30–60p agencies lose 10% productivity due to manual task tracking in Trello",
+            "why": "Automates tracking, freeing up creative time",
+            "assumptions": [
+              "Trello used",
+              "manual tracking"
+            ],
+            "relevance": 0.47372963798183926,
+            "specificity": true
+          },
+          {
+            "id": "B",
+            "text": "Remote teams face 25% communication drop-off in Slack during high-stakes projects",
+            "why": "Improves team alignment, reducing project risks",
+            "assumptions": [
+              "Slack is main communication tool"
+            ],
+            "relevance": 0.502168886303056,
+            "specificity": true
+          },
+          {
+            "id": "C",
+            "text": "10–50p teams struggle with version control in Adobe XD, causing 15% project delays",
+            "why": "Ensures timely delivery by managing files efficiently",
+            "assumptions": [
+              "Adobe XD used",
+              "version control issues"
+            ],
+            "relevance": 0.5347617046229902,
+            "specificity": true
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.47372963798183926,
+          0.502168886303056,
+          0.5347617046229902
+        ],
+        "maxPairCos": 0.5489000215917058,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 0,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5347617046229902,
+        "relativeFloorUsed": 0.4812855341606912,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.47372963798183926,
+          0.502168886303056,
+          0.5347617046229902
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.5489000215917058,
+        "repaired": true,
+        "batchFillerUsed": true,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 23172,
+        "tokensUsed": {
+          "input": 4549,
+          "output": 521,
+          "embedding": 358
+        },
+        "requestCounts": {
+          "chat": 5,
+          "embedding": 5
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755055429825,
+      "success": true
+    },
+    {
+      "questionNumber": 4,
+      "questionText": "How does your idea solve the problem?",
+      "payload": {
+        "questionNumber": 4,
+        "notes": {
+          "distinctAxes": [
+            "mechanism",
+            "integration",
+            "automation"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Adobe XD plugin auto-syncs design updates, boosting team sync by 25%",
+            "why": "Enhances real-time collaboration without extra apps",
+            "assumptions": [
+              "Teams use Adobe XD",
+              "Frequent design updates"
+            ],
+            "relevance": 0.5197811720118022,
+            "specificity": true,
+            "compositeScore": 0.6197811720118022
+          },
+          {
+            "id": "B",
+            "text": "Asana plugin for 50–100p creative teams to auto-sync project updates",
+            "why": "Ensures real-time visibility; boosts team alignment by 25%",
+            "assumptions": [
+              "Asana in use",
+              "teams need real-time updates"
+            ],
+            "tags": [
+              "asana"
+            ]
+          },
+          {
+            "id": "C",
+            "text": "Slack bot for remote creative teams to auto-generate briefs",
+            "why": "Streamlines briefing process, saving 20% time",
+            "assumptions": [
+              "Teams use Slack",
+              "Briefs are repetitive"
+            ],
+            "tags": [
+              "slack"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5197811720118022,
+          0.5287612208738045,
+          0.5359744224635785
+        ],
+        "maxPairCos": 0.5889032237572496,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 1,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5359744224635785,
+        "relativeFloorUsed": 0.4823769802172207,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5197811720118022,
+          0.5287612208738045,
+          0.5359744224635785
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.5889032237572496,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 11906,
+        "tokensUsed": {
+          "input": 2837,
+          "output": 389,
+          "embedding": 253
+        },
+        "requestCounts": {
+          "chat": 3,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755055445875,
+      "success": true
+    },
+    {
+      "questionNumber": 5,
+      "questionText": "How will you measure success?",
+      "payload": {
+        "questionNumber": 5,
+        "notes": {
+          "distinctAxes": [
+            "metric",
+            "coverage",
+            "confidence"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Success is a 20% PM time reduction within 6 months.",
+            "why": "Allows tracking of time savings in existing workflows.",
+            "assumptions": [
+              "Current PM time tracked",
+              "6-month period feasible"
+            ],
+            "relevance": 0.50890562375272,
+            "specificity": true,
+            "compositeScore": 0.60890562375272
+          },
+          {
+            "id": "B",
+            "text": "Aim for 25% increase in team throughput in 3 months.",
+            "why": "Boosts productivity, easy to measure via output volume.",
+            "assumptions": [
+              "Output metrics available",
+              "3-month projects common"
+            ],
+            "relevance": 0.473207382829144,
+            "specificity": true,
+            "compositeScore": 0.573207382829144
+          },
+          {
+            "id": "C",
+            "text": "Achieve 30% reduction in project delays within 6 months",
+            "why": "Directly impacts team efficiency and client satisfaction",
+            "assumptions": [
+              "Delays are measurable",
+              "Teams track project timelines"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.50890562375272,
+          0.473207382829144,
+          0.466126054692504
+        ],
+        "maxPairCos": 0.661693300780832,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 2,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.50890562375272,
+        "relativeFloorUsed": 0.45801506137744796,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.50890562375272,
+          0.473207382829144,
+          0.466126054692504
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.661693300780832,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 13991,
+        "tokensUsed": {
+          "input": 1985,
+          "output": 297,
+          "embedding": 190
+        },
+        "requestCounts": {
+          "chat": 2,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755055463004,
+      "success": true
+    },
+    {
+      "questionNumber": 6,
+      "questionText": "Who / what do they use instead?",
+      "payload": {
+        "questionNumber": 6,
+        "notes": {
+          "distinctAxes": [
+            "alt_tool",
+            "workaround",
+            "vendor"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Adobe XD teams use Google Docs for feedback and revisions",
+            "why": "Accessible but lacks direct design integration",
+            "assumptions": [
+              "Google Suite available"
+            ],
+            "tags": [
+              "adobe"
+            ],
+            "relevance": 0.6137679589283893,
+            "specificity": true,
+            "compositeScore": 0.7137679589283893
+          },
+          {
+            "id": "B",
+            "text": "Trello users rely on manual task tracking and email updates",
+            "why": "Common for agencies; lacks real-time sync",
+            "assumptions": [
+              "Email is standard"
+            ],
+            "tags": [
+              "trello"
+            ],
+            "relevance": 0.452320995488361,
+            "specificity": true,
+            "compositeScore": 0.552320995488361
+          },
+          {
+            "id": "C",
+            "text": "Remote teams use Asana for task tracking, but lack AI insights",
+            "why": "Asana is structured, but lacks AI-driven efficiency improvements",
+            "assumptions": [
+              "Asana is widely used",
+              "Teams seek AI insights"
+            ],
+            "tags": [
+              "asana"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.6137679589283893,
+          0.452320995488361,
+          0.5193418224999288
+        ],
+        "maxPairCos": 0.558305648161219,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 2,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.6137679589283893,
+        "relativeFloorUsed": 0.5523911630355504,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.6137679589283893,
+          0.452320995488361,
+          0.5193418224999288
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.558305648161219,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 13655,
+        "tokensUsed": {
+          "input": 2109,
+          "output": 284,
+          "embedding": 195
+        },
+        "requestCounts": {
+          "chat": 2,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755055479931,
+      "success": true
+    },
+    {
+      "questionNumber": 7,
+      "questionText": "What's your hard-to-copy edge?",
+      "payload": {
+        "questionNumber": 7,
+        "notes": {
+          "distinctAxes": [
+            "edge",
+            "data_adv",
+            "workflow_lock"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Data moat: 300k annotated creative briefs from top design agencies",
+            "why": "WHY: improves contextual understanding by leveraging real-world examples",
+            "assumptions": [
+              "Access to agency data"
+            ],
+            "tags": [
+              "data moat"
+            ],
+            "relevance": 0.478953303367075,
+            "specificity": true,
+            "compositeScore": 0.578953303367075
+          },
+          {
+            "id": "B",
+            "text": "Data moat: 150k annotated creative workflows from remote teams",
+            "why": "WHY: improves AI's task prediction accuracy by 22%",
+            "assumptions": [
+              "data sourced from existing users",
+              "annotations are high-quality"
+            ]
+          },
+          {
+            "id": "C",
+            "text": "Workflow/IP: Model trained on 5k remote team projects in Adobe XD",
+            "why": "WHY: Boosts design sync efficiency by 30% through pattern recognition",
+            "assumptions": [
+              "Adobe XD usage",
+              "Access to project data"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.478953303367075,
+          0.5466393429936188,
+          0.5947294922135671
+        ],
+        "maxPairCos": 0.720106331656915,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 1,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5947294922135671,
+        "relativeFloorUsed": 0.5352565429922104,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.478953303367075,
+          0.5466393429936188,
+          0.5947294922135671
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.720106331656915,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 19868,
+        "tokensUsed": {
+          "input": 5231,
+          "output": 501,
+          "embedding": 282
+        },
+        "requestCounts": {
+          "chat": 4,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755055504066,
+      "success": true
+    },
+    {
+      "questionNumber": 8,
+      "questionText": "Biggest unknown risk in one line",
+      "payload": {
+        "questionNumber": 8,
+        "notes": {
+          "distinctAxes": [
+            "risk_type",
+            "timing",
+            "impact"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Model misreads Slack threads → 20% rework in creative briefs.",
+            "why": "Misinterpretation leads to errors and resource wastage.",
+            "assumptions": [
+              "Model accuracy is crucial",
+              "Slack is primary channel"
+            ],
+            "relevance": 0.47729168047926956,
+            "specificity": true,
+            "compositeScore": 0.5772916804792696
+          },
+          {
+            "id": "B",
+            "text": "AI misinterprets Adobe XD layers → 15% rework in design updates.",
+            "why": "Misinterpretation causes inconsistencies, leading to additional corrections.",
+            "assumptions": [
+              "AI layer recognition",
+              "consistent design standards"
+            ],
+            "tags": [
+              "adobe xd",
+              "ai"
+            ]
+          },
+          {
+            "id": "C",
+            "text": "Adobe XD plugin misaligns design updates → 30% increase in revision cycles.",
+            "why": "Misalignment leads to more back-and-forth, delaying project timelines.",
+            "assumptions": [
+              "Adobe XD is primary tool",
+              "Teams rely on plugin for updates"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.47729168047926956,
+          0.5096387246025122,
+          0.45120516419590334
+        ],
+        "maxPairCos": 0.7298592160631004,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 1,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5096387246025122,
+        "relativeFloorUsed": 0.45867485214226106,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.47729168047926956,
+          0.5096387246025122,
+          0.45120516419590334
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.7298592160631004,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 18950,
+        "tokensUsed": {
+          "input": 5008,
+          "output": 518,
+          "embedding": 231
+        },
+        "requestCounts": {
+          "chat": 4,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755055526982,
+      "success": true
+    }
+  ],
+  "telemetry": {
+    "tokensUsed": {
+      "input": 25646,
+      "output": 3263,
+      "embedding": 1981
+    },
+    "requestCounts": {
+      "chat": 24,
+      "embedding": 27
+    },
+    "errorCounts": {
+      "rateLimited": 0,
+      "failed": 0,
+      "repaired": 7
+    },
+    "timing": {
+      "totalMs": 152589,
+      "averageQuestionMs": 19073
+    }
+  }
+}

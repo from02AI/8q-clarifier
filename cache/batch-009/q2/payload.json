@@ -1,0 +1,48 @@
+{
+  "questionNumber": 2,
+  "notes": {
+    "distinctAxes": [
+      "size",
+      "platform",
+      "context"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "10–30p remote design teams using Adobe XD in launch weeks",
+      "why": "Targets teams needing coordination during intense periods",
+      "assumptions": [
+        "Adobe XD is utilized",
+        "teams experience rushes"
+      ],
+      "relevance": 0.5419914786653832,
+      "specificity": true,
+      "compositeScore": 0.6419914786653832
+    },
+    {
+      "id": "B",
+      "text": "15–25p remote marketing teams using Trello in client review cycles",
+      "why": "Streamlines processes during crucial feedback periods",
+      "assumptions": [
+        "Trello is in use",
+        "client feedback is frequent"
+      ],
+      "relevance": 0.5133742980466203,
+      "specificity": true,
+      "compositeScore": 0.6133742980466202
+    },
+    {
+      "id": "C",
+      "text": "40–60p remote content teams using Asana in global time zones",
+      "why": "Facilitates coordination across diverse time zones",
+      "assumptions": [
+        "Asana is primary tool",
+        "teams are globally distributed"
+      ],
+      "relevance": 0.4843626865580241,
+      "specificity": true,
+      "compositeScore": 0.5843626865580241
+    }
+  ]
+}

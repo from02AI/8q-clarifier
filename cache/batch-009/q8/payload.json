@@ -1,0 +1,46 @@
+{
+  "questionNumber": 8,
+  "notes": {
+    "distinctAxes": [
+      "risk_type",
+      "timing",
+      "impact"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Model misreads Slack threads → 20% rework in creative briefs.",
+      "why": "Misinterpretation leads to errors and resource wastage.",
+      "assumptions": [
+        "Model accuracy is crucial",
+        "Slack is primary channel"
+      ],
+      "relevance": 0.47729168047926956,
+      "specificity": true,
+      "compositeScore": 0.5772916804792696
+    },
+    {
+      "id": "B",
+      "text": "AI misinterprets Adobe XD layers → 15% rework in design updates.",
+      "why": "Misinterpretation causes inconsistencies, leading to additional corrections.",
+      "assumptions": [
+        "AI layer recognition",
+        "consistent design standards"
+      ],
+      "tags": [
+        "adobe xd",
+        "ai"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Adobe XD plugin misaligns design updates → 30% increase in revision cycles.",
+      "why": "Misalignment leads to more back-and-forth, delaying project timelines.",
+      "assumptions": [
+        "Adobe XD is primary tool",
+        "Teams rely on plugin for updates"
+      ]
+    }
+  ]
+}

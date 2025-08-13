@@ -1,0 +1,46 @@
+{
+  "questionNumber": 6,
+  "notes": {
+    "distinctAxes": [
+      "alt_tool",
+      "workaround",
+      "vendor"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Asana for task management and communication",
+      "why": "Known for project tracking, but lacks integration with creative tools",
+      "assumptions": [
+        "Teams value task tracking over real-time chat"
+      ],
+      "relevance": 0.5226892843182877,
+      "specificity": true,
+      "compositeScore": 0.6226892843182876
+    },
+    {
+      "id": "B",
+      "text": "Microsoft Teams for integrated chat and video",
+      "why": "Combines messaging and meetings, but not creative-focused",
+      "assumptions": [
+        "Teams use MS ecosystem"
+      ],
+      "relevance": 0.45117389291082144,
+      "specificity": true,
+      "compositeScore": 0.5511738929108214
+    },
+    {
+      "id": "C",
+      "text": "Google Docs for collaborative brainstorming in 20-50p teams",
+      "why": "Offers real-time collaboration but lacks task management",
+      "assumptions": [
+        "Teams use Google Workspace",
+        "Need for collaboration"
+      ],
+      "tags": [
+        "google-docs"
+      ]
+    }
+  ]
+}

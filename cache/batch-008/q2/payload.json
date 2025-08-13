@@ -1,0 +1,50 @@
+{
+  "questionNumber": 2,
+  "notes": {
+    "distinctAxes": [
+      "size",
+      "function",
+      "platform",
+      "context"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "10-20p remote design teams using Slack in global time zones",
+      "why": "Slack is common for coordination across time zones.",
+      "assumptions": [
+        "Teams are remote",
+        "Slack is used",
+        "Design role"
+      ],
+      "relevance": 0.49808218865217296,
+      "specificity": true,
+      "compositeScore": 0.598082188652173
+    },
+    {
+      "id": "B",
+      "text": "30-60p remote marketing teams using Zoom in launch weeks",
+      "why": "Zoom supports intensive collaboration during launches.",
+      "assumptions": [
+        "Teams use Zoom",
+        "Remote setting",
+        "Marketing role"
+      ],
+      "relevance": 0.4923365204093866,
+      "specificity": true,
+      "compositeScore": 0.5923365204093866
+    },
+    {
+      "id": "C",
+      "text": "15-25p remote content teams using Asana in quarterly review cycles",
+      "why": "Targets content teams needing structured review cycles.",
+      "assumptions": [
+        "Asana is primary tool",
+        "review cycles are quarterly"
+      ],
+      "relevance": 0.48987414398094714,
+      "specificity": true
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "questionNumber": 2,
+  "notes": {
+    "distinctAxes": [
+      "size",
+      "function",
+      "platform",
+      "context"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "5–15p content teams using Slack in client review cycles",
+      "why": "Addresses small, agile content creation teams during review phases.",
+      "assumptions": [
+        "Slack is main communication tool",
+        "Frequent client reviews"
+      ],
+      "relevance": 0.535674513276081,
+      "specificity": true,
+      "compositeScore": 0.6356745132760809
+    },
+    {
+      "id": "B",
+      "text": "30–50p marketing teams using Monday.com in launch weeks",
+      "why": "Targets marketing teams during high-pressure periods like launches.",
+      "assumptions": [
+        "Monday.com is the primary tool",
+        "Regular product launches"
+      ],
+      "relevance": 0.4910383086808826,
+      "specificity": true,
+      "compositeScore": 0.5910383086808826
+    },
+    {
+      "id": "C",
+      "text": "15–25p design teams using Asana in global time zones",
+      "why": "Focuses on design teams coordinating across diverse locations.",
+      "assumptions": [
+        "Asana is widely used",
+        "Teams are globally distributed"
+      ],
+      "relevance": 0.4866244861174268,
+      "specificity": true,
+      "compositeScore": 0.5866244861174268
+    }
+  ]
+}

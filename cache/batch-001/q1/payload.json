@@ -2,54 +2,48 @@
   "questionNumber": 1,
   "notes": {
     "distinctAxes": [
-      "customer segment",
       "platform",
-      "mechanism",
-      "outcome metric"
-    ]
+      "team type",
+      "metric"
+    ],
+    "differentiationStrategy": "Each option varies by platform, team type, or metric."
   },
   "options": [
     {
       "id": "A",
-      "text": "Slack bot for 10–50p remote creative teams using Slack — WHY: Cuts PM time by 20%",
-      "why": "Reduces project management overhead, increasing efficiency and focus on creative tasks.",
+      "text": "Slack bot for 10–50p creative agencies using Slack. — WHY: Cuts meeting times by 30%.",
+      "why": "Reduces time spent in meetings, increasing productivity.",
       "assumptions": [
         "Teams use Slack",
-        "PM duties are significant"
+        "Teams have regular meetings"
       ],
       "tags": [
-        "remote",
         "slack",
-        "efficiency"
+        "creative"
       ],
-      "relevance": 0.5509786567300525,
+      "relevance": 0.493651960292864,
       "specificity": true,
-      "compositeScore": 0.6509786567300525
+      "compositeScore": 0.593651960292864
     },
     {
       "id": "B",
-      "text": "Figma automation for freelance designers using Figma — WHY: Boosts project throughput by 25%",
-      "why": "Automates repetitive design tasks, allowing more time for creative work.",
+      "text": "Asana tool for 5–20p remote marketing teams using Asana. — WHY: Boosts task completion by 35%.",
+      "why": "Enhances task management efficiency, increasing team output.",
       "assumptions": [
-        "Designers use Figma",
-        "Tasks are repetitive"
+        "Asana in use",
+        "marketing focus"
       ],
       "tags": [
-        "freelance",
-        "figma",
-        "throughput"
-      ],
-      "relevance": 0.4819721401238605,
-      "specificity": true,
-      "compositeScore": 0.5819721401238606
+        "asana"
+      ]
     },
     {
       "id": "C",
-      "text": "Miro board assistant for 20–100p creative agencies",
-      "why": "Enhances brainstorming sessions by 40%",
+      "text": "Miro board for 20–50p creative teams to brainstorm remotely. — WHY: Boosts idea generation by 30%",
+      "why": "Facilitates remote collaboration, enhancing creativity and output.",
       "assumptions": [
         "Miro in use",
-        "agencies need brainstorming"
+        "teams need brainstorming tools"
       ],
       "tags": [
         "miro"

@@ -1,0 +1,966 @@
+{
+  "sessionId": "batch-006",
+  "startTime": 1755054210221,
+  "lastSaveTime": 1755054397675,
+  "currentQuestion": 9,
+  "totalQuestions": 8,
+  "state": {
+    "idea": "AI copilot for remote creative teams",
+    "answers": [
+      {
+        "q": 1,
+        "chosen": "A",
+        "summary": "Slack bot for 10-50p remote creative teams using Slack. — WHY: Reduces coordination time by 30%."
+      },
+      {
+        "q": 2,
+        "chosen": "A",
+        "summary": "10–30p remote design teams using Asana in global time zones"
+      },
+      {
+        "q": 3,
+        "chosen": "A",
+        "summary": "Monthly creative blockages in Asana due to unclear briefs, delaying 30% of tasks."
+      },
+      {
+        "q": 4,
+        "chosen": "A",
+        "summary": "Slack-based AI analyzes chat to suggest next steps in projects"
+      },
+      {
+        "q": 5,
+        "chosen": "A",
+        "summary": "Increase project completion speed by 30% in Slack teams by Q2"
+      },
+      {
+        "q": 6,
+        "chosen": "A",
+        "summary": "Creative teams rely on Basecamp for project management and updates."
+      },
+      {
+        "q": 7,
+        "chosen": "A",
+        "summary": "Model fine-tuned on 10k creative projects for remote teams"
+      },
+      {
+        "q": 8,
+        "chosen": "A",
+        "summary": "Model misreads Slack threads → 20% rework in creative briefs."
+      }
+    ],
+    "features": {
+      "summary": "**Audience:** The target audience is remote creative teams of 10-50 people using Slack, particularly remote design teams of 10-30 people working in global time zones and using Asana.\n\n**Problem:** These teams face monthly creative blockages in Asana due to unclear briefs, resulting in 30% of tasks being delayed.\n\n**Solution:** A Slack bot powered by AI analyzes chat history to recommend next steps for projects.\n\n**Edge:** The bot is embedded within Slack, a platform already used by these teams, streamlining workflow and reducing the need for additional tools.\n\n**Metric:** The solution aims to reduce coordination time by 30% and increase project completion speed by the same margin by Q2.\n\n**Risk:** There is a risk that the AI may incorrectly interpret conversations, leading to inaccurate project recommendations."
+    }
+  },
+  "completed": true,
+  "questionResults": [
+    {
+      "questionNumber": 1,
+      "questionText": "Write your one-sentence idea",
+      "payload": {
+        "questionNumber": 1,
+        "notes": {
+          "distinctAxes": [
+            "customer segment",
+            "mechanism",
+            "platform",
+            "numeric impact"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Slack bot for 10-50p remote creative teams using Slack. — WHY: Reduces coordination time by 30%.",
+            "why": "Targets remote creative teams to streamline communication and task management.",
+            "assumptions": [
+              "Teams use Slack",
+              "Coordination is a major time sink"
+            ],
+            "tags": [
+              "slack",
+              "remote",
+              "creative"
+            ]
+          },
+          {
+            "id": "B",
+            "text": "Miro extension for 5–20p remote creative teams using Miro. — WHY: Boosts brainstorming efficiency by 25%.",
+            "why": "Enhances collaborative ideation sessions, speeding up project initiation.",
+            "assumptions": [
+              "Miro in use",
+              "Teams need brainstorming support"
+            ]
+          },
+          {
+            "id": "C",
+            "text": "Google Workspace AI for 50-100p marketing teams automating project tracking",
+            "why": "Boosts project completion rate by 15%",
+            "assumptions": [
+              "Google Workspace in use",
+              "project tracking needed"
+            ],
+            "relevance": 0.5452451460212672,
+            "specificity": true
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5730877709489377,
+          0.5121581192680178,
+          0.5452451460212672
+        ],
+        "maxPairCos": 0.6360820175643491,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 0,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5730877709489377,
+        "relativeFloorUsed": 0.5157789938540439,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5730877709489377,
+          0.5121581192680178,
+          0.5452451460212672
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.6360820175643491,
+        "repaired": true,
+        "batchFillerUsed": true,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 25501,
+        "tokensUsed": {
+          "input": 5941,
+          "output": 812,
+          "embedding": 419
+        },
+        "requestCounts": {
+          "chat": 6,
+          "embedding": 6
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054235741,
+      "success": true
+    },
+    {
+      "questionNumber": 2,
+      "questionText": "Who exactly is this for?",
+      "payload": {
+        "questionNumber": 2,
+        "notes": {
+          "distinctAxes": [
+            "size",
+            "function",
+            "platform",
+            "context"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "10–30p remote design teams using Asana in global time zones",
+            "why": "Targets small, distributed design teams needing coordination",
+            "assumptions": [
+              "Use of Asana",
+              "Work across time zones"
+            ],
+            "relevance": 0.5560300787345537,
+            "specificity": true,
+            "compositeScore": 0.6560300787345537
+          },
+          {
+            "id": "B",
+            "text": "50–100p marketing teams using Microsoft Teams in launch weeks",
+            "why": "Focuses on larger, intensive marketing campaigns",
+            "assumptions": [
+              "Microsoft Teams adopted",
+              "Frequent launches"
+            ],
+            "relevance": 0.5061802840004643,
+            "specificity": true,
+            "compositeScore": 0.6061802840004643
+          },
+          {
+            "id": "C",
+            "text": "30–50p content creation teams using Trello in client review cycles",
+            "why": "Addresses mid-sized teams with client-heavy workflows",
+            "assumptions": [
+              "Trello usage",
+              "Regular client reviews"
+            ],
+            "relevance": 0.4825642273425599,
+            "specificity": true,
+            "compositeScore": 0.5825642273425599
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5560300787345537,
+          0.5061802840004643,
+          0.4825642273425599
+        ],
+        "maxPairCos": 0.5810358623990686,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 3,
+        "repairAttempts": 0,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5560300787345537,
+        "relativeFloorUsed": 0.5004270708610983,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5560300787345537,
+          0.5061802840004643,
+          0.4825642273425599
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.5810358623990686,
+        "repaired": false,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 10688,
+        "tokensUsed": {
+          "input": 877,
+          "output": 159,
+          "embedding": 148
+        },
+        "requestCounts": {
+          "chat": 1,
+          "embedding": 2
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 0
+        }
+      },
+      "timestamp": 1755054246444,
+      "success": true
+    },
+    {
+      "questionNumber": 3,
+      "questionText": "What problem are they facing?",
+      "payload": {
+        "questionNumber": 3,
+        "notes": {
+          "distinctAxes": [
+            "pain",
+            "frequency",
+            "severity"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Monthly creative blockages in Asana due to unclear briefs, delaying 30% of tasks.",
+            "why": "Leads to inefficiencies and missed deadlines.",
+            "assumptions": [
+              "Creative teams use Asana",
+              "Briefs are frequently unclear"
+            ],
+            "tags": [
+              "asana"
+            ],
+            "relevance": 0.5065148928201285,
+            "specificity": true
+          },
+          {
+            "id": "B",
+            "text": "Weekly miscommunications in Slack causing 25% project delays for 10-50p teams.",
+            "why": "Directly impacts project timelines and team efficiency.",
+            "assumptions": [
+              "Teams rely on Slack for communication",
+              "Miscommunications are frequent"
+            ],
+            "tags": [
+              "slack"
+            ],
+            "relevance": 0.5364513726197119,
+            "specificity": true
+          },
+          {
+            "id": "C",
+            "text": "Bi-weekly delays in Asana tasks due to timezone gaps, affecting 40% of projects.",
+            "why": "Delays disrupt timelines, lowering client satisfaction.",
+            "assumptions": [
+              "Asana in use",
+              "global team"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5065148928201285,
+          0.5364513726197119,
+          0.47326822543684727
+        ],
+        "maxPairCos": 0.6292433588917568,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 0,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5364513726197119,
+        "relativeFloorUsed": 0.4828062353577407,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5065148928201285,
+          0.5364513726197119,
+          0.47326822543684727
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.6292433588917568,
+        "repaired": true,
+        "batchFillerUsed": true,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 23636,
+        "tokensUsed": {
+          "input": 4651,
+          "output": 579,
+          "embedding": 369
+        },
+        "requestCounts": {
+          "chat": 5,
+          "embedding": 5
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054270096,
+      "success": true
+    },
+    {
+      "questionNumber": 4,
+      "questionText": "How does your idea solve the problem?",
+      "payload": {
+        "questionNumber": 4,
+        "notes": {
+          "distinctAxes": [
+            "mechanism",
+            "integration",
+            "automation"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Slack-based AI analyzes chat to suggest next steps in projects",
+            "why": "Transforms discussions into actionable plans, aiding clarity",
+            "assumptions": [
+              "Slack logs available",
+              "AI accuracy accepted"
+            ],
+            "tags": [
+              "slack"
+            ],
+            "relevance": 0.47784750064032006,
+            "specificity": true,
+            "compositeScore": 0.5778475006403201
+          },
+          {
+            "id": "B",
+            "text": "Asana plugin suggests task priorities for remote teams",
+            "why": "Improves focus by highlighting critical tasks",
+            "assumptions": [
+              "Asana in use",
+              "teams need prioritization"
+            ],
+            "tags": [
+              "asana"
+            ],
+            "relevance": 0.4608916287857444,
+            "specificity": true,
+            "compositeScore": 0.5608916287857444
+          },
+          {
+            "id": "C",
+            "text": "Slack bot for creative briefs auto-clarification, reducing miscommunication by 30%",
+            "why": "Ensures clear briefs, reducing rework and delays",
+            "assumptions": [
+              "Slack in use",
+              "Briefs often unclear"
+            ],
+            "tags": [
+              "slack",
+              "briefs"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.47784750064032006,
+          0.4608916287857444,
+          0.5483430972687654
+        ],
+        "maxPairCos": 0.53762918008382,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 2,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5483430972687654,
+        "relativeFloorUsed": 0.49350878754188887,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.47784750064032006,
+          0.4608916287857444,
+          0.5483430972687654
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.53762918008382,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 15201,
+        "tokensUsed": {
+          "input": 1905,
+          "output": 333,
+          "embedding": 210
+        },
+        "requestCounts": {
+          "chat": 2,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054288952,
+      "success": true
+    },
+    {
+      "questionNumber": 5,
+      "questionText": "How will you measure success?",
+      "payload": {
+        "questionNumber": 5,
+        "notes": {
+          "distinctAxes": [
+            "metric",
+            "coverage",
+            "confidence"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Increase project completion speed by 30% in Slack teams by Q2",
+            "why": "Faster completion due to AI-suggested next steps improves workflow",
+            "assumptions": [
+              "Slack is primary tool",
+              "AI suggestions are actionable"
+            ],
+            "tags": [
+              "slack",
+              "project speed"
+            ],
+            "relevance": 0.6164361548285224,
+            "specificity": true
+          },
+          {
+            "id": "B",
+            "text": "Measure 25% increase in task completion rate in Slack over 3 months",
+            "why": "Directly reflects improved team efficiency and project flow",
+            "assumptions": [
+              "Slack is primary tool",
+              "baseline data available"
+            ]
+          },
+          {
+            "id": "C",
+            "text": "Achieve 40% reduction in task delays in Asana within 6 months",
+            "why": "Addresses task delays caused by unclear briefs, boosting efficiency",
+            "assumptions": [
+              "Teams use Asana",
+              "Briefs clarity impacts delays"
+            ],
+            "tags": [
+              "asana",
+              "task reduction"
+            ],
+            "relevance": 0.589404747088457,
+            "specificity": true
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.6164361548285224,
+          0.5056531695095298,
+          0.589404747088457
+        ],
+        "maxPairCos": 0.7587894204371303,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 0,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.6164361548285224,
+        "relativeFloorUsed": 0.5547925393456702,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.6164361548285224,
+          0.5056531695095298,
+          0.589404747088457
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.7587894204371303,
+        "repaired": true,
+        "batchFillerUsed": true,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 24042,
+        "tokensUsed": {
+          "input": 5288,
+          "output": 629,
+          "embedding": 319
+        },
+        "requestCounts": {
+          "chat": 5,
+          "embedding": 5
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054315609,
+      "success": true
+    },
+    {
+      "questionNumber": 6,
+      "questionText": "Who / what do they use instead?",
+      "payload": {
+        "questionNumber": 6,
+        "notes": {
+          "distinctAxes": [
+            "alt_tool",
+            "workaround",
+            "vendor"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Creative teams rely on Basecamp for project management and updates.",
+            "why": "Basecamp is widely used but lacks automation for creative workflows.",
+            "assumptions": [
+              "Basecamp in use",
+              "Basic project management suffices"
+            ],
+            "tags": [
+              "basecamp"
+            ],
+            "relevance": 0.5986969037762839,
+            "specificity": true,
+            "compositeScore": 0.6986969037762839
+          },
+          {
+            "id": "B",
+            "text": "Teams use Google Docs to draft and iterate task briefs.",
+            "why": "Docs are common for collaborating but not optimized for quick alignment.",
+            "assumptions": [
+              "Teams prefer familiar tools",
+              "Docs are free"
+            ],
+            "tags": [
+              "google_docs"
+            ],
+            "relevance": 0.49765824440759004,
+            "specificity": true,
+            "compositeScore": 0.5976582444075901
+          },
+          {
+            "id": "C",
+            "text": "Remote teams rely on Zoom calls for project updates and coordination.",
+            "why": "Zoom is widely used for real-time communication and clarifying tasks.",
+            "assumptions": [
+              "Teams prefer live interaction",
+              "Zoom is accessible"
+            ],
+            "tags": [
+              "zoom"
+            ],
+            "relevance": 0.5422475094583022,
+            "specificity": true
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5986969037762839,
+          0.49765824440759004,
+          0.5422475094583022
+        ],
+        "maxPairCos": 0.6056599269312852,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 2,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5986969037762839,
+        "relativeFloorUsed": 0.5388272133986556,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5986969037762839,
+          0.49765824440759004,
+          0.5422475094583022
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.6056599269312852,
+        "repaired": true,
+        "batchFillerUsed": true,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 22177,
+        "tokensUsed": {
+          "input": 3601,
+          "output": 506,
+          "embedding": 292
+        },
+        "requestCounts": {
+          "chat": 3,
+          "embedding": 5
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054341447,
+      "success": true
+    },
+    {
+      "questionNumber": 7,
+      "questionText": "What's your hard-to-copy edge?",
+      "payload": {
+        "questionNumber": 7,
+        "notes": {
+          "distinctAxes": [
+            "edge",
+            "data_adv",
+            "workflow_lock"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Model fine-tuned on 10k creative projects for remote teams",
+            "why": "WHY: increases AI relevance and contextual accuracy by 25%.",
+            "assumptions": [
+              "Projects cover diverse needs",
+              "Model training sufficient"
+            ],
+            "relevance": 0.6101727705993717,
+            "specificity": true,
+            "compositeScore": 0.7101727705993717
+          },
+          {
+            "id": "B",
+            "text": "Data moat: 200k creative briefs from top agencies",
+            "why": "WHY: improves project suggestions by 30% due to large, high-quality dataset.",
+            "assumptions": [
+              "Access to briefs",
+              "Relevance to creative work"
+            ],
+            "relevance": 0.4948807361535047,
+            "specificity": true,
+            "compositeScore": 0.5948807361535047
+          },
+          {
+            "id": "C",
+            "text": "Workflow/IP: Model fine-tuned on 5k remote creative team projects",
+            "why": "WHY: boosts task suggestion accuracy by 25% using relevant project data",
+            "assumptions": [
+              "Model trained on similar team dynamics",
+              "Data reflects current workflows"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.6101727705993717,
+          0.4948807361535047,
+          0.5297755009580741
+        ],
+        "maxPairCos": 0.7963608803266196,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 2,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.6101727705993717,
+        "relativeFloorUsed": 0.5491554935394345,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.6101727705993717,
+          0.4948807361535047,
+          0.5297755009580741
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.7963608803266196,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 19756,
+        "tokensUsed": {
+          "input": 3841,
+          "output": 441,
+          "embedding": 263
+        },
+        "requestCounts": {
+          "chat": 3,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054365856,
+      "success": true
+    },
+    {
+      "questionNumber": 8,
+      "questionText": "Biggest unknown risk in one line",
+      "payload": {
+        "questionNumber": 8,
+        "notes": {
+          "distinctAxes": [
+            "risk_type",
+            "timing",
+            "impact"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Model misreads Slack threads → 20% rework in creative briefs.",
+            "why": "Misinterpretation leads to incorrect guidance, causing rework.",
+            "assumptions": [
+              "AI misinterpretation",
+              "Slack usage"
+            ],
+            "relevance": 0.4738027232239125,
+            "specificity": true,
+            "compositeScore": 0.5738027232239125
+          },
+          {
+            "id": "B",
+            "text": "AI misinterprets Slack context, causing 25% task misalignment.",
+            "why": "Misinterpretation leads to incorrect task assignments, delaying projects.",
+            "assumptions": [
+              "AI depends on Slack data",
+              "contextual understanding is crucial"
+            ]
+          },
+          {
+            "id": "C",
+            "text": "Model accuracy drops in diverse teams, causing 30% misaligned outputs.",
+            "why": "Varied inputs confuse AI, leading to incorrect task guidance.",
+            "assumptions": [
+              "Diverse team structures",
+              "AI needs consistent data"
+            ],
+            "tags": [
+              "model accuracy",
+              "diversity"
+            ],
+            "relevance": 0.4598376474054404,
+            "specificity": true
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.4738027232239125,
+          0.4755536356129602,
+          0.4598376474054404
+        ],
+        "maxPairCos": 0.5675080435791063,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 1,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.4755536356129602,
+        "relativeFloorUsed": 0.4279982720516642,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.4738027232239125,
+          0.4755536356129602,
+          0.4598376474054404
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.5675080435791063,
+        "repaired": true,
+        "batchFillerUsed": true,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 28291,
+        "tokensUsed": {
+          "input": 8015,
+          "output": 746,
+          "embedding": 344
+        },
+        "requestCounts": {
+          "chat": 6,
+          "embedding": 6
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054397659,
+      "success": true
+    }
+  ],
+  "telemetry": {
+    "tokensUsed": {
+      "input": 34119,
+      "output": 4205,
+      "embedding": 2364
+    },
+    "requestCounts": {
+      "chat": 31,
+      "embedding": 35
+    },
+    "errorCounts": {
+      "rateLimited": 0,
+      "failed": 0,
+      "repaired": 7
+    },
+    "timing": {
+      "totalMs": 187454,
+      "averageQuestionMs": 23429.75
+    }
+  }
+}

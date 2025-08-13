@@ -1,0 +1,47 @@
+{
+  "questionNumber": 1,
+  "notes": {
+    "distinctAxes": [
+      "customer segment",
+      "mechanism",
+      "platform",
+      "numeric impact"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot for 10-50p remote creative teams using Slack. — WHY: Reduces coordination time by 30%.",
+      "why": "Targets remote creative teams to streamline communication and task management.",
+      "assumptions": [
+        "Teams use Slack",
+        "Coordination is a major time sink"
+      ],
+      "tags": [
+        "slack",
+        "remote",
+        "creative"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Miro extension for 5–20p remote creative teams using Miro. — WHY: Boosts brainstorming efficiency by 25%.",
+      "why": "Enhances collaborative ideation sessions, speeding up project initiation.",
+      "assumptions": [
+        "Miro in use",
+        "Teams need brainstorming support"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Google Workspace AI for 50-100p marketing teams automating project tracking",
+      "why": "Boosts project completion rate by 15%",
+      "assumptions": [
+        "Google Workspace in use",
+        "project tracking needed"
+      ],
+      "relevance": 0.5452451460212672,
+      "specificity": true
+    }
+  ]
+}

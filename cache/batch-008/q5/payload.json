@@ -1,0 +1,45 @@
+{
+  "questionNumber": 5,
+  "notes": {
+    "distinctAxes": [
+      "metric",
+      "coverage",
+      "confidence"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Reduce Slack message overload by 20% within 3 months",
+      "why": "Less clutter boosts focus and efficiency",
+      "assumptions": [
+        "Teams use Slack heavily",
+        "Overload measurable"
+      ],
+      "relevance": 0.5612431039600619,
+      "specificity": true
+    },
+    {
+      "id": "B",
+      "text": "Enhance task alignment by 15% for 10–50p teams via Slack bot",
+      "why": "Better alignment improves project outcomes",
+      "assumptions": [
+        "Task misalignment is an issue",
+        "Slack integration"
+      ],
+      "relevance": 0.5707679303464627,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "Achieve 25% increase in creative output within 6 months",
+      "why": "More output indicates higher productivity",
+      "assumptions": [
+        "Output is trackable",
+        "AI features utilized"
+      ],
+      "relevance": 0.5520136918414297,
+      "specificity": true
+    }
+  ]
+}

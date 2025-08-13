@@ -1,0 +1,952 @@
+{
+  "sessionId": "batch-009",
+  "startTime": 1755054509213,
+  "lastSaveTime": 1755054656232,
+  "currentQuestion": 9,
+  "totalQuestions": 8,
+  "state": {
+    "idea": "AI copilot for remote creative teams",
+    "answers": [
+      {
+        "q": 1,
+        "chosen": "A",
+        "summary": "Slack integration for 10-50p creative teams to streamline project updates."
+      },
+      {
+        "q": 2,
+        "chosen": "A",
+        "summary": "5–20p content teams using Asana during launch weeks"
+      },
+      {
+        "q": 3,
+        "chosen": "A",
+        "summary": "Content teams miss 30% of deadlines during launch weeks"
+      },
+      {
+        "q": 4,
+        "chosen": "A",
+        "summary": "Notion AI assistant for 20-100p creative teams to generate content briefs"
+      },
+      {
+        "q": 5,
+        "chosen": "A",
+        "summary": "Achieve 60% content brief automation in Notion for 20-100p teams in 6 months"
+      },
+      {
+        "q": 6,
+        "chosen": "A",
+        "summary": "Others use Google Docs for collaborative content planning"
+      },
+      {
+        "q": 7,
+        "chosen": "A",
+        "summary": "Proprietary Model: Fine-tuned with 10k creative projects"
+      },
+      {
+        "q": 8,
+        "chosen": "A",
+        "summary": "Model misreads Slack threads, causing 20% rework in creative briefs."
+      }
+    ],
+    "features": {
+      "summary": "**Audience:** Our solution targets content teams of 5-20 people using Asana and creative teams of 10-100 people using Slack and Notion.  \n**Problem:** During launch weeks, content teams experience a 30% deadline miss rate.  \n**Solution:** We offer Slack integrations for streamlined project updates and a Notion AI assistant to automate content brief creation.  \n**Edge:** Our offering includes unique features like an AI assistant in Notion that specifically serves to automate content briefs for larger team setups.  \n**Metric:** We aim to achieve 60% automation of content briefs in Notion within 6 months for teams sized 20-100 people.  \n**Risk:** There might be challenges in effectively integrating these solutions into existing workflows, potentially impacting engagement and efficacy."
+    }
+  },
+  "completed": true,
+  "questionResults": [
+    {
+      "questionNumber": 1,
+      "questionText": "Write your one-sentence idea",
+      "payload": {
+        "questionNumber": 1,
+        "notes": {
+          "distinctAxes": [
+            "customer size",
+            "integration platform",
+            "timeframe"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Slack integration for 10-50p creative teams to streamline project updates.",
+            "why": "Reduces meeting time by 30%.",
+            "assumptions": [
+              "Teams use Slack",
+              "Frequent project updates needed"
+            ],
+            "relevance": 0.49585005327428666,
+            "specificity": true,
+            "compositeScore": 0.5958500532742866
+          },
+          {
+            "id": "B",
+            "text": "Google Workspace add-on for 5-20p remote creative teams to streamline collaboration",
+            "why": "Boosts project completion rate by 25%",
+            "assumptions": [
+              "Google Workspace in use",
+              "remote setup"
+            ],
+            "tags": [
+              "google workspace"
+            ]
+          },
+          {
+            "id": "C",
+            "text": "Miro copilot for 20–100p creative agencies to streamline brainstorming sessions",
+            "why": "Reduces session time by 30%",
+            "assumptions": [
+              "Miro in use",
+              "session duration tracked"
+            ],
+            "tags": [
+              "miro"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.49585005327428666,
+          0.5083039086395511,
+          0.5816118961270846
+        ],
+        "maxPairCos": 0.6616786885083757,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 1,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5816118961270846,
+        "relativeFloorUsed": 0.5234507065143762,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.49585005327428666,
+          0.5083039086395511,
+          0.5816118961270846
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.6616786885083757,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 14758,
+        "tokensUsed": {
+          "input": 2737,
+          "output": 381,
+          "embedding": 170
+        },
+        "requestCounts": {
+          "chat": 3,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054523990,
+      "success": true
+    },
+    {
+      "questionNumber": 2,
+      "questionText": "Who exactly is this for?",
+      "payload": {
+        "questionNumber": 2,
+        "notes": {
+          "distinctAxes": [
+            "team size",
+            "platform",
+            "context"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "5–20p content teams using Asana during launch weeks",
+            "why": "Aids teams coordinating high-pressure launches.",
+            "assumptions": [
+              "Asana in use",
+              "frequent launches"
+            ],
+            "relevance": 0.4994900970120445,
+            "specificity": true,
+            "compositeScore": 0.5994900970120445
+          },
+          {
+            "id": "B",
+            "text": "20–50p design teams using Figma during client review cycles",
+            "why": "Focuses on teams optimizing design review processes.",
+            "assumptions": [
+              "Figma in use",
+              "client reviews frequent"
+            ],
+            "relevance": 0.4972466715093192,
+            "specificity": true,
+            "compositeScore": 0.5972466715093192
+          },
+          {
+            "id": "C",
+            "text": "10–30p marketing teams using Trello in global time zones",
+            "why": "Targets teams managing international campaigns.",
+            "assumptions": [
+              "Trello in use",
+              "global team"
+            ],
+            "relevance": 0.48774833238645776,
+            "specificity": true,
+            "compositeScore": 0.5877483323864577
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.4994900970120445,
+          0.4972466715093192,
+          0.48774833238645776
+        ],
+        "maxPairCos": 0.60600201265883,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 3,
+        "repairAttempts": 0,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.4994900970120445,
+        "relativeFloorUsed": 0.4495410873108401,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.4994900970120445,
+          0.4972466715093192,
+          0.48774833238645776
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.60600201265883,
+        "repaired": false,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 5557,
+        "tokensUsed": {
+          "input": 866,
+          "output": 152,
+          "embedding": 133
+        },
+        "requestCounts": {
+          "chat": 1,
+          "embedding": 2
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 0
+        }
+      },
+      "timestamp": 1755054529567,
+      "success": true
+    },
+    {
+      "questionNumber": 3,
+      "questionText": "What problem are they facing?",
+      "payload": {
+        "questionNumber": 3,
+        "notes": {
+          "distinctAxes": [
+            "pain",
+            "frequency",
+            "severity"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Content teams miss 30% of deadlines during launch weeks",
+            "why": "Missing deadlines impacts revenue and client trust",
+            "assumptions": [
+              "Deadlines are tracked",
+              "Launch weeks are frequent"
+            ],
+            "relevance": 0.46183772414202795,
+            "specificity": true,
+            "compositeScore": 0.5618377241420279
+          },
+          {
+            "id": "B",
+            "text": "Creative teams lose 30% productivity due to tool-switching",
+            "why": "Frequent context-switching disrupts workflow",
+            "assumptions": [
+              "Multiple tools used",
+              "No unified platform"
+            ]
+          },
+          {
+            "id": "C",
+            "text": "40% of creative teams struggle with feedback loops, delaying projects by 2 weeks",
+            "why": "Streamlined feedback reduces project delays",
+            "assumptions": [
+              "Feedback is often delayed",
+              "Teams use email or chat for feedback"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.46183772414202795,
+          0.47549743718309234,
+          0.500627156021089
+        ],
+        "maxPairCos": 0.6144666082554644,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 1,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.500627156021089,
+        "relativeFloorUsed": 0.4505644404189801,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.46183772414202795,
+          0.47549743718309234,
+          0.500627156021089
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.6144666082554644,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 13609,
+        "tokensUsed": {
+          "input": 2415,
+          "output": 340,
+          "embedding": 204
+        },
+        "requestCounts": {
+          "chat": 3,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054543191,
+      "success": true
+    },
+    {
+      "questionNumber": 4,
+      "questionText": "How does your idea solve the problem?",
+      "payload": {
+        "questionNumber": 4,
+        "notes": {
+          "distinctAxes": [
+            "mechanism",
+            "integration",
+            "automation"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Notion AI assistant for 20-100p creative teams to generate content briefs",
+            "why": "Streamlines briefing process; boosts productivity by 15%",
+            "assumptions": [
+              "Notion in use",
+              "teams need content briefs"
+            ],
+            "tags": [
+              "notion"
+            ]
+          },
+          {
+            "id": "B",
+            "text": "Asana bot for 5-20p remote creative teams to automate task reminders",
+            "why": "Increases deadline adherence by 15%",
+            "assumptions": [
+              "Asana in use",
+              "Teams struggle with deadlines"
+            ],
+            "tags": [
+              "asana"
+            ]
+          },
+          {
+            "id": "C",
+            "text": "Asana plugin for 5–20p creative teams to auto-sync project updates",
+            "why": "Ensures all members are informed, reducing update delays by 30%",
+            "assumptions": [
+              "Asana in use",
+              "teams need real-time updates"
+            ],
+            "tags": [
+              "asana"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.6621201908266207,
+          0.6258788346069418,
+          0.5410348992702733
+        ],
+        "maxPairCos": 0.744745155026394,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 0,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.6621201908266207,
+        "relativeFloorUsed": 0.5959081717439586,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.6621201908266207,
+          0.6258788346069418,
+          0.5410348992702733
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.744745155026394,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 15944,
+        "tokensUsed": {
+          "input": 3732,
+          "output": 471,
+          "embedding": 258
+        },
+        "requestCounts": {
+          "chat": 4,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054561999,
+      "success": true
+    },
+    {
+      "questionNumber": 5,
+      "questionText": "How will you measure success?",
+      "payload": {
+        "questionNumber": 5,
+        "notes": {
+          "distinctAxes": [
+            "metric",
+            "coverage",
+            "confidence"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Achieve 60% content brief automation in Notion for 20-100p teams in 6 months",
+            "why": "Saves time on manual tasks",
+            "assumptions": [
+              "Notion in use",
+              "teams create content briefs"
+            ],
+            "tags": [
+              "notion"
+            ],
+            "relevance": 0.6596329876924095,
+            "specificity": true
+          },
+          {
+            "id": "B",
+            "text": "Adoption rate: 50% of creative teams using AI copilot within 6 months",
+            "why": "Shows market penetration and user acceptance",
+            "assumptions": [
+              "Teams find value",
+              "Effective onboarding"
+            ]
+          },
+          {
+            "id": "C",
+            "text": "Reduce deadline misses by 20% for 5-20p teams using Asana in 3 months",
+            "why": "Improves efficiency during peak periods",
+            "assumptions": [
+              "Asana in use",
+              "teams face deadline challenges"
+            ],
+            "tags": [
+              "asana"
+            ],
+            "relevance": 0.4897571728002258,
+            "specificity": true
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.6596329876924095,
+          0.5689294745551283,
+          0.4897571728002258
+        ],
+        "maxPairCos": 0.5208125640738305,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 0,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.6596329876924095,
+        "relativeFloorUsed": 0.5936696889231686,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.6596329876924095,
+          0.5689294745551283,
+          0.4897571728002258
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.5208125640738305,
+        "repaired": true,
+        "batchFillerUsed": true,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 24676,
+        "tokensUsed": {
+          "input": 5378,
+          "output": 595,
+          "embedding": 359
+        },
+        "requestCounts": {
+          "chat": 5,
+          "embedding": 5
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054590129,
+      "success": true
+    },
+    {
+      "questionNumber": 6,
+      "questionText": "Who / what do they use instead?",
+      "payload": {
+        "questionNumber": 6,
+        "notes": {
+          "distinctAxes": [
+            "alternative solution",
+            "workaround",
+            "vendor"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Others use Google Docs for collaborative content planning",
+            "why": "Docs enable collaboration but miss automation features",
+            "assumptions": [
+              "Google Workspace subscription"
+            ],
+            "relevance": 0.5290517192119149,
+            "specificity": true,
+            "compositeScore": 0.6290517192119148
+          },
+          {
+            "id": "B",
+            "text": "Remote teams rely on email chains for project updates and feedback",
+            "why": "Email chains are widely used for asynchronous communication",
+            "assumptions": [
+              "Teams prefer email for communication",
+              "Email is accessible to all team members"
+            ],
+            "relevance": 0.4743706222095951,
+            "specificity": true
+          },
+          {
+            "id": "C",
+            "text": "Creative teams use Trello for visual project management and planning",
+            "why": "Trello offers a visual interface that's easy for creative tasks",
+            "assumptions": [
+              "Teams are visually oriented",
+              "Trello is accessible to all team members"
+            ],
+            "relevance": 0.48654960081579096,
+            "specificity": true
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5290517192119149,
+          0.4743706222095951,
+          0.48654960081579096
+        ],
+        "maxPairCos": 0.5104003424176694,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 3,
+        "candidatesPassingThresholds": 1,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5290517192119149,
+        "relativeFloorUsed": 0.47614654729072337,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5290517192119149,
+          0.4743706222095951,
+          0.48654960081579096
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.5104003424176694,
+        "repaired": true,
+        "batchFillerUsed": true,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 22987,
+        "tokensUsed": {
+          "input": 4525,
+          "output": 499,
+          "embedding": 310
+        },
+        "requestCounts": {
+          "chat": 4,
+          "embedding": 5
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054615613,
+      "success": true
+    },
+    {
+      "questionNumber": 7,
+      "questionText": "What's your hard-to-copy edge?",
+      "payload": {
+        "questionNumber": 7,
+        "notes": {
+          "distinctAxes": [
+            "edge",
+            "data_adv",
+            "workflow_lock"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Proprietary Model: Fine-tuned with 10k creative projects",
+            "why": "Increases content suggestion precision by 20%",
+            "assumptions": [
+              "Access to projects",
+              "Training is ongoing"
+            ],
+            "relevance": 0.5400099958069139,
+            "specificity": true,
+            "compositeScore": 0.6400099958069139
+          },
+          {
+            "id": "B",
+            "text": "Data moat: 500k creative briefs from top agencies",
+            "why": "Baselines models uniquely; increases relevance by 22%",
+            "assumptions": [
+              "Access to data",
+              "Data is current"
+            ],
+            "relevance": 0.5199375282134149,
+            "specificity": true,
+            "compositeScore": 0.6199375282134149
+          },
+          {
+            "id": "C",
+            "text": "Workflow/IP: AI model trained on 50k remote team interactions",
+            "why": "Enhances AI's contextual understanding; boosts task relevance by 20%",
+            "assumptions": [
+              "Access to interaction data",
+              "AI model training capabilities"
+            ],
+            "tags": [
+              "workflow",
+              "AI model"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.5400099958069139,
+          0.5199375282134149,
+          0.5196225254548545
+        ],
+        "maxPairCos": 0.5130573856750691,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 2,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.5400099958069139,
+        "relativeFloorUsed": 0.4860089962262225,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.5400099958069139,
+          0.5199375282134149,
+          0.5196225254548545
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.5130573856750691,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 16372,
+        "tokensUsed": {
+          "input": 3843,
+          "output": 429,
+          "embedding": 252
+        },
+        "requestCounts": {
+          "chat": 3,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054636156,
+      "success": true
+    },
+    {
+      "questionNumber": 8,
+      "questionText": "Biggest unknown risk in one line",
+      "payload": {
+        "questionNumber": 8,
+        "notes": {
+          "distinctAxes": [
+            "risk_type",
+            "impact",
+            "timing"
+          ]
+        },
+        "options": [
+          {
+            "id": "A",
+            "text": "Model misreads Slack threads, causing 20% rework in creative briefs.",
+            "why": "Inaccurate interpretations lead to incorrect outputs, requiring additional corrections.",
+            "assumptions": [
+              "Model lacks context awareness",
+              "Slack thread complexity"
+            ],
+            "tags": [
+              "Slack",
+              "accuracy"
+            ],
+            "relevance": 0.46596933375966915,
+            "specificity": true,
+            "compositeScore": 0.5659693337596692
+          },
+          {
+            "id": "B",
+            "text": "Content brief errors in Notion lead to 10% project delays.",
+            "why": "Automated brief errors require manual review, slowing down the workflow.",
+            "assumptions": [
+              "Notion AI limitations",
+              "Brief complexity"
+            ],
+            "tags": [
+              "Notion",
+              "errors"
+            ],
+            "relevance": 0.45540745097658814,
+            "specificity": true,
+            "compositeScore": 0.5554074509765882
+          },
+          {
+            "id": "C",
+            "text": "Notion AI errors in brief generation cause 20% rework rate.",
+            "why": "Inaccurate content briefs lead to additional revisions.",
+            "assumptions": [
+              "Notion AI usage",
+              "briefs are critical"
+            ],
+            "tags": [
+              "notion",
+              "rework"
+            ]
+          }
+        ]
+      },
+      "score": {
+        "rel": [
+          0.46596933375966915,
+          0.45540745097658814,
+          0.4923719993016102
+        ],
+        "maxPairCos": 0.6984424743044838,
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "pass": true
+      },
+      "metrics": {
+        "candidatesGenerated": 4,
+        "candidatesPassingThresholds": 2,
+        "repairAttempts": 1,
+        "finalSuccess": true
+      },
+      "telemetry": {
+        "bestRel": 0.4923719993016102,
+        "relativeFloorUsed": 0.4431347993714492,
+        "absFloorUsed": 0.45,
+        "selectedRel": [
+          0.46596933375966915,
+          0.45540745097658814,
+          0.4923719993016102
+        ],
+        "spec": [
+          true,
+          true,
+          true
+        ],
+        "maxPairCos": 0.6984424743044838,
+        "repaired": true,
+        "batchFillerUsed": false,
+        "templateUsed": false,
+        "finalPass": true,
+        "qLatencyMs": 16276,
+        "tokensUsed": {
+          "input": 2463,
+          "output": 368,
+          "embedding": 224
+        },
+        "requestCounts": {
+          "chat": 2,
+          "embedding": 3
+        },
+        "errorCounts": {
+          "rateLimited": 0,
+          "failed": 0,
+          "repaired": 1
+        }
+      },
+      "timestamp": 1755054656222,
+      "success": true
+    }
+  ],
+  "telemetry": {
+    "tokensUsed": {
+      "input": 25959,
+      "output": 3235,
+      "embedding": 1910
+    },
+    "requestCounts": {
+      "chat": 25,
+      "embedding": 27
+    },
+    "errorCounts": {
+      "rateLimited": 0,
+      "failed": 0,
+      "repaired": 7
+    },
+    "timing": {
+      "totalMs": 147019,
+      "averageQuestionMs": 18376.125
+    }
+  }
+}

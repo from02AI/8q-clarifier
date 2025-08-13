@@ -1,0 +1,42 @@
+{
+  "questionNumber": 7,
+  "notes": {
+    "distinctAxes": [
+      "edge",
+      "data_adv",
+      "workflow_lock"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Model fine-tuned on 50k creative projects for feedback efficiency",
+      "why": "WHY: Boosts feedback response speed by 30% through tailored suggestions.",
+      "assumptions": [
+        "Model training data",
+        "Relevance to current tasks"
+      ],
+      "relevance": 0.571992978375888,
+      "specificity": true,
+      "compositeScore": 0.671992978375888
+    },
+    {
+      "id": "B",
+      "text": "Data moat: 50k briefs from Adobe Creative Cloud users",
+      "why": "Enhances AI's contextual understanding, increasing relevance by 20%",
+      "assumptions": [
+        "Adobe partnership",
+        "exclusive access"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Distribution advantage: Featured in Slack's Creative Tools section, 3k installs",
+      "why": "WHY: Directly targets creative teams, boosting engagement by 20%",
+      "assumptions": [
+        "Slack users",
+        "Creative focus"
+      ]
+    }
+  ]
+}

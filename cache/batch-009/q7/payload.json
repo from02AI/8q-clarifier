@@ -1,0 +1,44 @@
+{
+  "questionNumber": 7,
+  "notes": {
+    "distinctAxes": [
+      "edge",
+      "data_adv",
+      "workflow_lock"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Data moat: 300k annotated creative briefs from top design agencies",
+      "why": "WHY: improves contextual understanding by leveraging real-world examples",
+      "assumptions": [
+        "Access to agency data"
+      ],
+      "tags": [
+        "data moat"
+      ],
+      "relevance": 0.478953303367075,
+      "specificity": true,
+      "compositeScore": 0.578953303367075
+    },
+    {
+      "id": "B",
+      "text": "Data moat: 150k annotated creative workflows from remote teams",
+      "why": "WHY: improves AI's task prediction accuracy by 22%",
+      "assumptions": [
+        "data sourced from existing users",
+        "annotations are high-quality"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Workflow/IP: Model trained on 5k remote team projects in Adobe XD",
+      "why": "WHY: Boosts design sync efficiency by 30% through pattern recognition",
+      "assumptions": [
+        "Adobe XD usage",
+        "Access to project data"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "questionNumber": 2,
+  "notes": {
+    "distinctAxes": [
+      "size band",
+      "function",
+      "platform",
+      "context"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "10–30p remote design teams using Slack in client review cycles.",
+      "why": "Targets designers who need seamless collaboration during client feedback.",
+      "assumptions": [
+        "Teams use Slack",
+        "Designers involved in review cycles"
+      ],
+      "tags": [
+        "design"
+      ],
+      "relevance": 0.6167640558569651,
+      "specificity": true,
+      "compositeScore": 0.7167640558569651
+    },
+    {
+      "id": "B",
+      "text": "30–50p marketing teams using Microsoft Teams in global time zones.",
+      "why": "Addresses challenges in coordinating marketing efforts across time zones.",
+      "assumptions": [
+        "Teams use Microsoft Teams",
+        "Marketing focus"
+      ],
+      "tags": [
+        "marketing"
+      ],
+      "relevance": 0.5084249905063108,
+      "specificity": true,
+      "compositeScore": 0.6084249905063108
+    },
+    {
+      "id": "C",
+      "text": "50–100p development teams using Asana during product launches.",
+      "why": "Focuses on tech teams needing support during high-pressure launches.",
+      "assumptions": [
+        "Teams use Asana",
+        "Development teams handle launches"
+      ],
+      "tags": [
+        "development"
+      ],
+      "relevance": 0.5018459652745139,
+      "specificity": true,
+      "compositeScore": 0.6018459652745138
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "questionNumber": 6,
+  "notes": {
+    "distinctAxes": [
+      "alternative tool",
+      "workaround",
+      "vendor"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Currently use Asana for task management, despite lacking real-time collaboration.",
+      "why": "Asana is popular but lacks seamless Slack integration for real-time updates.",
+      "assumptions": [
+        "Teams prefer centralized task tools",
+        "Asana lacks real-time sync"
+      ],
+      "relevance": 0.5214403179506469,
+      "specificity": true,
+      "compositeScore": 0.6214403179506469
+    },
+    {
+      "id": "B",
+      "text": "Rely on Trello boards, which require manual updates and lack automation.",
+      "why": "While visual, Trello lacks automation for campaign management.",
+      "assumptions": [
+        "Trello is widely used",
+        "Manual updates are standard"
+      ],
+      "relevance": 0.48379062030473274,
+      "specificity": true,
+      "compositeScore": 0.5837906203047327
+    },
+    {
+      "id": "C",
+      "text": "Use Google Docs for collaborative briefs, but lacks real-time AI insights",
+      "why": "Common and accessible but doesn't offer AI-driven automation",
+      "assumptions": [
+        "Teams use Google Workspace",
+        "AI insights needed"
+      ],
+      "tags": [
+        "Google Docs"
+      ],
+      "relevance": 0.5877943297850592,
+      "specificity": true
+    }
+  ]
+}

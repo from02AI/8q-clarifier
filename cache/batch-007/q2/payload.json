@@ -1,0 +1,48 @@
+{
+  "questionNumber": 2,
+  "notes": {
+    "distinctAxes": [
+      "team size",
+      "platform",
+      "context"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "5-15p remote graphic design teams using Adobe Creative Cloud in global time zones",
+      "why": "Ensures 24/7 creative output",
+      "assumptions": [
+        "Adobe Creative Cloud usage",
+        "global collaboration"
+      ],
+      "relevance": 0.5111222263876832,
+      "specificity": true,
+      "compositeScore": 0.6111222263876832
+    },
+    {
+      "id": "B",
+      "text": "20-40p remote video production teams using Zoom in launch weeks",
+      "why": "Optimizes communication for tight deadlines",
+      "assumptions": [
+        "Zoom usage",
+        "launch-focused output"
+      ],
+      "relevance": 0.455706272722739,
+      "specificity": true,
+      "compositeScore": 0.555706272722739
+    },
+    {
+      "id": "C",
+      "text": "15-30p marketing teams using Asana during client review cycles",
+      "why": "Streamlines feedback loops",
+      "assumptions": [
+        "Asana boards in use",
+        "frequent client reviews"
+      ],
+      "relevance": 0.4531651798459412,
+      "specificity": true,
+      "compositeScore": 0.5531651798459412
+    }
+  ]
+}

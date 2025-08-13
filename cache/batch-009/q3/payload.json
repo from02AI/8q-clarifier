@@ -1,0 +1,44 @@
+{
+  "questionNumber": 3,
+  "notes": {
+    "distinctAxes": [
+      "pain",
+      "frequency",
+      "severity"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "30–60p agencies lose 10% productivity due to manual task tracking in Trello",
+      "why": "Automates tracking, freeing up creative time",
+      "assumptions": [
+        "Trello used",
+        "manual tracking"
+      ],
+      "relevance": 0.47372963798183926,
+      "specificity": true
+    },
+    {
+      "id": "B",
+      "text": "Remote teams face 25% communication drop-off in Slack during high-stakes projects",
+      "why": "Improves team alignment, reducing project risks",
+      "assumptions": [
+        "Slack is main communication tool"
+      ],
+      "relevance": 0.502168886303056,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "10–50p teams struggle with version control in Adobe XD, causing 15% project delays",
+      "why": "Ensures timely delivery by managing files efficiently",
+      "assumptions": [
+        "Adobe XD used",
+        "version control issues"
+      ],
+      "relevance": 0.5347617046229902,
+      "specificity": true
+    }
+  ]
+}

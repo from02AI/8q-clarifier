@@ -1,0 +1,44 @@
+{
+  "questionNumber": 8,
+  "notes": {
+    "distinctAxes": [
+      "risk_type",
+      "timing",
+      "impact"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "AI bot misreads Slack threads, causing a 20% rework in client review briefs.",
+      "why": "Misinterpretations lead to extra workload and project delays.",
+      "assumptions": [
+        "AI accuracy below 95%",
+        "Complex conversation threads"
+      ],
+      "relevance": 0.4725572789347745,
+      "specificity": true,
+      "compositeScore": 0.5725572789347745
+    },
+    {
+      "id": "B",
+      "text": "AI bot privacy concerns in Google Workspace leads to 30% user drop-off",
+      "why": "Privacy issues can deter users, impacting adoption rates significantly.",
+      "assumptions": [
+        "Users value privacy",
+        "Google Workspace integration"
+      ],
+      "relevance": 0.4647562021581381,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "AI bot fails to sync with Google Workspace, leading to 25% increase in missed deadlines.",
+      "why": "Sync issues can delay project timelines significantly.",
+      "assumptions": [
+        "Teams rely on Google Workspace",
+        "Sync is critical for deadlines"
+      ]
+    }
+  ]
+}

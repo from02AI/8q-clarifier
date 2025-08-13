@@ -1,0 +1,49 @@
+{
+  "questionNumber": 2,
+  "notes": {
+    "distinctAxes": [
+      "size",
+      "function",
+      "platform",
+      "context"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "10–30p remote design teams using Asana in global time zones",
+      "why": "Targets small, distributed design teams needing coordination",
+      "assumptions": [
+        "Use of Asana",
+        "Work across time zones"
+      ],
+      "relevance": 0.5560300787345537,
+      "specificity": true,
+      "compositeScore": 0.6560300787345537
+    },
+    {
+      "id": "B",
+      "text": "50–100p marketing teams using Microsoft Teams in launch weeks",
+      "why": "Focuses on larger, intensive marketing campaigns",
+      "assumptions": [
+        "Microsoft Teams adopted",
+        "Frequent launches"
+      ],
+      "relevance": 0.5061802840004643,
+      "specificity": true,
+      "compositeScore": 0.6061802840004643
+    },
+    {
+      "id": "C",
+      "text": "30–50p content creation teams using Trello in client review cycles",
+      "why": "Addresses mid-sized teams with client-heavy workflows",
+      "assumptions": [
+        "Trello usage",
+        "Regular client reviews"
+      ],
+      "relevance": 0.4825642273425599,
+      "specificity": true,
+      "compositeScore": 0.5825642273425599
+    }
+  ]
+}

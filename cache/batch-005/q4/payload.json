@@ -1,0 +1,48 @@
+{
+  "questionNumber": 4,
+  "notes": {
+    "distinctAxes": [
+      "mechanism",
+      "integration",
+      "automation"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "AI-driven Google Workspace tool to auto-generate creative briefs",
+      "why": "Reduces briefing time by 25%",
+      "assumptions": [
+        "Google Workspace used",
+        "Creative briefs needed"
+      ],
+      "relevance": 0.5673050372860177,
+      "specificity": true,
+      "compositeScore": 0.6673050372860176
+    },
+    {
+      "id": "B",
+      "text": "SaaS platform with integrated Zoom for live creative sessions",
+      "why": "Streamlines live collab, reducing back-and-forth by 30%",
+      "assumptions": [
+        "Teams use Zoom",
+        "Require real-time collaboration"
+      ],
+      "relevance": 0.5020280980777392,
+      "specificity": true,
+      "compositeScore": 0.6020280980777392
+    },
+    {
+      "id": "C",
+      "text": "Asana plugin auto-assigns tasks based on team availability",
+      "why": "Aligns tasks faster, raising productivity by 15%",
+      "assumptions": [
+        "Asana used",
+        "Team shares calendar"
+      ],
+      "relevance": 0.47363052278912426,
+      "specificity": true,
+      "compositeScore": 0.5736305227891243
+    }
+  ]
+}

@@ -10,34 +10,33 @@
   "options": [
     {
       "id": "A",
-      "text": "Remote teams struggle with 40% delayed feedback loops",
-      "why": "Delays slow project completion, impacting deadlines",
+      "text": "Frequent miscommunications in creative briefs lead to 20% rework rate",
+      "why": "Reducing rework saves time and resources, enhancing team output.",
       "assumptions": [
-        "Teams rely on asynchronous communication",
-        "Feedback is critical to progress"
-      ]
+        "Briefs not standardized",
+        "Remote communication challenges"
+      ],
+      "relevance": 0.4646677676105571,
+      "specificity": true,
+      "compositeScore": 0.5646677676105571
     },
     {
       "id": "B",
-      "text": "Cross-border teams lose 15h/month in timezone coordination",
-      "why": "AI scheduling can optimize meetings across timezones",
+      "text": "Creative teams spend 40% of time on admin tasks, limiting creative output",
+      "why": "Reducing admin work boosts creative productivity by 25%",
       "assumptions": [
-        "Teams work in different timezones",
-        "Meetings are frequent"
-      ],
-      "relevance": 0.46209854258635624,
-      "specificity": true
+        "Admin tasks are repetitive",
+        "Teams desire more creative focus"
+      ]
     },
     {
       "id": "C",
-      "text": "Creative teams miss 25% deadlines due to poor task visibility",
-      "why": "AI-enhanced dashboards improve tracking and accountability",
+      "text": "Creative teams struggle with async feedback loops, delaying projects by 20% monthly",
+      "why": "Streamlining feedback reduces delays, enhancing productivity",
       "assumptions": [
-        "Tasks are managed digitally",
-        "Visibility tools are underutilized"
-      ],
-      "relevance": 0.4866741729866046,
-      "specificity": true
+        "Feedback is asynchronous",
+        "Teams work across time zones"
+      ]
     }
   ]
 }

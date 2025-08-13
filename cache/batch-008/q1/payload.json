@@ -1,0 +1,53 @@
+{
+  "questionNumber": 1,
+  "notes": {
+    "distinctAxes": [
+      "customer",
+      "mechanism",
+      "scope"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot copilot for 10–50p remote creative teams",
+      "why": "Lives where teams work; cuts PM time by 20%",
+      "assumptions": [
+        "Slack in use",
+        "basic API OK"
+      ],
+      "tags": [
+        "slack"
+      ],
+      "relevance": 0.5981311405971822,
+      "specificity": true,
+      "compositeScore": 0.6981311405971822
+    },
+    {
+      "id": "B",
+      "text": "Standalone SaaS for freelance designers with Figma automation",
+      "why": "Automates handoff; +25% throughput",
+      "assumptions": [
+        "Figma in use"
+      ],
+      "tags": [
+        "figma"
+      ],
+      "relevance": 0.477030275634939,
+      "specificity": true,
+      "compositeScore": 0.577030275634939
+    },
+    {
+      "id": "C",
+      "text": "Miro integration for 50–200p marketing teams to streamline brainstorming",
+      "why": "Boosts idea generation speed by 40%",
+      "assumptions": [
+        "Miro in use",
+        "teams need brainstorming"
+      ],
+      "tags": [
+        "miro"
+      ]
+    }
+  ]
+}

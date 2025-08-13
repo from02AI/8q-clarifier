@@ -1,0 +1,51 @@
+{
+  "questionNumber": 5,
+  "notes": {
+    "distinctAxes": [
+      "metric",
+      "coverage",
+      "confidence"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Increase project completion speed by 30% in Slack teams by Q2",
+      "why": "Faster completion due to AI-suggested next steps improves workflow",
+      "assumptions": [
+        "Slack is primary tool",
+        "AI suggestions are actionable"
+      ],
+      "tags": [
+        "slack",
+        "project speed"
+      ],
+      "relevance": 0.6164361548285224,
+      "specificity": true
+    },
+    {
+      "id": "B",
+      "text": "Measure 25% increase in task completion rate in Slack over 3 months",
+      "why": "Directly reflects improved team efficiency and project flow",
+      "assumptions": [
+        "Slack is primary tool",
+        "baseline data available"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Achieve 40% reduction in task delays in Asana within 6 months",
+      "why": "Addresses task delays caused by unclear briefs, boosting efficiency",
+      "assumptions": [
+        "Teams use Asana",
+        "Briefs clarity impacts delays"
+      ],
+      "tags": [
+        "asana",
+        "task reduction"
+      ],
+      "relevance": 0.589404747088457,
+      "specificity": true
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "questionNumber": 6,
+  "notes": {
+    "distinctAxes": [
+      "alt_tool",
+      "workaround",
+      "vendor"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Trello for task management and coordination.",
+      "why": "Trello is popular for its ease of use and visual task tracking.",
+      "assumptions": [
+        "Teams prefer visual boards",
+        "Existing Trello users"
+      ],
+      "relevance": 0.5150892002158535,
+      "specificity": true,
+      "compositeScore": 0.6150892002158534
+    },
+    {
+      "id": "B",
+      "text": "Microsoft Teams for integrated chat and task management",
+      "why": "Combines communication and task tools in one platform",
+      "assumptions": [
+        "Teams use Microsoft 365",
+        "Integration is seamless"
+      ],
+      "relevance": 0.4505296088222003,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "Email chains for task coordination in remote teams",
+      "why": "Common fallback; ensures everyone is in the loop",
+      "assumptions": [
+        "Teams lack integrated tools",
+        "Email is universally accessible"
+      ]
+    }
+  ]
+}

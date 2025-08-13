@@ -1,0 +1,49 @@
+{
+  "questionNumber": 1,
+  "notes": {
+    "distinctAxes": [
+      "customer segment",
+      "mechanism",
+      "scope",
+      "platform"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Figma tool for freelance creative teams using Figma. — WHY: Boosts design output by 25%",
+      "why": "Enhances productivity by automating repetitive design tasks.",
+      "assumptions": [
+        "Figma is used",
+        "Freelancers work independently"
+      ],
+      "relevance": 0.5123187593484395,
+      "specificity": true,
+      "compositeScore": 0.6123187593484395
+    },
+    {
+      "id": "B",
+      "text": "Slack bot for 10–50p remote design teams using Slack. — WHY: Cuts PM time by 20%",
+      "why": "Reduces time spent on project management tasks.",
+      "assumptions": [
+        "Teams use Slack",
+        "Slack API is accessible"
+      ],
+      "relevance": 0.4767556766636671,
+      "specificity": true,
+      "compositeScore": 0.5767556766636671
+    },
+    {
+      "id": "C",
+      "text": "Google Workspace add-on for 50–200p creative teams to automate project updates",
+      "why": "Reduces update time by 40%",
+      "assumptions": [
+        "Google Workspace in use",
+        "teams need frequent updates"
+      ],
+      "tags": [
+        "google workspace"
+      ]
+    }
+  ]
+}

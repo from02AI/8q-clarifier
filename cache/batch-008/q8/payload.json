@@ -1,0 +1,52 @@
+{
+  "questionNumber": 8,
+  "notes": {
+    "distinctAxes": [
+      "risk_type",
+      "timing",
+      "impact"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Model misreads Slack threads → 20% rework in creative briefs.",
+      "why": "Misinterpretation leads to confusion and additional work.",
+      "assumptions": [
+        "Model has NLP limitations",
+        "Creative briefs are complex"
+      ],
+      "tags": [
+        "model",
+        "NLP"
+      ],
+      "relevance": 0.4512250993418184,
+      "specificity": true,
+      "compositeScore": 0.5512250993418184
+    },
+    {
+      "id": "B",
+      "text": "AI copilot misreads creative context in Slack, causing 15% rework in remote team projects.",
+      "why": "Technical risk specific to AI limitations in creative workflows.",
+      "assumptions": [
+        "Template-generated for Q8 guaranteed specificity"
+      ],
+      "tags": [
+        "risk",
+        "business"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Remote teams resist AI copilot adoption, limiting penetration to 15% in first 3 months.",
+      "why": "Adoption risk tied to creative team workflows and change resistance.",
+      "assumptions": [
+        "Template-generated for Q8 guaranteed specificity"
+      ],
+      "tags": [
+        "risk",
+        "business"
+      ]
+    }
+  ]
+}

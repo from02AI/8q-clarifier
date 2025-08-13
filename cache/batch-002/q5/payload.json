@@ -1,0 +1,48 @@
+{
+  "questionNumber": 5,
+  "notes": {
+    "distinctAxes": [
+      "metric",
+      "coverage",
+      "confidence"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Track Slack bot usage; aim for 80% team adoption in 6 months",
+      "why": "High adoption indicates integration success",
+      "assumptions": [
+        "Teams use Slack",
+        "Adoption correlates with success"
+      ],
+      "tags": [
+        "adoption",
+        "slack"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Track PM time saved; aim for 20% reduction within 3 months",
+      "why": "Directly measures efficiency gains from using the AI copilot",
+      "assumptions": [
+        "Teams track PM hours",
+        "Baseline data available"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Measure AI-generated brief accuracy; target 90% accuracy within 3 months for 20–50p creative teams",
+      "why": "Ensures AI adds value by reducing manual revisions",
+      "assumptions": [
+        "Teams provide feedback",
+        "AI training data is robust"
+      ],
+      "tags": [
+        "accuracy"
+      ],
+      "relevance": 0.6580460524480213,
+      "specificity": true
+    }
+  ]
+}

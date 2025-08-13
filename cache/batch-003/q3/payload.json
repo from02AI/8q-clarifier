@@ -1,0 +1,48 @@
+{
+  "questionNumber": 3,
+  "notes": {
+    "distinctAxes": [
+      "pain",
+      "frequency",
+      "severity"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Remote creative teams struggle with 30% delays in project feedback loops.",
+      "why": "Reduces feedback cycle time by 15%, enhancing productivity.",
+      "assumptions": [
+        "Feedback is critical",
+        "Delays are common"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "10-50p remote marketing teams face 25% project delays due to misaligned priorities.",
+      "why": "AI helps align priorities, reducing delays.",
+      "assumptions": [
+        "Remote setup",
+        "AI integration possible"
+      ],
+      "tags": [
+        "marketing"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "5–15p remote design teams see 20% slower turnaround due to feedback miscommunication in Slack",
+      "why": "Feedback delays directly impact project timelines.",
+      "assumptions": [
+        "Teams use Slack",
+        "Feedback is crucial"
+      ],
+      "tags": [
+        "design",
+        "feedback"
+      ],
+      "relevance": 0.4941193667782708,
+      "specificity": true
+    }
+  ]
+}

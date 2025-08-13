@@ -1,0 +1,43 @@
+{
+  "questionNumber": 3,
+  "notes": {
+    "distinctAxes": [
+      "pain",
+      "frequency",
+      "severity"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Weekly Slack message overload leads to 15% drop in creative output",
+      "why": "Overload hinders focus, reducing team productivity",
+      "assumptions": [
+        "Slack is primary communication",
+        "Teams struggle with message volume"
+      ]
+    },
+    {
+      "id": "B",
+      "text": "Remote creative teams using AI copilot save 6 hours/week on Google Workspace workflows.",
+      "why": "Concrete time savings through AI automation for remote creative workflows.",
+      "assumptions": [
+        "Template-generated for Q3 guaranteed specificity"
+      ],
+      "tags": [
+        "generated"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "AI copilot in Slack reduces creative workflow time by 15% for 100-person remote teams.",
+      "why": "Platform-specific AI solution with measurable impact for remote creative teams.",
+      "assumptions": [
+        "Template-generated for Q3 guaranteed specificity"
+      ],
+      "tags": [
+        "generated"
+      ]
+    }
+  ]
+}

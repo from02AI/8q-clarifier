@@ -10,39 +10,35 @@
   "options": [
     {
       "id": "A",
-      "text": "Reach 80% user satisfaction among designers in 3 months",
-      "why": "High satisfaction indicates product-market fit",
+      "text": "Achieve 90% user satisfaction within 4 months for early adopters",
+      "why": "High satisfaction indicates product-market fit and engagement",
       "assumptions": [
-        "User feedback collected",
-        "3-month survey setup"
+        "Early user feedback is positive",
+        "Initial bugs are fixed"
       ],
-      "tags": [
-        "confidence"
-      ],
-      "relevance": 0.5230925273418872,
+      "relevance": 0.4506611505220174,
       "specificity": true,
-      "compositeScore": 0.6230925273418871
+      "compositeScore": 0.5506611505220174
     },
     {
       "id": "B",
-      "text": "Increase design output by 20% for 10–30p remote teams using AI-driven feedback loops",
-      "why": "Enhances creative throughput with AI insights",
+      "text": "Boost creative output by 20% in 6 months for 30–50p teams using AI-driven task prioritization",
+      "why": "Focuses on high-impact tasks, reducing low-value work",
       "assumptions": [
-        "Teams use design software",
-        "AI feedback is actionable"
+        "AI adoption",
+        "task management tools in use"
       ],
       "tags": [
-        "design",
-        "AI"
+        "productivity"
       ]
     },
     {
       "id": "C",
-      "text": "Track 20% faster project completion for 10-50p creative teams using Slack in 6 months",
-      "why": "Faster completion demonstrates immediate efficiency gains",
+      "text": "Boost remote team creativity by 20% in 6 months via Slack AI insights",
+      "why": "Enhances creative output by providing real-time AI-driven suggestions",
       "assumptions": [
         "Slack integration",
-        "consistent team size"
+        "AI insights actionable"
       ]
     }
   ]

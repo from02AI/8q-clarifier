@@ -1,0 +1,52 @@
+{
+  "questionNumber": 8,
+  "notes": {
+    "distinctAxes": [
+      "risk_type",
+      "timing",
+      "impact"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Model misreads Slack threads → 20% rework in creative briefs.",
+      "why": "Errors necessitate additional editing and approvals.",
+      "assumptions": [
+        "AI may misinterpret context",
+        "Slack is primary communication tool"
+      ],
+      "relevance": 0.45417215565640223,
+      "specificity": true,
+      "compositeScore": 0.5541721556564022
+    },
+    {
+      "id": "B",
+      "text": "Google Docs API changes disrupt AI sync → 30% downtime in brainstorming.",
+      "why": "API changes can break existing integrations, leading to downtime.",
+      "assumptions": [
+        "Google Docs integration",
+        "API stability"
+      ],
+      "tags": [
+        "integration friction"
+      ],
+      "relevance": 0.4909162211128317,
+      "specificity": true
+    },
+    {
+      "id": "C",
+      "text": "AI model misinterprets creative briefs → 25% increase in revision cycles.",
+      "why": "Misinterpretation leads to more rework, delaying project timelines.",
+      "assumptions": [
+        "Briefs are AI-generated",
+        "Model accuracy"
+      ],
+      "tags": [
+        "model accuracy"
+      ],
+      "relevance": 0.4996769894713901,
+      "specificity": true
+    }
+  ]
+}

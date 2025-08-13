@@ -1,0 +1,48 @@
+{
+  "questionNumber": 8,
+  "notes": {
+    "distinctAxes": [
+      "risk_type",
+      "timing",
+      "impact"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Model misreads Slack threads → 20% rework in creative briefs.",
+      "why": "Misinterpretation leads to incorrect guidance, causing rework.",
+      "assumptions": [
+        "AI misinterpretation",
+        "Slack usage"
+      ],
+      "relevance": 0.4738027232239125,
+      "specificity": true,
+      "compositeScore": 0.5738027232239125
+    },
+    {
+      "id": "B",
+      "text": "AI misinterprets Slack context, causing 25% task misalignment.",
+      "why": "Misinterpretation leads to incorrect task assignments, delaying projects.",
+      "assumptions": [
+        "AI depends on Slack data",
+        "contextual understanding is crucial"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Model accuracy drops in diverse teams, causing 30% misaligned outputs.",
+      "why": "Varied inputs confuse AI, leading to incorrect task guidance.",
+      "assumptions": [
+        "Diverse team structures",
+        "AI needs consistent data"
+      ],
+      "tags": [
+        "model accuracy",
+        "diversity"
+      ],
+      "relevance": 0.4598376474054404,
+      "specificity": true
+    }
+  ]
+}

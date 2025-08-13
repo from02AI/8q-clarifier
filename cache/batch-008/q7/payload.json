@@ -1,0 +1,45 @@
+{
+  "questionNumber": 7,
+  "notes": {
+    "distinctAxes": [
+      "edge",
+      "data_adv",
+      "workflow_lock"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Data moat: 500k creative briefs from agencies",
+      "why": "WHY: Enhances training data breadth, boosting task suggestions.",
+      "assumptions": [
+        "Access to diverse datasets",
+        "Data processing capabilities"
+      ],
+      "relevance": 0.4948544040705787,
+      "specificity": true,
+      "compositeScore": 0.5948544040705787
+    },
+    {
+      "id": "B",
+      "text": "Custom AI model trained on 10k completed projects",
+      "why": "WHY: Personalizes suggestions, increasing user satisfaction by 20%.",
+      "assumptions": [
+        "Access to project data",
+        "Model adaptability"
+      ],
+      "relevance": 0.49271251449086695,
+      "specificity": true,
+      "compositeScore": 0.5927125144908669
+    },
+    {
+      "id": "C",
+      "text": "Distribution advantage: Preinstalled on 500 creative teams' Slack workspaces",
+      "why": "WHY: Facilitates immediate adoption and reduces onboarding friction.",
+      "assumptions": [
+        "Teams use Slack",
+        "Preinstallation possible"
+      ]
+    }
+  ]
+}

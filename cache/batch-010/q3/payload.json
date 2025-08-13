@@ -1,0 +1,45 @@
+{
+  "questionNumber": 3,
+  "notes": {
+    "distinctAxes": [
+      "pain",
+      "frequency",
+      "severity"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Creative teams miss deadlines 2x/month due to miscommunication.",
+      "why": "Miscommunication leads to costly project delays.",
+      "assumptions": [
+        "Complex projects",
+        "Communication is fragmented"
+      ],
+      "relevance": 0.4857391484271238,
+      "specificity": true,
+      "compositeScore": 0.5857391484271238
+    },
+    {
+      "id": "B",
+      "text": "Teams lose 5 hrs/week coordinating tasks across time zones.",
+      "why": "Frequent timezone overlap issues cause lost productivity.",
+      "assumptions": [
+        "Teams span multiple time zones",
+        "Coordination is manual"
+      ],
+      "relevance": 0.4549434229887517,
+      "specificity": true,
+      "compositeScore": 0.5549434229887517
+    },
+    {
+      "id": "C",
+      "text": "Remote teams face 3x/week delays due to timezone misalignment.",
+      "why": "Timezone issues cause missed deadlines and reduced productivity.",
+      "assumptions": [
+        "Teams work across multiple timezones",
+        "No current timezone management tool"
+      ]
+    }
+  ]
+}

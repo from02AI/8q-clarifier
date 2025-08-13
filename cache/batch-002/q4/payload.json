@@ -1,0 +1,49 @@
+{
+  "questionNumber": 4,
+  "notes": {
+    "distinctAxes": [
+      "mechanism",
+      "integration",
+      "automation"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "AI SaaS automates creative briefs from Slack inputs",
+      "why": "Cuts briefing time by 25%",
+      "assumptions": [
+        "Creative teams use Slack",
+        "Briefs needed regularly"
+      ],
+      "relevance": 0.6479404629200246,
+      "specificity": true,
+      "compositeScore": 0.7479404629200246
+    },
+    {
+      "id": "B",
+      "text": "Slack bot auto-summarizes discussions into action points",
+      "why": "Reduces coordination delays by 30% in weekly sprints",
+      "assumptions": [
+        "Teams use Slack",
+        "Need concise summaries"
+      ],
+      "relevance": 0.4959091110944781,
+      "specificity": true,
+      "compositeScore": 0.5959091110944781
+    },
+    {
+      "id": "C",
+      "text": "AI copilot for Figma to auto-generate design iterations",
+      "why": "Boosts design iteration speed by 30%",
+      "assumptions": [
+        "Figma in use",
+        "design iteration needed"
+      ],
+      "tags": [
+        "figma",
+        "design"
+      ]
+    }
+  ]
+}

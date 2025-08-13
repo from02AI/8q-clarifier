@@ -1,0 +1,61 @@
+{
+  "questionNumber": 2,
+  "notes": {
+    "distinctAxes": [
+      "team size",
+      "function",
+      "platform",
+      "context"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "15–30p remote content teams using Asana in cross-timezone collaborations",
+      "why": "Targets content teams for collaborative scheduling across time zones.",
+      "assumptions": [
+        "Asana is used",
+        "global team spread"
+      ],
+      "tags": [
+        "content",
+        "asana"
+      ],
+      "relevance": 0.5519622942543894,
+      "specificity": true,
+      "compositeScore": 0.6519622942543893
+    },
+    {
+      "id": "B",
+      "text": "10–20p remote marketing teams using Monday.com in launch weeks",
+      "why": "Aids marketing teams during high-pressure launch periods.",
+      "assumptions": [
+        "Monday.com usage",
+        "frequent launches"
+      ],
+      "tags": [
+        "marketing",
+        "monday.com"
+      ],
+      "relevance": 0.5070115711937889,
+      "specificity": true,
+      "compositeScore": 0.6070115711937889
+    },
+    {
+      "id": "C",
+      "text": "25–50p remote design teams using Figma in client review cycles",
+      "why": "Focuses on design feedback loops to streamline client interactions.",
+      "assumptions": [
+        "Figma is used",
+        "regular client feedback"
+      ],
+      "tags": [
+        "design",
+        "figma"
+      ],
+      "relevance": 0.4959737201277216,
+      "specificity": true,
+      "compositeScore": 0.5959737201277217
+    }
+  ]
+}

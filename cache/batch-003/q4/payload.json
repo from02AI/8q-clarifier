@@ -1,0 +1,46 @@
+{
+  "questionNumber": 4,
+  "notes": {
+    "distinctAxes": [
+      "mechanism",
+      "integration",
+      "automation"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Slack bot automates reminders for feedback deadlines, boosting timeliness by 25%.",
+      "why": "Keeps teams on track with automated, timely nudges.",
+      "assumptions": [
+        "Slack in use",
+        "Teams need reminders"
+      ],
+      "relevance": 0.4568062731686706,
+      "specificity": true,
+      "compositeScore": 0.5568062731686706
+    },
+    {
+      "id": "B",
+      "text": "AI plugin for Adobe Creative Cloud to auto-suggest design iterations",
+      "why": "Speeds up design process by 25% with AI-driven suggestions",
+      "assumptions": [
+        "Adobe Creative Cloud in use",
+        "Design teams need iteration help"
+      ]
+    },
+    {
+      "id": "C",
+      "text": "Slack bot for 5–15p marketing teams, auto-summarizing feedback in real-time",
+      "why": "Reduces feedback loop time by 30%",
+      "assumptions": [
+        "Slack in use",
+        "real-time feedback needed"
+      ],
+      "tags": [
+        "slack",
+        "marketing"
+      ]
+    }
+  ]
+}
